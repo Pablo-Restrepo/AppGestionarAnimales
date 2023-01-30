@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace AppTiendaMascotas.Ventanas
 {
-	public partial class vtnResidencia : Form
+	public partial class vtnProducto : Form
 	{
-		public vtnResidencia()
+		public vtnProducto()
 		{
 			InitializeComponent();
 			style();
@@ -24,31 +24,33 @@ namespace AppTiendaMascotas.Ventanas
 
 		private Boolean bandera = true;
 		private Boolean bandera2 = false;
-		private Residencia res = new Residencia();
+		private Cliente cliente = new Cliente();
 
 		private void informacion()
 		{
-			cbxResElimi.DataSource = res.consultarResidenciaIDs();
-			cbxResElimi.DisplayMember = "IDRESIDENCIA";
-			cbxResElimi.ValueMember = "IDRESIDENCIA";
+			txtSerialProdDelete.DataSource = cliente.consultarClienteIDs();
+			txtSerialProdDelete.DisplayMember = "NOMBREDUENIO";
+			txtSerialProdDelete.ValueMember = "CEDULADUENIO";
 
 			DataSet dsResultado = new DataSet();
-			dsResultado = res.consultarResidencia();
-			dataGridResidencias.DataSource = dsResultado;
-			dataGridResidencias.DataMember = "ResultadoDatos";
+			dsResultado = cliente.consultarCliente();
+			dgvConsultaProducto.DataSource = dsResultado;
+			dgvConsultaProducto.DataMember = "ResultadoDatos";
 		}
 
 		private void style()
 		{
-			dataGridResidencias.Region = new System.Drawing.Region(CreateRoundedRectangle(dataGridResidencias.Width, dataGridResidencias.Height));
+			dgvConsultaProducto.Region = new System.Drawing.Region(CreateRoundedRectangle(dgvConsultaProducto.Width, dgvConsultaProducto.Height));
 
-			txtNumResidencia.Anchor = AnchorStyles.Top;
-			txtNumResidentes.Anchor = AnchorStyles.Top;
-			cbxResElimi.Anchor = AnchorStyles.Top;
-			cbxTipoR.Anchor = AnchorStyles.Top;
-			btnEliminar.Anchor = AnchorStyles.Top;
-			btnGuardar.Anchor = AnchorStyles.Top;
-			dataGridResidencias.Anchor = AnchorStyles.Top;
+			txtSerialP.Anchor = AnchorStyles.Top;
+			txtPrecioP.Anchor = AnchorStyles.Top;
+			txtNombreProducto.Anchor = AnchorStyles.Top;
+			txtSerialProdDelete.Anchor = AnchorStyles.Top;
+			cbxTipoP.Anchor = AnchorStyles.Top;
+			pictureBox1.Anchor = AnchorStyles.Top;
+			btnEliminarProducto.Anchor = AnchorStyles.Top;
+			btnGuardarProducto.Anchor = AnchorStyles.Top;
+			dgvConsultaProducto.Anchor = AnchorStyles.Top;
 			pictureBox2.Anchor = AnchorStyles.Top;
 			pictureBox3.Anchor = AnchorStyles.Top;
 			label1.Anchor = AnchorStyles.Top;
@@ -58,6 +60,7 @@ namespace AppTiendaMascotas.Ventanas
 			label5.Anchor = AnchorStyles.Top;
 			label6.Anchor = AnchorStyles.Top;
 			label7.Anchor = AnchorStyles.Top;
+			label8.Anchor = AnchorStyles.Top;
 		}
 
 		private System.Drawing.Drawing2D.GraphicsPath CreateRoundedRectangle(int buttonWidth, int buttonHeight)
@@ -85,7 +88,7 @@ namespace AppTiendaMascotas.Ventanas
 				label5.Location = new Point(label5.Location.X + 1, label5.Location.Y);
 				label6.Location = new Point(label6.Location.X + 1, label6.Location.Y);
 				label7.Location = new Point(label7.Location.X + 1, label7.Location.Y);
-				dataGridResidencias.Location = new Point(dataGridResidencias.Location.X + 1, dataGridResidencias.Location.Y);
+				dgvConsultaProducto.Location = new Point(dgvConsultaProducto.Location.X + 1, dgvConsultaProducto.Location.Y);
 			}
 			else if (!this.VerticalScroll.Visible && bandera2)
 			{
@@ -98,7 +101,7 @@ namespace AppTiendaMascotas.Ventanas
 				label5.Location = new Point(label5.Location.X - 2, label5.Location.Y);
 				label6.Location = new Point(label6.Location.X - 2, label6.Location.Y);
 				label7.Location = new Point(label7.Location.X - 2, label7.Location.Y);
-				dataGridResidencias.Location = new Point(dataGridResidencias.Location.X - 2, dataGridResidencias.Location.Y);
+				dgvConsultaProducto.Location = new Point(dgvConsultaProducto.Location.X - 2, dgvConsultaProducto.Location.Y);
 			}
 		}
 
@@ -109,55 +112,37 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			int idResidencia, numResidentes, resultado;
-			string tipoResidencia;
+			int resultado;
+			long numTelefono, cedulaCliente;
+			string nombreCliente;
 
-			idResidencia = int.Parse(txtNumResidencia.Text);
-			numResidentes = int.Parse(txtNumResidentes.Text);
-			tipoResidencia = cbxTipoR.Text;
-
-			if (txtNumResidencia.Text.Equals("") || txtNumResidentes.Text.Equals("") || cbxTipoR.Text.Equals(""))
-			{
-				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			resultado = res.ingresarResidencia(idResidencia, numResidentes, tipoResidencia);
-
+			cedulaCliente = long.Parse(txtSerialP.Text);
+			numTelefono = long.Parse(txtPrecioP.Text);
+			nombreCliente = txtNombreProducto.Text;
+			resultado = cliente.ingresarCliente(cedulaCliente, nombreCliente, numTelefono);
 			if (resultado > 0)
 			{
-				informacion();
-				MessageBox.Show("Residencia registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				txtNumResidencia.Text = "";
-				txtNumResidentes.Text = "";
+				MessageBox.Show("Cliente registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			else
 			{
-				MessageBox.Show("Residencia no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Cliente no registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
-			int numResidencia, resultado;
+			int idCliente, resultado;
 
-			if (cbxResElimi.Text.Equals(""))
-			{
-				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			numResidencia = Convert.ToInt32(cbxResElimi.SelectedValue);
-			resultado = res.eliminarResidencia(numResidencia);
-
+			idCliente = int.Parse(txtSerialProdDelete.Text);
+			resultado = cliente.eliminarCliente(idCliente);
 			if (resultado > 0)
 			{
-				informacion();
-				MessageBox.Show("Residencia eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				MessageBox.Show("Cliente eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			else
 			{
-				MessageBox.Show("Residencia no eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Cliente no eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}

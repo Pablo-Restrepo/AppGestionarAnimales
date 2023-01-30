@@ -119,11 +119,65 @@
     <Compile Include="logica\Venta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ventanas\vtnAlojamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnAlojamiento.Designer.cs">
+      <DependentUpon>vtnAlojamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnAtencion.Designer.cs">
+      <DependentUpon>vtnAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnAcercaDe.Designer.cs">
+      <DependentUpon>vtnAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnCompra.Designer.cs">
+      <DependentUpon>vtnCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnVenta.Designer.cs">
+      <DependentUpon>vtnVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnMascota.Designer.cs">
+      <DependentUpon>vtnMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnProducto.Designer.cs">
+      <DependentUpon>vtnProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnEmpleado.Designer.cs">
+      <DependentUpon>vtnEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\vtnInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\vtnInicio.Designer.cs">
       <DependentUpon>vtnInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnCliente.Designer.cs">
+      <DependentUpon>vtnCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\vtnResidencia.cs">
       <SubType>Form</SubType>
@@ -139,8 +193,35 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnAlojamiento.resx">
+      <DependentUpon>vtnAlojamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnAtencion.resx">
+      <DependentUpon>vtnAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnAcercaDe.resx">
+      <DependentUpon>vtnAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnCompra.resx">
+      <DependentUpon>vtnCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnVenta.resx">
+      <DependentUpon>vtnVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnMascota.resx">
+      <DependentUpon>vtnMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnProducto.resx">
+      <DependentUpon>vtnProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnEmpleado.resx">
+      <DependentUpon>vtnEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\vtnInicio.resx">
       <DependentUpon>vtnInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnCliente.resx">
+      <DependentUpon>vtnCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\vtnResidencia.resx">
       <DependentUpon>vtnResidencia.cs</DependentUpon>
@@ -245,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Rectangle 7 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_round-question-mark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

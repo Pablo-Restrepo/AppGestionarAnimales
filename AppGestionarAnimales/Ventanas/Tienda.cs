@@ -50,7 +50,7 @@ namespace AppTiendaMascotas
 			btnAtencion.Region = new System.Drawing.Region(CreateRoundedRectangle(btnAtencion.Width, btnAtencion.Height));
 			btnVenta.Region = new System.Drawing.Region(CreateRoundedRectangle(btnVenta.Width, btnVenta.Height));
 			btnCompra.Region = new System.Drawing.Region(CreateRoundedRectangle(btnCompra.Width, btnCompra.Height));
-			btnConsultas.Region = new System.Drawing.Region(CreateRoundedRectangle(btnConsultas.Width, btnConsultas.Height));
+			btnAcercaDe.Region = new System.Drawing.Region(CreateRoundedRectangle(btnAcercaDe.Width, btnAcercaDe.Height));
 		}
 
 		private void textoMenu()
@@ -221,7 +221,7 @@ namespace AppTiendaMascotas
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -238,7 +238,7 @@ namespace AppTiendaMascotas
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -249,13 +249,13 @@ namespace AppTiendaMascotas
 
 		private void btnCliente_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnCliente());
+			abrirFormHija(new vtnCliente());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(25, 25, 25);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -266,13 +266,13 @@ namespace AppTiendaMascotas
 
 		private void btnEmplado_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnEmpleado());
+			abrirFormHija(new vtnEmpleado());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(25, 25, 25);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -283,13 +283,13 @@ namespace AppTiendaMascotas
 
 		private void btnProducto_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnProducto());
+			abrirFormHija(new vtnProducto());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(25, 25, 25);
@@ -300,13 +300,13 @@ namespace AppTiendaMascotas
 
 		private void btnMascota_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnMascota());
+			abrirFormHija(new vtnMascota());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(25, 25, 25);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -317,13 +317,13 @@ namespace AppTiendaMascotas
 
 		private void btnAlojamiento_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnAlojamiento());
+			abrirFormHija(new vtnAlojamiento());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(25, 25, 25);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -334,13 +334,13 @@ namespace AppTiendaMascotas
 
 		private void btnAtencion_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnAtencion());
+			abrirFormHija(new vtnAtencion());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(25, 25, 25);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -351,13 +351,13 @@ namespace AppTiendaMascotas
 
 		private void btnVenta_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnVenta());
+			abrirFormHija(new vtnVenta());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -368,13 +368,13 @@ namespace AppTiendaMascotas
 
 		private void btnCompra_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnCompra());
+			abrirFormHija(new vtnCompra());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(25, 25, 25);
-			btnConsultas.BackColor = Color.FromArgb(46, 48, 51);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
@@ -385,13 +385,13 @@ namespace AppTiendaMascotas
 
 		private void btnConsultas_Click(object sender, EventArgs e)
 		{
-			//abrirFormHija(new vtnConsulta());
+			abrirFormHija(new vtnAcercaDe());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
 			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
-			btnConsultas.BackColor = Color.FromArgb(25, 25, 25);
+			btnAcercaDe.BackColor = Color.FromArgb(25, 25, 25);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);

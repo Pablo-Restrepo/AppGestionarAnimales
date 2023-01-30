@@ -113,6 +113,16 @@ namespace AppTiendaMascotas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_round_question_mark {
+            get {
+                object obj = ResourceManager.GetObject("ic_round-question-mark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_round_search {
             get {
                 object obj = ResourceManager.GetObject("ic_round-search", resourceCulture);

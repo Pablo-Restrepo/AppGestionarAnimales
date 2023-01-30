@@ -31,8 +31,14 @@ namespace AppTiendaMascotas
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tienda));
 			this.panelMenu = new System.Windows.Forms.Panel();
+			this.lblHora = new System.Windows.Forms.Label();
+			this.panelTop = new System.Windows.Forms.Panel();
+			this.txtBuscar = new System.Windows.Forms.TextBox();
+			this.panelCentral = new System.Windows.Forms.Panel();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pbLogo = new System.Windows.Forms.PictureBox();
-			this.btnConsultas = new System.Windows.Forms.Button();
+			this.btnAcercaDe = new System.Windows.Forms.Button();
 			this.btnCompra = new System.Windows.Forms.Button();
 			this.btnVenta = new System.Windows.Forms.Button();
 			this.btnAtencion = new System.Windows.Forms.Button();
@@ -43,25 +49,19 @@ namespace AppTiendaMascotas
 			this.btnCliente = new System.Windows.Forms.Button();
 			this.btnResidencia = new System.Windows.Forms.Button();
 			this.btnInicio = new System.Windows.Forms.Button();
-			this.lblHora = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.panelTop = new System.Windows.Forms.Panel();
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
-			this.txtBuscar = new System.Windows.Forms.TextBox();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.panelCentral = new System.Windows.Forms.Panel();
 			this.panelMenu.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panelTop.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panelMenu
 			// 
 			this.panelMenu.Controls.Add(this.pbLogo);
-			this.panelMenu.Controls.Add(this.btnConsultas);
+			this.panelMenu.Controls.Add(this.btnAcercaDe);
 			this.panelMenu.Controls.Add(this.btnCompra);
 			this.panelMenu.Controls.Add(this.btnVenta);
 			this.panelMenu.Controls.Add(this.btnAtencion);
@@ -80,6 +80,79 @@ namespace AppTiendaMascotas
 			this.panelMenu.Size = new System.Drawing.Size(183, 610);
 			this.panelMenu.TabIndex = 0;
 			// 
+			// lblHora
+			// 
+			this.lblHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.lblHora.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblHora.ForeColor = System.Drawing.Color.White;
+			this.lblHora.Location = new System.Drawing.Point(20, 83);
+			this.lblHora.Name = "lblHora";
+			this.lblHora.Size = new System.Drawing.Size(136, 58);
+			this.lblHora.TabIndex = 2;
+			this.lblHora.Text = "N/A";
+			this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// panelTop
+			// 
+			this.panelTop.Controls.Add(this.pictureBox3);
+			this.panelTop.Controls.Add(this.txtBuscar);
+			this.panelTop.Controls.Add(this.pictureBox2);
+			this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelTop.Location = new System.Drawing.Point(183, 0);
+			this.panelTop.Name = "panelTop";
+			this.panelTop.Size = new System.Drawing.Size(736, 55);
+			this.panelTop.TabIndex = 1;
+			// 
+			// txtBuscar
+			// 
+			this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtBuscar.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBuscar.ForeColor = System.Drawing.Color.DarkGray;
+			this.txtBuscar.Location = new System.Drawing.Point(20, 23);
+			this.txtBuscar.MaxLength = 40;
+			this.txtBuscar.Name = "txtBuscar";
+			this.txtBuscar.Size = new System.Drawing.Size(671, 18);
+			this.txtBuscar.TabIndex = 21;
+			this.txtBuscar.TabStop = false;
+			this.txtBuscar.Text = "Buscar";
+			this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
+			this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+			// 
+			// panelCentral
+			// 
+			this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+			this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelCentral.Location = new System.Drawing.Point(183, 55);
+			this.panelCentral.Name = "panelCentral";
+			this.panelCentral.Padding = new System.Windows.Forms.Padding(0, 0, 0, 14);
+			this.panelCentral.Size = new System.Drawing.Size(736, 555);
+			this.panelCentral.TabIndex = 2;
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.pictureBox3.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.ic_round_search;
+			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBox3.Location = new System.Drawing.Point(668, 19);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+			this.pictureBox3.TabIndex = 14;
+			this.pictureBox3.TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.pictureBox2.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.search;
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBox2.Location = new System.Drawing.Point(6, 14);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(696, 38);
+			this.pictureBox2.TabIndex = 1;
+			this.pictureBox2.TabStop = false;
+			// 
 			// pbLogo
 			// 
 			this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
@@ -92,26 +165,26 @@ namespace AppTiendaMascotas
 			this.pbLogo.TabIndex = 1;
 			this.pbLogo.TabStop = false;
 			// 
-			// btnConsultas
+			// btnAcercaDe
 			// 
-			this.btnConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.btnConsultas.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.material_symbols_screen_search_desktop_outline;
-			this.btnConsultas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.btnConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnConsultas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.btnConsultas.FlatAppearance.BorderSize = 0;
-			this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnConsultas.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnConsultas.ForeColor = System.Drawing.Color.White;
-			this.btnConsultas.Location = new System.Drawing.Point(25, 552);
-			this.btnConsultas.Name = "btnConsultas";
-			this.btnConsultas.Size = new System.Drawing.Size(132, 34);
-			this.btnConsultas.TabIndex = 13;
-			this.btnConsultas.Text = "       Consultas";
-			this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnConsultas.UseVisualStyleBackColor = false;
-			this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+			this.btnAcercaDe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnAcercaDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.btnAcercaDe.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.ic_round_question_mark;
+			this.btnAcercaDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.btnAcercaDe.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnAcercaDe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.btnAcercaDe.FlatAppearance.BorderSize = 0;
+			this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAcercaDe.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAcercaDe.ForeColor = System.Drawing.Color.White;
+			this.btnAcercaDe.Location = new System.Drawing.Point(25, 552);
+			this.btnAcercaDe.Name = "btnAcercaDe";
+			this.btnAcercaDe.Size = new System.Drawing.Size(132, 34);
+			this.btnAcercaDe.TabIndex = 13;
+			this.btnAcercaDe.Text = "       Acerca De";
+			this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnAcercaDe.UseVisualStyleBackColor = false;
+			this.btnAcercaDe.Click += new System.EventHandler(this.btnConsultas_Click);
 			// 
 			// btnCompra
 			// 
@@ -313,18 +386,6 @@ namespace AppTiendaMascotas
 			this.btnInicio.UseVisualStyleBackColor = false;
 			this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
 			// 
-			// lblHora
-			// 
-			this.lblHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.lblHora.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblHora.ForeColor = System.Drawing.Color.White;
-			this.lblHora.Location = new System.Drawing.Point(20, 83);
-			this.lblHora.Name = "lblHora";
-			this.lblHora.Size = new System.Drawing.Size(136, 58);
-			this.lblHora.TabIndex = 2;
-			this.lblHora.Text = "N/A";
-			this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -336,67 +397,6 @@ namespace AppTiendaMascotas
 			this.pictureBox1.Size = new System.Drawing.Size(149, 586);
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
-			// 
-			// panelTop
-			// 
-			this.panelTop.Controls.Add(this.pictureBox3);
-			this.panelTop.Controls.Add(this.txtBuscar);
-			this.panelTop.Controls.Add(this.pictureBox2);
-			this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelTop.Location = new System.Drawing.Point(183, 0);
-			this.panelTop.Name = "panelTop";
-			this.panelTop.Size = new System.Drawing.Size(736, 55);
-			this.panelTop.TabIndex = 1;
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.pictureBox3.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.ic_round_search;
-			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox3.Location = new System.Drawing.Point(668, 19);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-			this.pictureBox3.TabIndex = 14;
-			this.pictureBox3.TabStop = false;
-			// 
-			// txtBuscar
-			// 
-			this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtBuscar.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBuscar.ForeColor = System.Drawing.Color.DarkGray;
-			this.txtBuscar.Location = new System.Drawing.Point(20, 23);
-			this.txtBuscar.MaxLength = 40;
-			this.txtBuscar.Name = "txtBuscar";
-			this.txtBuscar.Size = new System.Drawing.Size(671, 18);
-			this.txtBuscar.TabIndex = 21;
-			this.txtBuscar.TabStop = false;
-			this.txtBuscar.Text = "Buscar";
-			this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
-			this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.pictureBox2.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.search;
-			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox2.Location = new System.Drawing.Point(6, 14);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(696, 38);
-			this.pictureBox2.TabIndex = 1;
-			this.pictureBox2.TabStop = false;
-			// 
-			// panelCentral
-			// 
-			this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panelCentral.Location = new System.Drawing.Point(183, 55);
-			this.panelCentral.Name = "panelCentral";
-			this.panelCentral.Padding = new System.Windows.Forms.Padding(0, 0, 0, 14);
-			this.panelCentral.Size = new System.Drawing.Size(736, 555);
-			this.panelCentral.TabIndex = 2;
 			// 
 			// Tienda
 			// 
@@ -414,12 +414,12 @@ namespace AppTiendaMascotas
 			this.Text = " Tienda de Mascotas";
 			this.Load += new System.EventHandler(this.Tienda_Load);
 			this.panelMenu.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panelTop.ResumeLayout(false);
 			this.panelTop.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -435,7 +435,7 @@ namespace AppTiendaMascotas
 		private System.Windows.Forms.Label lblHora;
 		private System.Windows.Forms.Button btnInicio;
 		private System.Windows.Forms.Button btnResidencia;
-		private System.Windows.Forms.Button btnConsultas;
+		private System.Windows.Forms.Button btnAcercaDe;
 		private System.Windows.Forms.Button btnCompra;
 		private System.Windows.Forms.Button btnVenta;
 		private System.Windows.Forms.Button btnAtencion;

@@ -31,3 +31,12 @@ C:\Users\restr\Source\Repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAn
 C:\Users\restr\Source\Repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.pdb
 C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnResidencia.resources
 C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnInicio.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnCliente.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnEmpleado.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnMascota.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnProducto.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnAlojamiento.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnAtencion.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnVenta.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnCompra.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnAcercaDe.resources
