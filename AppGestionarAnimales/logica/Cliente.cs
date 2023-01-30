@@ -39,7 +39,16 @@ namespace AppTiendaMascotas.logica
             return rDT;
         }
 
-        public string consultarCantidadClientes()
+		public DataSet consultarClienteMenu()
+		{
+			DataSet rDT = new DataSet();
+			string consulta;
+			consulta = "SELECT CEDULADUENIO Cedula,NOMBREDUENIO Nombre,NUMTELEFONODUENIO Numero FROM DUENIO";
+			rDT = dt.ejecutarSELECT(consulta);
+			return rDT;
+		}
+
+		public string consultarCantidadClientes()
         {
             DataSet rDT = new DataSet();
             string consulta;

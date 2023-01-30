@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
+using System.Windows.Forms;
 
 namespace AppTiendaMascotas.accesoDatos
 {
@@ -15,20 +16,23 @@ namespace AppTiendaMascotas.accesoDatos
         //metodo que crea una intruccion dml;
         public int ejecutarDML(string consulta) 
         {
-            int filasAfectadas;
-            //paso1: crear conexion:
-            OracleConnection miConexion = new OracleConnection(cadenaConexion);
-            //paso 2:crear un objeto de tipo oracle command
-            OracleCommand miComando = new OracleCommand(consulta, miConexion);
-            //paso3: abrir la conexion:
-            miConexion.Open();
-            /*este comando devuelve un valor entero que indica las filas que se modificaron
-             en la operacion*/
-            filasAfectadas = miComando.ExecuteNonQuery();
-            //paso 5: cierro la conexion:
-            miConexion.Close();
-            return filasAfectadas;
-        }
+			int filasAfectadas = 0;
+			OracleConnection miConexion = new OracleConnection(cadenaConexion);
+			OracleCommand miComando = new OracleCommand(consulta, miConexion);
+			try
+			{
+				miConexion.Open();
+				filasAfectadas = miComando.ExecuteNonQuery();
+				miConexion.Close();
+				return filasAfectadas;
+			}
+			catch (Exception ex)
+			{
+				miConexion.Close();
+				MessageBox.Show("Ocurrió un error con la base de datos: " + ex.Message);
+			}
+			return filasAfectadas;
+		}
 
         public DataSet ejecutarSELECT(string consulta) 
         {

@@ -39,5 +39,14 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
-    }
+
+		public DataSet consultarNumAlojamiento()
+		{
+			DataSet rDT = new DataSet();
+			string consulta;
+			consulta = "SELECT COUNT(IDALOJA) FROM ALOJA WHERE fechafinalojamiento >= SYSDATE";
+			rDT = dt.ejecutarSELECT(consulta);
+			return rDT;
+		}
+	}
 }

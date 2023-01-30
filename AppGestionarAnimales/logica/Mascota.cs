@@ -39,5 +39,14 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
-    }
+
+		public DataSet consultarMascotasMenu()
+		{
+			DataSet rDT = new DataSet();
+			string consulta;
+			consulta = "SELECT NOMBREMASCOTA Nombre,TIPOMASCOTA Tipo,ESPECIEMASCOTA Especie,GENEROMASCOTA Genero FROM MASCOTA";
+			rDT = dt.ejecutarSELECT(consulta);
+			return rDT;
+		}
+	}
 }

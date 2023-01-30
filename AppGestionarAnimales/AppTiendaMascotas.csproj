@@ -97,10 +97,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoDatos\Datos.cs" />
-    <Compile Include="Tienda.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Tienda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tienda.Designer.cs">
+    <Compile Include="Ventanas\Tienda.Designer.cs">
       <DependentUpon>Tienda.cs</DependentUpon>
     </Compile>
     <Compile Include="logica\Aloja.cs" />
@@ -114,19 +119,32 @@
     <Compile Include="logica\Venta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Tienda.resx">
+    <Compile Include="Ventanas\vtnInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnInicio.Designer.cs">
+      <DependentUpon>vtnInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\vtnResidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnResidencia.Designer.cs">
+      <DependentUpon>vtnResidencia.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ventanas\Tienda.resx">
       <DependentUpon>Tienda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Ventanas\vtnInicio.resx">
+      <DependentUpon>vtnInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\vtnResidencia.resx">
+      <DependentUpon>vtnResidencia.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -158,6 +176,75 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ph_dog-bold %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_round-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi_users-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdi_worker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fluent-mdl2_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_baseline-pets %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-park-solid_attention.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols_point-of-sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols_shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-symbols_screen-search-desktop-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bx_building-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_sharp-supervised-user-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_round-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 7 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 7 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 7 %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

@@ -48,5 +48,15 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT.Tables[0].Rows[0][0].ToString();
         }
-    }
+
+		public DataTable consultarResidenciaIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT IDRESIDENCIA FROM RESIDENCIA";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
+		}
+	}
 }

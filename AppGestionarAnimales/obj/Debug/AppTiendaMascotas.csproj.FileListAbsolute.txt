@@ -29,3 +29,5 @@ C:\Users\restr\Source\Repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAn
 C:\Users\restr\Source\Repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.csproj.CopyComplete
 C:\Users\restr\Source\Repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.exe
 C:\Users\restr\Source\Repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.pdb
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnResidencia.resources
+C:\Users\restr\source\repos\AppGestionarAnimales\appTiendaMascota\AppGestionarAnimales\obj\Debug\AppTiendaMascotas.Ventanas.vtnInicio.resources
