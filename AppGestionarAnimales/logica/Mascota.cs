@@ -35,7 +35,7 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT IDMASCOTA,NOMBREMASCOTA,TIPOMASCOTA,ESPECIEMASCOTA,GENEROMASCOTA,CEDULADUENIO FROM MASCOTA";
+            consulta = "SELECT IDMASCOTA ID,NOMBREMASCOTA NOMBRE,TIPOMASCOTA TIPO,ESPECIEMASCOTA ESPECIE,GENEROMASCOTA GENERO,CEDULADUENIO ID_DUEÑO FROM MASCOTA";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
@@ -47,6 +47,16 @@ namespace AppTiendaMascotas.logica
 			consulta = "SELECT NOMBREMASCOTA Nombre,TIPOMASCOTA Tipo,ESPECIEMASCOTA Especie,GENEROMASCOTA Genero FROM MASCOTA";
 			rDT = dt.ejecutarSELECT(consulta);
 			return rDT;
+		}
+
+		public DataTable consultarMascotaIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT IDMASCOTA, NOMBREMASCOTA FROM MASCOTA";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
 		}
 	}
 }

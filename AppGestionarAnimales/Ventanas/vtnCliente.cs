@@ -28,9 +28,9 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void informacion()
 		{
-			txtIdClienteDelete.DataSource = cliente.consultarClienteIDs();
-			txtIdClienteDelete.DisplayMember = "NOMBREDUENIO";
-			txtIdClienteDelete.ValueMember = "CEDULADUENIO";
+			cbxIdClienteDelete.DataSource = cliente.consultarClienteIDs();
+			cbxIdClienteDelete.DisplayMember = "NOMBREDUENIO";
+			cbxIdClienteDelete.ValueMember = "CEDULADUENIO";
 
 			DataSet dsResultado = new DataSet();
 			dsResultado = cliente.consultarCliente();
@@ -45,7 +45,7 @@ namespace AppTiendaMascotas.Ventanas
 			txtCedulaCliente.Anchor = AnchorStyles.Top;
 			txtNumTele.Anchor = AnchorStyles.Top;
 			txtNombreC.Anchor = AnchorStyles.Top;
-			txtIdClienteDelete.Anchor = AnchorStyles.Top;
+			cbxIdClienteDelete.Anchor = AnchorStyles.Top;
 			pictureBox1.Anchor = AnchorStyles.Top;
 			btnEliminarCliente.Anchor = AnchorStyles.Top;
 			btnGuardarC.Anchor = AnchorStyles.Top;
@@ -110,17 +110,36 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
+			if (txtCedulaCliente.Text.Equals("") || txtNumTele.Text.Equals("") || txtNombreC.Text.Equals(""))
+			{
+				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
 			int resultado;
 			long numTelefono, cedulaCliente;
 			string nombreCliente;
 
-			cedulaCliente = long.Parse(txtCedulaCliente.Text);
-			numTelefono = long.Parse(txtNumTele.Text);
-			nombreCliente = txtNombreC.Text;
-			resultado = cliente.ingresarCliente(cedulaCliente, nombreCliente, numTelefono);
+			try
+			{
+				cedulaCliente = long.Parse(txtCedulaCliente.Text);
+				numTelefono = long.Parse(txtNumTele.Text);
+				nombreCliente = txtNombreC.Text;
+				resultado = cliente.ingresarCliente(cedulaCliente, nombreCliente, numTelefono);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
 			if (resultado > 0)
 			{
+				informacion();
 				MessageBox.Show("Cliente registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				txtCedulaCliente.Text = "";
+				txtNumTele.Text = "";
+				txtNombreC.Text = "";
 			}
 			else
 			{
@@ -130,12 +149,28 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
+			if (cbxIdClienteDelete.Text.Equals(""))
+			{
+				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
 			int idCliente, resultado;
 
-			idCliente = int.Parse(txtIdClienteDelete.Text);
-			resultado = cliente.eliminarCliente(idCliente);
+			try
+			{
+				idCliente = Convert.ToInt32(cbxIdClienteDelete.SelectedValue);
+				resultado = cliente.eliminarCliente(idCliente);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
 			if (resultado > 0)
 			{
+				informacion();
 				MessageBox.Show("Cliente eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			else

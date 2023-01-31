@@ -34,7 +34,7 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT CEDULADUENIO,NOMBREDUENIO,NUMTELEFONODUENIO FROM DUENIO";
+            consulta = "SELECT CEDULADUENIO CEDULA,NOMBREDUENIO NOMBRE,NUMTELEFONODUENIO TELEFONO FROM DUENIO";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }

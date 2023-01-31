@@ -39,7 +39,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtNumTele = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.txtIdClienteDelete = new System.Windows.Forms.ComboBox();
+			this.cbxIdClienteDelete = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.dgvConsultaClientes = new System.Windows.Forms.DataGridView();
@@ -141,17 +141,17 @@
 			this.label5.TabIndex = 27;
 			this.label5.Text = "Numero de Telefono:";
 			// 
-			// txtIdClienteDelete
+			// cbxIdClienteDelete
 			// 
-			this.txtIdClienteDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtIdClienteDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.txtIdClienteDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtIdClienteDelete.ForeColor = System.Drawing.Color.White;
-			this.txtIdClienteDelete.FormattingEnabled = true;
-			this.txtIdClienteDelete.Location = new System.Drawing.Point(237, 352);
-			this.txtIdClienteDelete.Name = "txtIdClienteDelete";
-			this.txtIdClienteDelete.Size = new System.Drawing.Size(300, 27);
-			this.txtIdClienteDelete.TabIndex = 33;
+			this.cbxIdClienteDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxIdClienteDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxIdClienteDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxIdClienteDelete.ForeColor = System.Drawing.Color.White;
+			this.cbxIdClienteDelete.FormattingEnabled = true;
+			this.cbxIdClienteDelete.Location = new System.Drawing.Point(237, 352);
+			this.cbxIdClienteDelete.Name = "cbxIdClienteDelete";
+			this.cbxIdClienteDelete.Size = new System.Drawing.Size(300, 27);
+			this.cbxIdClienteDelete.TabIndex = 33;
 			// 
 			// label6
 			// 
@@ -326,7 +326,7 @@
 			this.Controls.Add(this.dgvConsultaClientes);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnEliminarCliente);
-			this.Controls.Add(this.txtIdClienteDelete);
+			this.Controls.Add(this.cbxIdClienteDelete);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.btnGuardarC);
 			this.Controls.Add(this.txtNumTele);
@@ -362,7 +362,7 @@
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button btnGuardarC;
-		private System.Windows.Forms.ComboBox txtIdClienteDelete;
+		private System.Windows.Forms.ComboBox cbxIdClienteDelete;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button btnEliminarCliente;
 		private System.Windows.Forms.Label label7;

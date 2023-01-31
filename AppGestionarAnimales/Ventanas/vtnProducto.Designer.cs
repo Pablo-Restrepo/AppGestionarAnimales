@@ -28,10 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtPrecioP = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.txtSerialProdDelete = new System.Windows.Forms.ComboBox();
+			this.cbxSerialProdDelete = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.dgvConsultaProducto = new System.Windows.Forms.DataGridView();
@@ -143,17 +143,17 @@
 			this.label5.TabIndex = 27;
 			this.label5.Text = "Precio del Producto:";
 			// 
-			// txtSerialProdDelete
+			// cbxSerialProdDelete
 			// 
-			this.txtSerialProdDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtSerialProdDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.txtSerialProdDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtSerialProdDelete.ForeColor = System.Drawing.Color.White;
-			this.txtSerialProdDelete.FormattingEnabled = true;
-			this.txtSerialProdDelete.Location = new System.Drawing.Point(237, 384);
-			this.txtSerialProdDelete.Name = "txtSerialProdDelete";
-			this.txtSerialProdDelete.Size = new System.Drawing.Size(300, 27);
-			this.txtSerialProdDelete.TabIndex = 33;
+			this.cbxSerialProdDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxSerialProdDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxSerialProdDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxSerialProdDelete.ForeColor = System.Drawing.Color.White;
+			this.cbxSerialProdDelete.FormattingEnabled = true;
+			this.cbxSerialProdDelete.Location = new System.Drawing.Point(237, 384);
+			this.cbxSerialProdDelete.Name = "cbxSerialProdDelete";
+			this.cbxSerialProdDelete.Size = new System.Drawing.Size(300, 27);
+			this.cbxSerialProdDelete.TabIndex = 33;
 			// 
 			// label6
 			// 
@@ -186,47 +186,47 @@
 			this.dgvConsultaProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvConsultaProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dgvConsultaProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvConsultaProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvConsultaProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvConsultaProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvConsultaProducto.DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Inter Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvConsultaProducto.DefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvConsultaProducto.EnableHeadersVisualStyles = false;
 			this.dgvConsultaProducto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.dgvConsultaProducto.Location = new System.Drawing.Point(16, 542);
 			this.dgvConsultaProducto.Name = "dgvConsultaProducto";
 			this.dgvConsultaProducto.ReadOnly = true;
 			this.dgvConsultaProducto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvConsultaProducto.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Inter Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvConsultaProducto.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this.dgvConsultaProducto.RowHeadersVisible = false;
 			this.dgvConsultaProducto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-			this.dgvConsultaProducto.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+			this.dgvConsultaProducto.RowsDefaultCellStyle = dataGridViewCellStyle8;
 			this.dgvConsultaProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvConsultaProducto.Size = new System.Drawing.Size(692, 259);
 			this.dgvConsultaProducto.TabIndex = 36;
@@ -324,9 +324,9 @@
 			this.label8.ForeColor = System.Drawing.Color.White;
 			this.label8.Location = new System.Drawing.Point(12, 219);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(171, 23);
+			this.label8.Size = new System.Drawing.Size(177, 23);
 			this.label8.TabIndex = 39;
-			this.label8.Text = "Tipo de Producto";
+			this.label8.Text = "Tipo de Producto:";
 			// 
 			// cbxTipoP
 			// 
@@ -335,6 +335,12 @@
 			this.cbxTipoP.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbxTipoP.ForeColor = System.Drawing.Color.White;
 			this.cbxTipoP.FormattingEnabled = true;
+			this.cbxTipoP.Items.AddRange(new object[] {
+            "Alimento",
+            "Medicamento",
+            "Juguete",
+            "Accesorio",
+            "Hogar"});
 			this.cbxTipoP.Location = new System.Drawing.Point(237, 219);
 			this.cbxTipoP.Name = "cbxTipoP";
 			this.cbxTipoP.Size = new System.Drawing.Size(300, 27);
@@ -354,7 +360,7 @@
 			this.Controls.Add(this.dgvConsultaProducto);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnEliminarProducto);
-			this.Controls.Add(this.txtSerialProdDelete);
+			this.Controls.Add(this.cbxSerialProdDelete);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.btnGuardarProducto);
 			this.Controls.Add(this.txtPrecioP);
@@ -390,7 +396,7 @@
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button btnGuardarProducto;
-		private System.Windows.Forms.ComboBox txtSerialProdDelete;
+		private System.Windows.Forms.ComboBox cbxSerialProdDelete;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button btnEliminarProducto;
 		private System.Windows.Forms.Label label7;

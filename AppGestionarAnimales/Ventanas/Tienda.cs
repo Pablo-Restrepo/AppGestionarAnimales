@@ -80,11 +80,19 @@ namespace AppTiendaMascotas
 
 		private void Timer1_Elapsed(object sender, ElapsedEventArgs e)
 		{
-			lblHora.Invoke((MethodInvoker)delegate
+			try
 			{
-				DateTime now = DateTime.Now;
-				lblHora.Text = now.ToString("dd 'de' MMMM 'del' yyyy");
-			});
+				lblHora.Invoke((MethodInvoker)delegate
+				{
+					DateTime now = DateTime.Now;
+					lblHora.Text = now.ToString("dd 'de' MMMM 'del' yyyy");
+				});
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
 		}
 
 		private System.Drawing.Drawing2D.GraphicsPath CreateRoundedRectangle(int buttonWidth, int buttonHeight)

@@ -35,24 +35,20 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.txtResidenciaIdA = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.txtAlojamientoDelete = new System.Windows.Forms.ComboBox();
+			this.cbxAlojamientoDelete = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.dgvConsultaAlojamiento = new System.Windows.Forms.DataGridView();
 			this.btnEliminarAlojamiento = new System.Windows.Forms.Button();
 			this.btnGuardarAlojamiento = new System.Windows.Forms.Button();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.txtMascotaIdA = new System.Windows.Forms.TextBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.timeFechaInicioAloj = new System.Windows.Forms.DateTimePicker();
 			this.timeFechaFinAloj = new System.Windows.Forms.DateTimePicker();
+			this.cbxResidencia = new System.Windows.Forms.ComboBox();
+			this.cbxMascota = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsultaAlojamiento)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -91,19 +87,6 @@
 			this.label3.TabIndex = 20;
 			this.label3.Text = "Numero de Residencia:";
 			// 
-			// txtResidenciaIdA
-			// 
-			this.txtResidenciaIdA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtResidenciaIdA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtResidenciaIdA.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtResidenciaIdA.ForeColor = System.Drawing.Color.White;
-			this.txtResidenciaIdA.Location = new System.Drawing.Point(250, 86);
-			this.txtResidenciaIdA.MaxLength = 50;
-			this.txtResidenciaIdA.Name = "txtResidenciaIdA";
-			this.txtResidenciaIdA.Size = new System.Drawing.Size(272, 18);
-			this.txtResidenciaIdA.TabIndex = 23;
-			this.txtResidenciaIdA.TabStop = false;
-			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -112,9 +95,9 @@
 			this.label4.ForeColor = System.Drawing.Color.White;
 			this.label4.Location = new System.Drawing.Point(11, 129);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(168, 23);
+			this.label4.Size = new System.Drawing.Size(95, 23);
 			this.label4.TabIndex = 24;
-			this.label4.Text = "ID de la Mascota:";
+			this.label4.Text = "Mascota:";
 			// 
 			// label5
 			// 
@@ -124,21 +107,21 @@
 			this.label5.ForeColor = System.Drawing.Color.White;
 			this.label5.Location = new System.Drawing.Point(11, 174);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(120, 23);
+			this.label5.Size = new System.Drawing.Size(126, 23);
 			this.label5.TabIndex = 27;
-			this.label5.Text = "Fecha Inicio";
+			this.label5.Text = "Fecha Inicio:";
 			// 
-			// txtAlojamientoDelete
+			// cbxAlojamientoDelete
 			// 
-			this.txtAlojamientoDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtAlojamientoDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.txtAlojamientoDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAlojamientoDelete.ForeColor = System.Drawing.Color.White;
-			this.txtAlojamientoDelete.FormattingEnabled = true;
-			this.txtAlojamientoDelete.Location = new System.Drawing.Point(237, 388);
-			this.txtAlojamientoDelete.Name = "txtAlojamientoDelete";
-			this.txtAlojamientoDelete.Size = new System.Drawing.Size(300, 27);
-			this.txtAlojamientoDelete.TabIndex = 33;
+			this.cbxAlojamientoDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxAlojamientoDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxAlojamientoDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxAlojamientoDelete.ForeColor = System.Drawing.Color.White;
+			this.cbxAlojamientoDelete.FormattingEnabled = true;
+			this.cbxAlojamientoDelete.Location = new System.Drawing.Point(237, 388);
+			this.cbxAlojamientoDelete.Name = "cbxAlojamientoDelete";
+			this.cbxAlojamientoDelete.Size = new System.Drawing.Size(300, 27);
+			this.cbxAlojamientoDelete.TabIndex = 33;
 			// 
 			// label6
 			// 
@@ -258,39 +241,6 @@
 			this.btnGuardarAlojamiento.UseVisualStyleBackColor = false;
 			this.btnGuardarAlojamiento.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
-			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox2.Location = new System.Drawing.Point(237, 80);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(300, 32);
-			this.pictureBox2.TabIndex = 22;
-			this.pictureBox2.TabStop = false;
-			// 
-			// txtMascotaIdA
-			// 
-			this.txtMascotaIdA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtMascotaIdA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtMascotaIdA.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtMascotaIdA.ForeColor = System.Drawing.Color.White;
-			this.txtMascotaIdA.Location = new System.Drawing.Point(250, 132);
-			this.txtMascotaIdA.MaxLength = 50;
-			this.txtMascotaIdA.Name = "txtMascotaIdA";
-			this.txtMascotaIdA.Size = new System.Drawing.Size(272, 18);
-			this.txtMascotaIdA.TabIndex = 38;
-			this.txtMascotaIdA.TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
-			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox1.Location = new System.Drawing.Point(237, 126);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(300, 32);
-			this.pictureBox1.TabIndex = 37;
-			this.pictureBox1.TabStop = false;
-			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
@@ -323,6 +273,30 @@
 			this.timeFechaFinAloj.Size = new System.Drawing.Size(299, 26);
 			this.timeFechaFinAloj.TabIndex = 49;
 			// 
+			// cbxResidencia
+			// 
+			this.cbxResidencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxResidencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxResidencia.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxResidencia.ForeColor = System.Drawing.Color.White;
+			this.cbxResidencia.FormattingEnabled = true;
+			this.cbxResidencia.Location = new System.Drawing.Point(236, 83);
+			this.cbxResidencia.Name = "cbxResidencia";
+			this.cbxResidencia.Size = new System.Drawing.Size(300, 27);
+			this.cbxResidencia.TabIndex = 50;
+			// 
+			// cbxMascota
+			// 
+			this.cbxMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxMascota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxMascota.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxMascota.ForeColor = System.Drawing.Color.White;
+			this.cbxMascota.FormattingEnabled = true;
+			this.cbxMascota.Location = new System.Drawing.Point(236, 129);
+			this.cbxMascota.Name = "cbxMascota";
+			this.cbxMascota.Size = new System.Drawing.Size(300, 27);
+			this.cbxMascota.TabIndex = 51;
+			// 
 			// vtnAlojamiento
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,21 +304,19 @@
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
 			this.ClientSize = new System.Drawing.Size(736, 555);
+			this.Controls.Add(this.cbxMascota);
+			this.Controls.Add(this.cbxResidencia);
 			this.Controls.Add(this.timeFechaFinAloj);
 			this.Controls.Add(this.timeFechaInicioAloj);
 			this.Controls.Add(this.label8);
-			this.Controls.Add(this.txtMascotaIdA);
-			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.dgvConsultaAlojamiento);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnEliminarAlojamiento);
-			this.Controls.Add(this.txtAlojamientoDelete);
+			this.Controls.Add(this.cbxAlojamientoDelete);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.btnGuardarAlojamiento);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.txtResidenciaIdA);
-			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -353,8 +325,6 @@
 			this.Text = "vtnResidencia";
 			this.Resize += new System.EventHandler(this.vtnResidencia_Resize);
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsultaAlojamiento)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -364,20 +334,18 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox txtResidenciaIdA;
-		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button btnGuardarAlojamiento;
-		private System.Windows.Forms.ComboBox txtAlojamientoDelete;
+		private System.Windows.Forms.ComboBox cbxAlojamientoDelete;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button btnEliminarAlojamiento;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.DataGridView dgvConsultaAlojamiento;
-		private System.Windows.Forms.TextBox txtMascotaIdA;
-		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.DateTimePicker timeFechaInicioAloj;
 		private System.Windows.Forms.DateTimePicker timeFechaFinAloj;
+		private System.Windows.Forms.ComboBox cbxResidencia;
+		private System.Windows.Forms.ComboBox cbxMascota;
 	}
 }

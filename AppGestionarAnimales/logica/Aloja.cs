@@ -35,7 +35,7 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT IDALOJA,IDRESIDENCIA,IDMASCOTA,FECHAINICIOALOJAMIENTO,FECHAFINALOJAMIENTO FROM ALOJA";
+            consulta = "SELECT IDALOJA ID,IDRESIDENCIA ID_RESIDENCIA,IDMASCOTA ID_MASCOTA,FECHAINICIOALOJAMIENTO FECHA_INICIO,FECHAFINALOJAMIENTO FECHA_FINAL FROM ALOJA";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
@@ -47,6 +47,16 @@ namespace AppTiendaMascotas.logica
 			consulta = "SELECT COUNT(IDALOJA) FROM ALOJA WHERE fechafinalojamiento >= SYSDATE";
 			rDT = dt.ejecutarSELECT(consulta);
 			return rDT;
+		}
+
+		public DataTable consultarAlojamientoIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT IDALOJA, IDALOJA FROM ALOJA";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
 		}
 	}
 }

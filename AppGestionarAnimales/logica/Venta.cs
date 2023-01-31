@@ -58,5 +58,14 @@ namespace AppTiendaMascotas.logica
 			return rDT;
 		}
 
+		public DataTable consultarVentaIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT IDVENTA FROM VENTA";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
+		}
 	}
 }

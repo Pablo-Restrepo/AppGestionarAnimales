@@ -34,7 +34,7 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT CODEMPLEADO,NOMBREEMPLEADO,APELLIDOEMPLEADO,CARGOEMPLEADO,FECHAINGRESO,SALARIOEMPLEADO FROM EMPLEADO";
+            consulta = "SELECT CODEMPLEADO CODIGO,NOMBREEMPLEADO NOMBRE,APELLIDOEMPLEADO APELLIDO,CARGOEMPLEADO CARGO,FECHAINGRESO INGRESO,SALARIOEMPLEADO SALARIO FROM EMPLEADO";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
@@ -47,5 +47,15 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT.Tables[0].Rows[0][0].ToString();
         }
-    }
+
+		public DataTable consultarEmpleadoIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT CODEMPLEADO, NOMBREEMPLEADO FROM EMPLEADO";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
+		}
+	}
 }

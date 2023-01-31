@@ -24,16 +24,16 @@ namespace AppTiendaMascotas.Ventanas
 
 		private Boolean bandera = true;
 		private Boolean bandera2 = false;
-		private Cliente cliente = new Cliente();
+		private Empleado emp = new Empleado();
 
 		private void informacion()
 		{
-			cbxEmpledoElim.DataSource = cliente.consultarClienteIDs();
-			cbxEmpledoElim.DisplayMember = "NOMBREDUENIO";
-			cbxEmpledoElim.ValueMember = "CEDULADUENIO";
+			cbxEmpledoElim.DataSource = emp.consultarEmpleadoIDs();
+			cbxEmpledoElim.DisplayMember = "NOMBREEMPLEADO";
+			cbxEmpledoElim.ValueMember = "CODEMPLEADO";
 
 			DataSet dsResultado = new DataSet();
-			dsResultado = cliente.consultarCliente();
+			dsResultado = emp.consultarEmpleado();
 			dgvConsultaEmp.DataSource = dsResultado;
 			dgvConsultaEmp.DataMember = "ResultadoDatos";
 		}
@@ -93,6 +93,9 @@ namespace AppTiendaMascotas.Ventanas
 				label5.Location = new Point(label5.Location.X + 1, label5.Location.Y);
 				label6.Location = new Point(label6.Location.X + 1, label6.Location.Y);
 				label7.Location = new Point(label7.Location.X + 1, label7.Location.Y);
+				label8.Location = new Point(label8.Location.X + 1, label8.Location.Y);
+				label9.Location = new Point(label9.Location.X + 1, label9.Location.Y);
+				label10.Location = new Point(label10.Location.X + 1, label10.Location.Y);
 				dgvConsultaEmp.Location = new Point(dgvConsultaEmp.Location.X + 1, dgvConsultaEmp.Location.Y);
 			}
 			else if (!this.VerticalScroll.Visible && bandera2)
@@ -106,6 +109,9 @@ namespace AppTiendaMascotas.Ventanas
 				label5.Location = new Point(label5.Location.X - 2, label5.Location.Y);
 				label6.Location = new Point(label6.Location.X - 2, label6.Location.Y);
 				label7.Location = new Point(label7.Location.X - 2, label7.Location.Y);
+				label8.Location = new Point(label8.Location.X - 2, label8.Location.Y);
+				label9.Location = new Point(label9.Location.X - 2, label9.Location.Y);
+				label10.Location = new Point(label10.Location.X - 2, label10.Location.Y);
 				dgvConsultaEmp.Location = new Point(dgvConsultaEmp.Location.X - 2, dgvConsultaEmp.Location.Y);
 			}
 		}
@@ -117,37 +123,78 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			int resultado;
-			long numTelefono, cedulaCliente;
-			string nombreCliente;
+			if (timeFechaIngreso.Text.Equals("") || txtCodEmpleado.Text.Equals("") || txtSalarioEmp.Text.Equals("") || txtNombreEmpleado.Text.Equals("") || txtApellidoEmpleado.Text.Equals("") || cbxCargoEmp.Text.Equals(""))
+			{
+				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
 
-			cedulaCliente = long.Parse(txtCodEmpleado.Text);
-			numTelefono = long.Parse(txtApellidoEmpleado.Text);
-			nombreCliente = txtNombreEmpleado.Text;
-			resultado = cliente.ingresarCliente(cedulaCliente, nombreCliente, numTelefono);
+			int codEmpleado, resultado;
+			long salarioEmpleado;
+			string nombreEmpleado, apellidoEmpleado, cargoEmpleado, fechaIngreso;
+
+			try
+			{
+				DateTime fechaIEmp = timeFechaIngreso.Value;
+				fechaIngreso = fechaIEmp.ToString("dd'/'MM'/'yyyy");
+				codEmpleado = int.Parse(txtCodEmpleado.Text);
+				salarioEmpleado = int.Parse(txtSalarioEmp.Text);
+				nombreEmpleado = txtNombreEmpleado.Text;
+				apellidoEmpleado = txtApellidoEmpleado.Text;
+				cargoEmpleado = cbxCargoEmp.Text;
+				resultado = emp.ingresarEmpleado(codEmpleado, nombreEmpleado, apellidoEmpleado, cargoEmpleado, fechaIngreso, salarioEmpleado);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
 			if (resultado > 0)
 			{
-				MessageBox.Show("Cliente registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				informacion();
+				MessageBox.Show("Empleado registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				timeFechaIngreso.Text = "";
+				txtCodEmpleado.Text = "";
+				txtNombreEmpleado.Text = "";
+				txtSalarioEmp.Text = "";
+				txtApellidoEmpleado.Text = "";
 			}
 			else
 			{
-				MessageBox.Show("Cliente no registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Empleado no registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
+			if (cbxEmpledoElim.Text.Equals(""))
+			{
+				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
 			int idCliente, resultado;
 
-			idCliente = int.Parse(cbxEmpledoElim.Text);
-			resultado = cliente.eliminarCliente(idCliente);
+			try
+			{
+				idCliente = Convert.ToInt32(cbxEmpledoElim.SelectedValue);
+				resultado = emp.eliminarEmpleado(idCliente);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			
 			if (resultado > 0)
 			{
-				MessageBox.Show("Cliente eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				informacion();
+				MessageBox.Show("Empleado eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			else
 			{
-				MessageBox.Show("Cliente no eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Empleado no eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}

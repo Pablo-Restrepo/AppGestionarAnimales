@@ -109,20 +109,27 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			int idResidencia, numResidentes, resultado;
-			string tipoResidencia;
-
-			idResidencia = int.Parse(txtNumResidencia.Text);
-			numResidentes = int.Parse(txtNumResidentes.Text);
-			tipoResidencia = cbxTipoR.Text;
-
 			if (txtNumResidencia.Text.Equals("") || txtNumResidentes.Text.Equals("") || cbxTipoR.Text.Equals(""))
 			{
 				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
-			resultado = res.ingresarResidencia(idResidencia, numResidentes, tipoResidencia);
+			int idResidencia, numResidentes, resultado;
+			string tipoResidencia;
+
+			try
+			{
+				idResidencia = int.Parse(txtNumResidencia.Text);
+				numResidentes = int.Parse(txtNumResidentes.Text);
+				tipoResidencia = cbxTipoR.Text;
+				resultado = res.ingresarResidencia(idResidencia, numResidentes, tipoResidencia);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
 
 			if (resultado > 0)
 			{
@@ -139,16 +146,24 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
-			int numResidencia, resultado;
-
 			if (cbxResElimi.Text.Equals(""))
 			{
 				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
-			numResidencia = Convert.ToInt32(cbxResElimi.SelectedValue);
-			resultado = res.eliminarResidencia(numResidencia);
+			int numResidencia, resultado;
+
+			try
+			{
+				numResidencia = Convert.ToInt32(cbxResElimi.SelectedValue);
+				resultado = res.eliminarResidencia(numResidencia);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
 
 			if (resultado > 0)
 			{

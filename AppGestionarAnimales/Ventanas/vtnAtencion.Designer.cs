@@ -36,24 +36,24 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtApellidoEmpleado = new System.Windows.Forms.TextBox();
+			this.txtDescAtencion = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.cbxEmpledoElim = new System.Windows.Forms.ComboBox();
+			this.cbxAtencionElimi = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.dgvConsultaAtencion = new System.Windows.Forms.DataGridView();
-			this.btnEliminarEmpleado = new System.Windows.Forms.Button();
-			this.btnGuardarEmp = new System.Windows.Forms.Button();
+			this.btnEliminar = new System.Windows.Forms.Button();
+			this.btnGuardar = new System.Windows.Forms.Button();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.label8 = new System.Windows.Forms.Label();
-			this.txtSalarioEmp = new System.Windows.Forms.TextBox();
+			this.txtCostoAtencion = new System.Windows.Forms.TextBox();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
-			this.timeFechaIngreso = new System.Windows.Forms.DateTimePicker();
-			this.cbxCargoEmp = new System.Windows.Forms.ComboBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.comboBox2 = new System.Windows.Forms.ComboBox();
+			this.timeFechaAtencion = new System.Windows.Forms.DateTimePicker();
+			this.cbxTipoAtencion = new System.Windows.Forms.ComboBox();
+			this.cbxMascota = new System.Windows.Forms.ComboBox();
+			this.cbxEmpleado = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsultaAtencion)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -91,9 +91,9 @@
 			this.label3.ForeColor = System.Drawing.Color.White;
 			this.label3.Location = new System.Drawing.Point(11, 83);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(213, 23);
+			this.label3.Size = new System.Drawing.Size(108, 23);
 			this.label3.TabIndex = 20;
-			this.label3.Text = "Codigo del Empleado:";
+			this.label3.Text = "Empleado:";
 			// 
 			// label4
 			// 
@@ -103,22 +103,22 @@
 			this.label4.ForeColor = System.Drawing.Color.White;
 			this.label4.Location = new System.Drawing.Point(11, 129);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(168, 23);
+			this.label4.Size = new System.Drawing.Size(95, 23);
 			this.label4.TabIndex = 24;
-			this.label4.Text = "ID de la Mascota:";
+			this.label4.Text = "Mascota:";
 			// 
-			// txtApellidoEmpleado
+			// txtDescAtencion
 			// 
-			this.txtApellidoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtApellidoEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtApellidoEmpleado.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtApellidoEmpleado.ForeColor = System.Drawing.Color.White;
-			this.txtApellidoEmpleado.Location = new System.Drawing.Point(251, 221);
-			this.txtApellidoEmpleado.MaxLength = 200;
-			this.txtApellidoEmpleado.Name = "txtApellidoEmpleado";
-			this.txtApellidoEmpleado.Size = new System.Drawing.Size(272, 18);
-			this.txtApellidoEmpleado.TabIndex = 29;
-			this.txtApellidoEmpleado.TabStop = false;
+			this.txtDescAtencion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.txtDescAtencion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtDescAtencion.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDescAtencion.ForeColor = System.Drawing.Color.White;
+			this.txtDescAtencion.Location = new System.Drawing.Point(251, 221);
+			this.txtDescAtencion.MaxLength = 200;
+			this.txtDescAtencion.Name = "txtDescAtencion";
+			this.txtDescAtencion.Size = new System.Drawing.Size(272, 18);
+			this.txtDescAtencion.TabIndex = 29;
+			this.txtDescAtencion.TabStop = false;
 			// 
 			// label5
 			// 
@@ -132,17 +132,17 @@
 			this.label5.TabIndex = 27;
 			this.label5.Text = "Tipo de Atencion:";
 			// 
-			// cbxEmpledoElim
+			// cbxAtencionElimi
 			// 
-			this.cbxEmpledoElim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.cbxEmpledoElim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cbxEmpledoElim.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbxEmpledoElim.ForeColor = System.Drawing.Color.White;
-			this.cbxEmpledoElim.FormattingEnabled = true;
-			this.cbxEmpledoElim.Location = new System.Drawing.Point(237, 467);
-			this.cbxEmpledoElim.Name = "cbxEmpledoElim";
-			this.cbxEmpledoElim.Size = new System.Drawing.Size(300, 27);
-			this.cbxEmpledoElim.TabIndex = 33;
+			this.cbxAtencionElimi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxAtencionElimi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxAtencionElimi.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxAtencionElimi.ForeColor = System.Drawing.Color.White;
+			this.cbxAtencionElimi.FormattingEnabled = true;
+			this.cbxAtencionElimi.Location = new System.Drawing.Point(237, 467);
+			this.cbxAtencionElimi.Name = "cbxAtencionElimi";
+			this.cbxAtencionElimi.Size = new System.Drawing.Size(300, 27);
+			this.cbxAtencionElimi.TabIndex = 33;
 			// 
 			// label6
 			// 
@@ -220,47 +220,47 @@
 			this.dgvConsultaAtencion.Size = new System.Drawing.Size(692, 259);
 			this.dgvConsultaAtencion.TabIndex = 36;
 			// 
-			// btnEliminarEmpleado
+			// btnEliminar
 			// 
-			this.btnEliminarEmpleado.BackColor = System.Drawing.Color.Transparent;
-			this.btnEliminarEmpleado.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__3_;
-			this.btnEliminarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnEliminarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnEliminarEmpleado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.btnEliminarEmpleado.FlatAppearance.BorderSize = 0;
-			this.btnEliminarEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.btnEliminarEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.btnEliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEliminarEmpleado.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEliminarEmpleado.ForeColor = System.Drawing.Color.White;
-			this.btnEliminarEmpleado.Location = new System.Drawing.Point(442, 509);
-			this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
-			this.btnEliminarEmpleado.Size = new System.Drawing.Size(95, 37);
-			this.btnEliminarEmpleado.TabIndex = 34;
-			this.btnEliminarEmpleado.Text = "Eliminar";
-			this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
-			this.btnEliminarEmpleado.Click += new System.EventHandler(this.btnEliminar_Click);
+			this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+			this.btnEliminar.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__3_;
+			this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+			this.btnEliminar.FlatAppearance.BorderSize = 0;
+			this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+			this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEliminar.ForeColor = System.Drawing.Color.White;
+			this.btnEliminar.Location = new System.Drawing.Point(442, 509);
+			this.btnEliminar.Name = "btnEliminar";
+			this.btnEliminar.Size = new System.Drawing.Size(95, 37);
+			this.btnEliminar.TabIndex = 34;
+			this.btnEliminar.Text = "Eliminar";
+			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
 			// 
-			// btnGuardarEmp
+			// btnGuardar
 			// 
-			this.btnGuardarEmp.BackColor = System.Drawing.Color.Transparent;
-			this.btnGuardarEmp.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__3_;
-			this.btnGuardarEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnGuardarEmp.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnGuardarEmp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.btnGuardarEmp.FlatAppearance.BorderSize = 0;
-			this.btnGuardarEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.btnGuardarEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.btnGuardarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnGuardarEmp.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnGuardarEmp.ForeColor = System.Drawing.Color.White;
-			this.btnGuardarEmp.Location = new System.Drawing.Point(443, 351);
-			this.btnGuardarEmp.Name = "btnGuardarEmp";
-			this.btnGuardarEmp.Size = new System.Drawing.Size(95, 37);
-			this.btnGuardarEmp.TabIndex = 30;
-			this.btnGuardarEmp.Text = "Guardar";
-			this.btnGuardarEmp.UseVisualStyleBackColor = false;
-			this.btnGuardarEmp.Click += new System.EventHandler(this.btnGuardar_Click);
+			this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+			this.btnGuardar.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__3_;
+			this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+			this.btnGuardar.FlatAppearance.BorderSize = 0;
+			this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+			this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+			this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnGuardar.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGuardar.ForeColor = System.Drawing.Color.White;
+			this.btnGuardar.Location = new System.Drawing.Point(443, 351);
+			this.btnGuardar.Name = "btnGuardar";
+			this.btnGuardar.Size = new System.Drawing.Size(95, 37);
+			this.btnGuardar.TabIndex = 30;
+			this.btnGuardar.Text = "Guardar";
+			this.btnGuardar.UseVisualStyleBackColor = false;
+			this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
 			// pictureBox3
 			// 
@@ -284,18 +284,18 @@
 			this.label8.TabIndex = 39;
 			this.label8.Text = "Descripcion:";
 			// 
-			// txtSalarioEmp
+			// txtCostoAtencion
 			// 
-			this.txtSalarioEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtSalarioEmp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtSalarioEmp.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtSalarioEmp.ForeColor = System.Drawing.Color.White;
-			this.txtSalarioEmp.Location = new System.Drawing.Point(251, 310);
-			this.txtSalarioEmp.MaxLength = 50;
-			this.txtSalarioEmp.Name = "txtSalarioEmp";
-			this.txtSalarioEmp.Size = new System.Drawing.Size(272, 18);
-			this.txtSalarioEmp.TabIndex = 47;
-			this.txtSalarioEmp.TabStop = false;
+			this.txtCostoAtencion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.txtCostoAtencion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtCostoAtencion.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCostoAtencion.ForeColor = System.Drawing.Color.White;
+			this.txtCostoAtencion.Location = new System.Drawing.Point(251, 310);
+			this.txtCostoAtencion.MaxLength = 50;
+			this.txtCostoAtencion.Name = "txtCostoAtencion";
+			this.txtCostoAtencion.Size = new System.Drawing.Size(272, 18);
+			this.txtCostoAtencion.TabIndex = 47;
+			this.txtCostoAtencion.TabStop = false;
 			// 
 			// pictureBox5
 			// 
@@ -331,51 +331,55 @@
 			this.label10.TabIndex = 42;
 			this.label10.Text = "Fecha de Atencion:";
 			// 
-			// timeFechaIngreso
+			// timeFechaAtencion
 			// 
-			this.timeFechaIngreso.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.timeFechaIngreso.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.timeFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.timeFechaIngreso.Location = new System.Drawing.Point(238, 263);
-			this.timeFechaIngreso.Name = "timeFechaIngreso";
-			this.timeFechaIngreso.Size = new System.Drawing.Size(299, 26);
-			this.timeFechaIngreso.TabIndex = 48;
+			this.timeFechaAtencion.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.timeFechaAtencion.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.timeFechaAtencion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.timeFechaAtencion.Location = new System.Drawing.Point(238, 263);
+			this.timeFechaAtencion.Name = "timeFechaAtencion";
+			this.timeFechaAtencion.Size = new System.Drawing.Size(299, 26);
+			this.timeFechaAtencion.TabIndex = 48;
 			// 
-			// cbxCargoEmp
+			// cbxTipoAtencion
 			// 
-			this.cbxCargoEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.cbxCargoEmp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cbxCargoEmp.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbxCargoEmp.ForeColor = System.Drawing.Color.White;
-			this.cbxCargoEmp.FormattingEnabled = true;
-			this.cbxCargoEmp.Location = new System.Drawing.Point(237, 174);
-			this.cbxCargoEmp.Name = "cbxCargoEmp";
-			this.cbxCargoEmp.Size = new System.Drawing.Size(300, 27);
-			this.cbxCargoEmp.TabIndex = 49;
+			this.cbxTipoAtencion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxTipoAtencion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxTipoAtencion.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxTipoAtencion.ForeColor = System.Drawing.Color.White;
+			this.cbxTipoAtencion.FormattingEnabled = true;
+			this.cbxTipoAtencion.Items.AddRange(new object[] {
+            "Medica",
+            "Limpieza",
+            "Consulta"});
+			this.cbxTipoAtencion.Location = new System.Drawing.Point(237, 174);
+			this.cbxTipoAtencion.Name = "cbxTipoAtencion";
+			this.cbxTipoAtencion.Size = new System.Drawing.Size(300, 27);
+			this.cbxTipoAtencion.TabIndex = 49;
 			// 
-			// comboBox1
+			// cbxMascota
 			// 
-			this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox1.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox1.ForeColor = System.Drawing.Color.White;
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(238, 83);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(300, 27);
-			this.comboBox1.TabIndex = 50;
+			this.cbxMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxMascota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxMascota.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxMascota.ForeColor = System.Drawing.Color.White;
+			this.cbxMascota.FormattingEnabled = true;
+			this.cbxMascota.Location = new System.Drawing.Point(237, 129);
+			this.cbxMascota.Name = "cbxMascota";
+			this.cbxMascota.Size = new System.Drawing.Size(300, 27);
+			this.cbxMascota.TabIndex = 51;
 			// 
-			// comboBox2
+			// cbxEmpleado
 			// 
-			this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox2.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox2.ForeColor = System.Drawing.Color.White;
-			this.comboBox2.FormattingEnabled = true;
-			this.comboBox2.Location = new System.Drawing.Point(237, 129);
-			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(300, 27);
-			this.comboBox2.TabIndex = 51;
+			this.cbxEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxEmpleado.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxEmpleado.ForeColor = System.Drawing.Color.White;
+			this.cbxEmpleado.FormattingEnabled = true;
+			this.cbxEmpleado.Location = new System.Drawing.Point(237, 83);
+			this.cbxEmpleado.Name = "cbxEmpleado";
+			this.cbxEmpleado.Size = new System.Drawing.Size(300, 27);
+			this.cbxEmpleado.TabIndex = 50;
 			// 
 			// vtnAtencion
 			// 
@@ -383,23 +387,23 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-			this.ClientSize = new System.Drawing.Size(753, 555);
-			this.Controls.Add(this.comboBox2);
-			this.Controls.Add(this.comboBox1);
-			this.Controls.Add(this.cbxCargoEmp);
-			this.Controls.Add(this.timeFechaIngreso);
-			this.Controls.Add(this.txtSalarioEmp);
+			this.ClientSize = new System.Drawing.Size(736, 555);
+			this.Controls.Add(this.cbxMascota);
+			this.Controls.Add(this.cbxEmpleado);
+			this.Controls.Add(this.cbxTipoAtencion);
+			this.Controls.Add(this.timeFechaAtencion);
+			this.Controls.Add(this.txtCostoAtencion);
 			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.dgvConsultaAtencion);
 			this.Controls.Add(this.label7);
-			this.Controls.Add(this.btnEliminarEmpleado);
-			this.Controls.Add(this.cbxEmpledoElim);
+			this.Controls.Add(this.btnEliminar);
+			this.Controls.Add(this.cbxAtencionElimi);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.btnGuardarEmp);
-			this.Controls.Add(this.txtApellidoEmpleado);
+			this.Controls.Add(this.btnGuardar);
+			this.Controls.Add(this.txtDescAtencion);
 			this.Controls.Add(this.pictureBox3);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -423,23 +427,23 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox txtApellidoEmpleado;
+		private System.Windows.Forms.TextBox txtDescAtencion;
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button btnGuardarEmp;
-		private System.Windows.Forms.ComboBox cbxEmpledoElim;
+		private System.Windows.Forms.Button btnGuardar;
+		private System.Windows.Forms.ComboBox cbxAtencionElimi;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button btnEliminarEmpleado;
+		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.DataGridView dgvConsultaAtencion;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox txtSalarioEmp;
+		private System.Windows.Forms.TextBox txtCostoAtencion;
 		private System.Windows.Forms.PictureBox pictureBox5;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.DateTimePicker timeFechaIngreso;
-		private System.Windows.Forms.ComboBox cbxCargoEmp;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.ComboBox comboBox2;
+		private System.Windows.Forms.DateTimePicker timeFechaAtencion;
+		private System.Windows.Forms.ComboBox cbxTipoAtencion;
+		private System.Windows.Forms.ComboBox cbxMascota;
+		private System.Windows.Forms.ComboBox cbxEmpleado;
 	}
 }

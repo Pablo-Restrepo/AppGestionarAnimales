@@ -143,6 +143,16 @@ namespace AppTiendaMascotas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_park_solid_appointment {
+            get {
+                object obj = ResourceManager.GetObject("icon-park-solid_appointment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_park_solid_attention {
             get {
                 object obj = ResourceManager.GetObject("icon-park-solid_attention", resourceCulture);

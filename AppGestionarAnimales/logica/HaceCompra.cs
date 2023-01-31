@@ -25,7 +25,7 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT IDCLIENTE,IDVENTA FROM HACECOMPRA";
+            consulta = "SELECT IDCLIENTE ID_DEL_CLIENTE,IDVENTA ID_DE_LA_VENTA FROM HACECOMPRA";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }

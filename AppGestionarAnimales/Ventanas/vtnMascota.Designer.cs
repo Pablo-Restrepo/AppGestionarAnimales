@@ -32,42 +32,33 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.txtMascotaId = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtIdMascotaDelete = new System.Windows.Forms.ComboBox();
+			this.cbxIdMascotaDelete = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.dgvConsultaMascota = new System.Windows.Forms.DataGridView();
 			this.btnEliminarMascota = new System.Windows.Forms.Button();
 			this.btnGuardarMascota = new System.Windows.Forms.Button();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.txtNombreMascota = new System.Windows.Forms.TextBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label8 = new System.Windows.Forms.Label();
-			this.txtCedulaDuenioM = new System.Windows.Forms.TextBox();
-			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.cbxTipoMascota = new System.Windows.Forms.ComboBox();
 			this.txtEspecieMascota = new System.Windows.Forms.TextBox();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.dgvConsultaDuenios = new System.Windows.Forms.DataGridView();
-			this.label11 = new System.Windows.Forms.Label();
 			this.cbxGeneroMascota = new System.Windows.Forms.ComboBox();
+			this.cbxCedulaDuen = new System.Windows.Forms.ComboBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.txtNombreMascota = new System.Windows.Forms.TextBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.txtMascotaId = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsultaMascota)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDuenios)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -106,19 +97,6 @@
 			this.label3.TabIndex = 20;
 			this.label3.Text = "ID de la Mascota:";
 			// 
-			// txtMascotaId
-			// 
-			this.txtMascotaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtMascotaId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtMascotaId.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtMascotaId.ForeColor = System.Drawing.Color.White;
-			this.txtMascotaId.Location = new System.Drawing.Point(250, 86);
-			this.txtMascotaId.MaxLength = 50;
-			this.txtMascotaId.Name = "txtMascotaId";
-			this.txtMascotaId.Size = new System.Drawing.Size(272, 18);
-			this.txtMascotaId.TabIndex = 23;
-			this.txtMascotaId.TabStop = false;
-			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -127,21 +105,21 @@
 			this.label4.ForeColor = System.Drawing.Color.White;
 			this.label4.Location = new System.Drawing.Point(11, 129);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(217, 23);
+			this.label4.Size = new System.Drawing.Size(223, 23);
 			this.label4.TabIndex = 24;
-			this.label4.Text = "Nombre de la Mascota";
+			this.label4.Text = "Nombre de la Mascota:";
 			// 
-			// txtIdMascotaDelete
+			// cbxIdMascotaDelete
 			// 
-			this.txtIdMascotaDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtIdMascotaDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.txtIdMascotaDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtIdMascotaDelete.ForeColor = System.Drawing.Color.White;
-			this.txtIdMascotaDelete.FormattingEnabled = true;
-			this.txtIdMascotaDelete.Location = new System.Drawing.Point(237, 464);
-			this.txtIdMascotaDelete.Name = "txtIdMascotaDelete";
-			this.txtIdMascotaDelete.Size = new System.Drawing.Size(300, 27);
-			this.txtIdMascotaDelete.TabIndex = 33;
+			this.cbxIdMascotaDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxIdMascotaDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxIdMascotaDelete.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxIdMascotaDelete.ForeColor = System.Drawing.Color.White;
+			this.cbxIdMascotaDelete.FormattingEnabled = true;
+			this.cbxIdMascotaDelete.Location = new System.Drawing.Point(237, 464);
+			this.cbxIdMascotaDelete.Name = "cbxIdMascotaDelete";
+			this.cbxIdMascotaDelete.Size = new System.Drawing.Size(300, 27);
+			this.cbxIdMascotaDelete.TabIndex = 33;
 			// 
 			// label6
 			// 
@@ -261,39 +239,6 @@
 			this.btnGuardarMascota.UseVisualStyleBackColor = false;
 			this.btnGuardarMascota.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
-			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox2.Location = new System.Drawing.Point(237, 80);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(300, 32);
-			this.pictureBox2.TabIndex = 22;
-			this.pictureBox2.TabStop = false;
-			// 
-			// txtNombreMascota
-			// 
-			this.txtNombreMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtNombreMascota.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtNombreMascota.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtNombreMascota.ForeColor = System.Drawing.Color.White;
-			this.txtNombreMascota.Location = new System.Drawing.Point(250, 132);
-			this.txtNombreMascota.MaxLength = 50;
-			this.txtNombreMascota.Name = "txtNombreMascota";
-			this.txtNombreMascota.Size = new System.Drawing.Size(272, 18);
-			this.txtNombreMascota.TabIndex = 38;
-			this.txtNombreMascota.TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
-			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox1.Location = new System.Drawing.Point(237, 126);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(300, 32);
-			this.pictureBox1.TabIndex = 37;
-			this.pictureBox1.TabStop = false;
-			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
@@ -306,29 +251,6 @@
 			this.label8.TabIndex = 39;
 			this.label8.Text = "Clase de la Mascota:";
 			// 
-			// txtCedulaDuenioM
-			// 
-			this.txtCedulaDuenioM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.txtCedulaDuenioM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtCedulaDuenioM.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCedulaDuenioM.ForeColor = System.Drawing.Color.White;
-			this.txtCedulaDuenioM.Location = new System.Drawing.Point(251, 306);
-			this.txtCedulaDuenioM.MaxLength = 50;
-			this.txtCedulaDuenioM.Name = "txtCedulaDuenioM";
-			this.txtCedulaDuenioM.Size = new System.Drawing.Size(272, 18);
-			this.txtCedulaDuenioM.TabIndex = 47;
-			this.txtCedulaDuenioM.TabStop = false;
-			// 
-			// pictureBox5
-			// 
-			this.pictureBox5.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
-			this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox5.Location = new System.Drawing.Point(238, 300);
-			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new System.Drawing.Size(300, 32);
-			this.pictureBox5.TabIndex = 46;
-			this.pictureBox5.TabStop = false;
-			// 
 			// label9
 			// 
 			this.label9.AutoSize = true;
@@ -337,9 +259,9 @@
 			this.label9.ForeColor = System.Drawing.Color.White;
 			this.label9.Location = new System.Drawing.Point(12, 303);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(180, 23);
+			this.label9.Size = new System.Drawing.Size(77, 23);
 			this.label9.TabIndex = 45;
-			this.label9.Text = "Cedula del Dueño:";
+			this.label9.Text = "Dueño:";
 			// 
 			// label10
 			// 
@@ -349,9 +271,9 @@
 			this.label10.ForeColor = System.Drawing.Color.White;
 			this.label10.Location = new System.Drawing.Point(11, 259);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(211, 23);
+			this.label10.Size = new System.Drawing.Size(217, 23);
 			this.label10.TabIndex = 42;
-			this.label10.Text = "Genero de la Mascota";
+			this.label10.Text = "Genero de la Mascota:";
 			// 
 			// cbxTipoMascota
 			// 
@@ -360,6 +282,13 @@
 			this.cbxTipoMascota.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbxTipoMascota.ForeColor = System.Drawing.Color.White;
 			this.cbxTipoMascota.FormattingEnabled = true;
+			this.cbxTipoMascota.Items.AddRange(new object[] {
+            "Reptil",
+            "Perro",
+            "Gato",
+            "Anfibio",
+            "Pez",
+            "Roedor"});
 			this.cbxTipoMascota.Location = new System.Drawing.Point(237, 172);
 			this.cbxTipoMascota.Name = "cbxTipoMascota";
 			this.cbxTipoMascota.Size = new System.Drawing.Size(300, 27);
@@ -400,70 +329,6 @@
 			this.label5.TabIndex = 50;
 			this.label5.Text = "Especie:";
 			// 
-			// dgvConsultaDuenios
-			// 
-			this.dgvConsultaDuenios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvConsultaDuenios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.dgvConsultaDuenios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvConsultaDuenios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-			this.dgvConsultaDuenios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvConsultaDuenios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-			this.dgvConsultaDuenios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Inter Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvConsultaDuenios.DefaultCellStyle = dataGridViewCellStyle6;
-			this.dgvConsultaDuenios.EnableHeadersVisualStyles = false;
-			this.dgvConsultaDuenios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvConsultaDuenios.Location = new System.Drawing.Point(16, 961);
-			this.dgvConsultaDuenios.Name = "dgvConsultaDuenios";
-			this.dgvConsultaDuenios.ReadOnly = true;
-			this.dgvConsultaDuenios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Inter Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvConsultaDuenios.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-			this.dgvConsultaDuenios.RowHeadersVisible = false;
-			this.dgvConsultaDuenios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(6, 0, 6, 0);
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-			this.dgvConsultaDuenios.RowsDefaultCellStyle = dataGridViewCellStyle8;
-			this.dgvConsultaDuenios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvConsultaDuenios.Size = new System.Drawing.Size(692, 259);
-			this.dgvConsultaDuenios.TabIndex = 54;
-			// 
-			// label11
-			// 
-			this.label11.AutoSize = true;
-			this.label11.BackColor = System.Drawing.Color.Transparent;
-			this.label11.Font = new System.Drawing.Font("Inter", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.ForeColor = System.Drawing.Color.White;
-			this.label11.Location = new System.Drawing.Point(8, 901);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(149, 42);
-			this.label11.TabIndex = 53;
-			this.label11.Text = "Dueños";
-			// 
 			// cbxGeneroMascota
 			// 
 			this.cbxGeneroMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
@@ -471,10 +336,71 @@
 			this.cbxGeneroMascota.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbxGeneroMascota.ForeColor = System.Drawing.Color.White;
 			this.cbxGeneroMascota.FormattingEnabled = true;
+			this.cbxGeneroMascota.Items.AddRange(new object[] {
+            "Macho",
+            "Hembra"});
 			this.cbxGeneroMascota.Location = new System.Drawing.Point(238, 259);
 			this.cbxGeneroMascota.Name = "cbxGeneroMascota";
 			this.cbxGeneroMascota.Size = new System.Drawing.Size(300, 27);
 			this.cbxGeneroMascota.TabIndex = 55;
+			// 
+			// cbxCedulaDuen
+			// 
+			this.cbxCedulaDuen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.cbxCedulaDuen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbxCedulaDuen.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbxCedulaDuen.ForeColor = System.Drawing.Color.White;
+			this.cbxCedulaDuen.FormattingEnabled = true;
+			this.cbxCedulaDuen.Location = new System.Drawing.Point(237, 303);
+			this.cbxCedulaDuen.Name = "cbxCedulaDuen";
+			this.cbxCedulaDuen.Size = new System.Drawing.Size(300, 27);
+			this.cbxCedulaDuen.TabIndex = 56;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
+			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBox1.Location = new System.Drawing.Point(237, 126);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(300, 32);
+			this.pictureBox1.TabIndex = 37;
+			this.pictureBox1.TabStop = false;
+			// 
+			// txtNombreMascota
+			// 
+			this.txtNombreMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.txtNombreMascota.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtNombreMascota.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNombreMascota.ForeColor = System.Drawing.Color.White;
+			this.txtNombreMascota.Location = new System.Drawing.Point(250, 132);
+			this.txtNombreMascota.MaxLength = 50;
+			this.txtNombreMascota.Name = "txtNombreMascota";
+			this.txtNombreMascota.Size = new System.Drawing.Size(272, 18);
+			this.txtNombreMascota.TabIndex = 38;
+			this.txtNombreMascota.TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBox2.Location = new System.Drawing.Point(237, 80);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(300, 32);
+			this.pictureBox2.TabIndex = 22;
+			this.pictureBox2.TabStop = false;
+			// 
+			// txtMascotaId
+			// 
+			this.txtMascotaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+			this.txtMascotaId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtMascotaId.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtMascotaId.ForeColor = System.Drawing.Color.White;
+			this.txtMascotaId.Location = new System.Drawing.Point(250, 86);
+			this.txtMascotaId.MaxLength = 50;
+			this.txtMascotaId.Name = "txtMascotaId";
+			this.txtMascotaId.Size = new System.Drawing.Size(272, 18);
+			this.txtMascotaId.TabIndex = 23;
+			this.txtMascotaId.TabStop = false;
 			// 
 			// vtnMascota
 			// 
@@ -483,15 +409,12 @@
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
 			this.ClientSize = new System.Drawing.Size(736, 555);
+			this.Controls.Add(this.cbxCedulaDuen);
 			this.Controls.Add(this.cbxGeneroMascota);
-			this.Controls.Add(this.dgvConsultaDuenios);
-			this.Controls.Add(this.label11);
 			this.Controls.Add(this.txtEspecieMascota);
 			this.Controls.Add(this.pictureBox3);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.cbxTipoMascota);
-			this.Controls.Add(this.txtCedulaDuenioM);
-			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label8);
@@ -500,7 +423,7 @@
 			this.Controls.Add(this.dgvConsultaMascota);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnEliminarMascota);
-			this.Controls.Add(this.txtIdMascotaDelete);
+			this.Controls.Add(this.cbxIdMascotaDelete);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.btnGuardarMascota);
 			this.Controls.Add(this.label4);
@@ -514,11 +437,9 @@
 			this.Text = "vtnResidencia";
 			this.Resize += new System.EventHandler(this.vtnResidencia_Resize);
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsultaMascota)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dgvConsultaDuenios)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -528,28 +449,25 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox txtMascotaId;
-		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button btnGuardarMascota;
-		private System.Windows.Forms.ComboBox txtIdMascotaDelete;
+		private System.Windows.Forms.ComboBox cbxIdMascotaDelete;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button btnEliminarMascota;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.DataGridView dgvConsultaMascota;
-		private System.Windows.Forms.TextBox txtNombreMascota;
-		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox txtCedulaDuenioM;
-		private System.Windows.Forms.PictureBox pictureBox5;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.ComboBox cbxTipoMascota;
 		private System.Windows.Forms.TextBox txtEspecieMascota;
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.DataGridView dgvConsultaDuenios;
-		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.ComboBox cbxGeneroMascota;
+		private System.Windows.Forms.ComboBox cbxCedulaDuen;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.TextBox txtNombreMascota;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.TextBox txtMascotaId;
 	}
 }

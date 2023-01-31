@@ -24,16 +24,26 @@ namespace AppTiendaMascotas.Ventanas
 
 		private Boolean bandera = true;
 		private Boolean bandera2 = false;
-		private Cliente cliente = new Cliente();
+		private Producto pro = new Producto();
+		private Empleado emp = new Empleado();
+		private Venta vent = new Venta();
 
 		private void informacion()
 		{
-			cbxEmpledoElim.DataSource = cliente.consultarClienteIDs();
-			cbxEmpledoElim.DisplayMember = "NOMBREDUENIO";
-			cbxEmpledoElim.ValueMember = "CEDULADUENIO";
+			cbxProducto.DataSource = pro.consultarProductoIDs();
+			cbxProducto.DisplayMember = "NOMBREPRODUCTO";
+			cbxProducto.ValueMember = "SERIALPRODUCTO";
+
+			cbxEmpleado.DataSource = emp.consultarEmpleadoIDs();
+			cbxEmpleado.DisplayMember = "NOMBREEMPLEADO";
+			cbxEmpleado.ValueMember = "CODEMPLEADO";
+
+			cbxIdVentaDelete.DataSource = vent.consultarVentaIDs();
+			cbxIdVentaDelete.DisplayMember = "IDVENTA";
+			cbxIdVentaDelete.ValueMember = "IDVENTA";
 
 			DataSet dsResultado = new DataSet();
-			dsResultado = cliente.consultarCliente();
+			dsResultado = vent.consultarVentas();
 			dgvConsultaEmp.DataSource = dsResultado;
 			dgvConsultaEmp.DataMember = "ResultadoDatos";
 		}
@@ -42,14 +52,17 @@ namespace AppTiendaMascotas.Ventanas
 		{
 			dgvConsultaEmp.Region = new System.Drawing.Region(CreateRoundedRectangle(dgvConsultaEmp.Width, dgvConsultaEmp.Height));
 
-			txtApellidoEmpleado.Anchor = AnchorStyles.Top;
-			cbxEmpledoElim.Anchor = AnchorStyles.Top;
-			cbxCargoEmp.Anchor = AnchorStyles.Top;
-			btnEliminarEmpleado.Anchor = AnchorStyles.Top;
-			btnGuardarEmp.Anchor = AnchorStyles.Top;
+			txtCantProd.Anchor = AnchorStyles.Top;
+			cbxIdVentaDelete.Anchor = AnchorStyles.Top;
+			txtCostoVenta.Anchor = AnchorStyles.Top;
+			cbxEmpleado.Anchor = AnchorStyles.Top;
+			cbxProducto.Anchor = AnchorStyles.Top;
+			btnEliminar.Anchor = AnchorStyles.Top;
+			btnGuardar.Anchor = AnchorStyles.Top;
 			dgvConsultaEmp.Anchor = AnchorStyles.Top;
 			pictureBox3.Anchor = AnchorStyles.Top;
-			timeFechaIngreso.Anchor = AnchorStyles.Top;
+			pictureBox1.Anchor = AnchorStyles.Top;
+			timeFechaVenta.Anchor = AnchorStyles.Top;
 			label1.Anchor = AnchorStyles.Top;
 			label2.Anchor = AnchorStyles.Top;
 			label3.Anchor = AnchorStyles.Top;
@@ -86,6 +99,8 @@ namespace AppTiendaMascotas.Ventanas
 				label5.Location = new Point(label5.Location.X + 1, label5.Location.Y);
 				label6.Location = new Point(label6.Location.X + 1, label6.Location.Y);
 				label7.Location = new Point(label7.Location.X + 1, label7.Location.Y);
+				label8.Location = new Point(label8.Location.X + 1, label8.Location.Y);
+				label10.Location = new Point(label10.Location.X + 1, label10.Location.Y);
 				dgvConsultaEmp.Location = new Point(dgvConsultaEmp.Location.X + 1, dgvConsultaEmp.Location.Y);
 			}
 			else if (!this.VerticalScroll.Visible && bandera2)
@@ -99,6 +114,8 @@ namespace AppTiendaMascotas.Ventanas
 				label5.Location = new Point(label5.Location.X - 2, label5.Location.Y);
 				label6.Location = new Point(label6.Location.X - 2, label6.Location.Y);
 				label7.Location = new Point(label7.Location.X - 2, label7.Location.Y);
+				label8.Location = new Point(label8.Location.X - 2, label8.Location.Y);
+				label10.Location = new Point(label10.Location.X - 2, label10.Location.Y);
 				dgvConsultaEmp.Location = new Point(dgvConsultaEmp.Location.X - 2, dgvConsultaEmp.Location.Y);
 			}
 		}
@@ -110,22 +127,71 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
+			if (cbxProducto.Text.Equals("") || cbxEmpleado.Text.Equals("") || timeFechaVenta.Text.Equals("") || txtCantProd.Text.Equals("") || txtCostoVenta.Text.Equals(""))
+			{
+				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
 
+			int idProducto, codEmpleado, numProducto, valorVenta, resultado;
+
+			try
+			{
+				DateTime fechaV = timeFechaVenta.Value;
+				idProducto = Convert.ToInt32(cbxProducto.SelectedValue);
+				codEmpleado = Convert.ToInt32(cbxEmpleado.SelectedValue);
+				numProducto = int.Parse(txtCantProd.Text);
+				valorVenta = int.Parse(txtCostoVenta.Text);
+				resultado = vent.ingresarVenta(idProducto, codEmpleado, numProducto, fechaV.ToString("dd'/'MM'/'yyyy HH:mm:ss"), valorVenta);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			
+			if (resultado > 0)
+			{
+				informacion();
+				MessageBox.Show("Venta registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				txtCantProd.Text = "";
+				txtCostoVenta.Text = "";
+			}
+			else
+			{
+				MessageBox.Show("Venta no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
-			int idCliente, resultado;
+			if (cbxIdVentaDelete.Text.Equals(""))
+			{
+				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
 
-			idCliente = int.Parse(cbxEmpledoElim.Text);
-			resultado = cliente.eliminarCliente(idCliente);
+			int idVenta, resultado;
+
+			try
+			{
+				idVenta = Convert.ToInt32(cbxIdVentaDelete.SelectedValue);
+				resultado = vent.eliminarVenta(idVenta);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			
 			if (resultado > 0)
 			{
-				MessageBox.Show("Cliente eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				informacion();
+				MessageBox.Show("Venta eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			else
 			{
-				MessageBox.Show("Cliente no eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Venta no eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}

@@ -35,7 +35,7 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT IDRESIDENCIA,NUMRESIDENTESMAX,TIPORESIDENCIA FROM RESIDENCIA";
+            consulta = "SELECT IDRESIDENCIA ID,NUMRESIDENTESMAX MAXIMO_DE_RESIDENTES,TIPORESIDENCIA TIPO_DE_RESIDENCIA FROM RESIDENCIA";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }

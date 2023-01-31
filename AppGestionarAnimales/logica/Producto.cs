@@ -35,7 +35,7 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT SERIALPRODUCTO,NOMBREPRODUCTO,PRECIOPRODUCTO,TIPOPRODUCTO FROM PRODUCTO";
+            consulta = "SELECT SERIALPRODUCTO SERIAL,NOMBREPRODUCTO NOMBRE,PRECIOPRODUCTO PRECIO,TIPOPRODUCTO TIPO FROM PRODUCTO";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
@@ -74,6 +74,16 @@ namespace AppTiendaMascotas.logica
 			consulta = "SELECT serialproducto ID, nombreproducto nombre, precioproducto informacion FROM producto WHERE lower(nombreproducto) like '%" + aux + "%' UNION SELECT codempleado, nombreempleado, salarioempleado FROM empleado WHERE lower(nombreempleado) like '%" + aux + "%' UNION SELECT ceduladuenio, nombreduenio, numtelefonoduenio FROM duenio WHERE lower(nombreduenio) like '%" + aux + "%' UNION SELECT idmascota, nombremascota, ceduladuenio FROM mascota WHERE lower(nombremascota) like '%" + aux + "%'";
 			rDT = dt.ejecutarSELECT(consulta);
 			return rDT;
+		}
+
+		public DataTable consultarProductoIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT SERIALPRODUCTO, NOMBREPRODUCTO FROM PRODUCTO";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
 		}
 	}
 }
