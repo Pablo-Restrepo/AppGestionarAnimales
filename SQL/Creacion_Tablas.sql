@@ -1,0 +1,130 @@
+ALTER SESSION SET "_oracle_script" = TRUE;
+
+CREATE USER PROYECTO IDENTIFIED BY 2802;
+
+GRANT DBA TO PROYECTO;
+
+/*==============================================================*/
+/* Table: RESIDENCIA                                                 */
+/*==============================================================*/
+CREATE TABLE RESIDENCIA(
+    IDRESIDENCIA NUMBER NOT NULL,
+    NUMRESIDENTESMAX INT NOT NULL,
+    CONSTRAINT PK_RESIDENCIA PRIMARY KEY(IDRESIDENCIA)
+);
+
+ALTER TABLE RESIDENCIA ADD TIPORESIDENCIA VARCHAR2(30) NOT NULL;
+
+ALTER TABLE RESIDENCIA ADD CONSTRAINT CKC_TIPORESIDENCIA CHECK(TIPORESIDENCIA IN('Reptiliario Grande', 'Reptiliario Pequenio', 'Terrario', 'Casa Perro', 'Casa Gato', 'Acuario', 'Jaula'));
+
+/*==============================================================*/
+/* Table: DUENIO                                                 */
+/*==============================================================*/
+CREATE TABLE DUENIO(
+    CEDULADUENIO NUMBER NOT NULL,
+    NOMBREDUENIO VARCHAR2(40) NOT NULL,
+    NUMTELEFONODUENIO NUMBER NOT NULL,
+    CONSTRAINT PK_DUENIO PRIMARY KEY(CEDULADUENIO)
+);
+
+/*==============================================================*/
+/* Table: EMPLEADO                                                 */
+/*==============================================================*/
+CREATE TABLE EMPLEADO(
+    CODEMPLEADO NUMBER NOT NULL,
+    NOMBREEMPLEADO VARCHAR2(25) NOT NULL,
+    APELLIDOEMPLEADO VARCHAR2(40) NOT NULL,
+    CARGOEMPLEADO VARCHAR2(25) NOT NULL,
+    FECHAINGRESO DATE NOT NULL,
+    SALARIOEMPLEADO INTEGER NOT NULL,
+    CONSTRAINT PK_EMPLEADO PRIMARY KEY(CODEMPLEADO),
+    CONSTRAINT CKC_CARGOEMPLEADO CHECK(CARGOEMPLEADO IN('Veterinario', 'Auxiliar', 'Gerente', 'Vendedor'))
+);
+
+/*==============================================================*/
+/* Table: PRODUCTO                                                 */
+/*==============================================================*/
+CREATE TABLE PRODUCTO(
+    SERIALPRODUCTO NUMBER NOT NULL,
+    NOMBREPRODUCTO VARCHAR2(30) NOT NULL,
+    PRECIOPRODUCTO INTEGER NOT NULL,
+    TIPOPRODUCTO VARCHAR2(25) NOT NULL,
+    CONSTRAINT PK_PRODUCTO PRIMARY KEY(SERIALPRODUCTO),
+    CONSTRAINT CKC_TIPOPRODUCTO CHECK(TIPOPRODUCTO IN('Alimento', 'Medicamento', 'Juguete', 'Accesorio', 'Hogar'))
+);
+
+/*==============================================================*/
+/* Table: MASCOTA                                                 */
+/*==============================================================*/
+CREATE TABLE MASCOTA(
+    IDMASCOTA NUMBER NOT NULL,
+    NOMBREMASCOTA VARCHAR2(30) NOT NULL,
+    TIPOMASCOTA VARCHAR2(20) NOT NULL,
+    ESPECIEMASCOTA VARCHAR2(30) NOT NULL,
+    GENEROMASCOTA VARCHAR2(30) NOT NULL,
+    CEDULADUENIO NUMBER NOT NULL,
+    CONSTRAINT PK_MASCOTA PRIMARY KEY(IDMASCOTA),
+    CONSTRAINT FK_DUEMASCO FOREIGN KEY (CEDULADUENIO) REFERENCES DUENIO(CEDULADUENIO) ON DELETE CASCADE
+);
+
+ALTER TABLE MASCOTA ADD CONSTRAINT CKC_GENEROMASCOTA CHECK(GENEROMASCOTA IN('Macho', 'Hembra'));
+
+ALTER TABLE MASCOTA ADD CONSTRAINT CKC_TIPOMASCOTA CHECK(TIPOMASCOTA IN('Reptil', 'Perro', 'Gato', 'Anfibio', 'Pez', 'Roedor'));
+
+/*==============================================================*/
+/* Table: ALOJA                                                 */
+/*==============================================================*/
+CREATE TABLE ALOJA (
+    IDALOJA NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
+    IDRESIDENCIA NUMBER NOT NULL,
+    IDMASCOTA NUMBER NOT NULL,
+    FECHAINICIOALOJAMIENTO TIMESTAMP NOT NULL,
+    FECHAFINALOJAMIENTO TIMESTAMP NOT NULL,
+    CONSTRAINT PK_ALOJA PRIMARY KEY(IDALOJA),
+    CONSTRAINT FK_RESIALOJ FOREIGN KEY(IDRESIDENCIA) REFERENCES RESIDENCIA(IDRESIDENCIA) ON DELETE CASCADE,
+    CONSTRAINT FK_MASCOALOJ FOREIGN KEY(IDMASCOTA) REFERENCES MASCOTA(IDMASCOTA) ON DELETE CASCADE,
+    CONSTRAINT UQ_FECHAINI UNIQUE(FECHAINICIOALOJAMIENTO)
+);
+
+/*==============================================================*/
+/* Table: ATIENDE                                                 */
+/*==============================================================*/
+CREATE TABLE ATIENDE(
+    IDATENCION NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
+    CODEMPLEADO NUMBER NOT NULL,
+    IDMASCOTA NUMBER NOT NULL,
+    TIPOATENCION VARCHAR2(30) NOT NULL,
+    FECHAATENCION DATE NOT NULL,
+    COSTOATENCION VARCHAR2(25) NOT NULL,
+    DESCRIPTCION VARCHAR2(50),
+    CONSTRAINT PK_ATIENDE PRIMARY KEY(IDATENCION),
+    CONSTRAINT FK_EMPATIENDE FOREIGN KEY(CODEMPLEADO) REFERENCES EMPLEADO(CODEMPLEADO) ON DELETE CASCADE,
+    CONSTRAINT FK_MASCOATIENDE FOREIGN KEY(IDMASCOTA) REFERENCES MASCOTA(IDMASCOTA) ON DELETE CASCADE,
+    CONSTRAINT CKC_TIPOATENCION CHECK(TIPOATENCION IN('Medica', 'Limpieza', 'Consulta'))
+);
+
+/*==============================================================*/
+/* Table: VENTA                                                 */
+/*==============================================================*/
+CREATE TABLE VENTA(
+    IDVENTA NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
+    IDPRODUCTO NUMBER NOT NULL,
+    IDEMPLEADO NUMBER NOT NULL,
+    NUMPRODUCTO NUMBER NOT NULL,
+    FECHAVENTA TIMESTAMP NOT NULL,
+    VALORVENTA INTEGER NOT NULL,
+    CONSTRAINT PK_VENTA PRIMARY KEY(IDVENTA),
+    CONSTRAINT FK_PRODVENT FOREIGN KEY(IDPRODUCTO) REFERENCES PRODUCTO(SERIALPRODUCTO) ON DELETE CASCADE,
+    CONSTRAINT FK_EMPVENT FOREIGN KEY(IDEMPLEADO) REFERENCES EMPLEADO(CODEMPLEADO) ON DELETE CASCADE
+);
+
+/*==============================================================*/
+/* Table: HACECOMPRA                                                 */
+/*==============================================================*/
+CREATE TABLE HACECOMPRA(
+    IDCLIENTE NUMBER NOT NULL,
+    IDVENTA NUMBER NOT NULL,
+    CONSTRAINT PK_HACECOMPRA PRIMARY KEY(IDCLIENTE, IDVENTA),
+    CONSTRAINT FK_CLIHACOMP FOREIGN KEY(IDCLIENTE) REFERENCES DUENIO(CEDULADUENIO) ON DELETE CASCADE,
+    CONSTRAINT FK_VENTHACOMP FOREIGN KEY(IDVENTA) REFERENCES VENTA(IDVENTA) ON DELETE CASCADE
+);
