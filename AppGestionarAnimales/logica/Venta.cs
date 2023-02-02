@@ -53,7 +53,7 @@ namespace AppTiendaMascotas.logica
 		{
 			DataSet rDT = new DataSet();
 			string consulta;
-			consulta = "SELECT SUM(VALORVENTA) FROM VENTA";
+			consulta = "SELECT SUM(VALORVENTA*NUMPRODUCTO) FROM VENTA";
 			rDT = dt.ejecutarSELECT(consulta);
 			return rDT;
 		}

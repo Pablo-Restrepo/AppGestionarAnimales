@@ -50,7 +50,7 @@ namespace AppTiendaMascotas.Ventanas
 			dataGridClientes.DataMember = "ResultadoDatos";
 
 			dsResultado = venta.consultarVentaTotal();
-			lblVentas.Text = "$" + dsResultado.Tables["ResultadoDatos"].Rows[0]["SUM(VALORVENTA)"].ToString();
+			lblVentas.Text = "$" + dsResultado.Tables["ResultadoDatos"].Rows[0]["SUM(VALORVENTA*NUMPRODUCTO)"].ToString();
 
 			dsResultado = aloja.consultarNumAlojamiento();
 			lblMascotasAloj.Text = dsResultado.Tables["ResultadoDatos"].Rows[0]["COUNT(IDALOJA)"].ToString();
