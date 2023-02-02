@@ -30,6 +30,7 @@ namespace AppTiendaMascotas.logica
             resultado = dt.ejecutarDML(consulta);
             return resultado;
         }
+
         public DataSet consultarVentas()
         {
             DataSet rDT = new DataSet();
@@ -38,5 +39,33 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
-    }
+
+		public DataSet consultarVentasMenu()
+		{
+			DataSet rDT = new DataSet();
+			string consulta;
+			consulta = "SELECT NOMBREPRODUCTO Nombre, NUMPRODUCTO Cantidad, VALORVENTA Total FROM VENTA INNER JOIN PRODUCTO ON producto.serialproducto = venta.idproducto ORDER BY FECHAVENTA DESC";
+			rDT = dt.ejecutarSELECT(consulta);
+			return rDT;
+		}
+
+		public DataSet consultarVentaTotal()
+		{
+			DataSet rDT = new DataSet();
+			string consulta;
+			consulta = "SELECT SUM(VALORVENTA) FROM VENTA";
+			rDT = dt.ejecutarSELECT(consulta);
+			return rDT;
+		}
+
+		public DataTable consultarVentaIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT IDVENTA FROM VENTA";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
+		}
+	}
 }

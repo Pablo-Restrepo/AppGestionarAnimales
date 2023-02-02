@@ -34,12 +34,21 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT CEDULADUENIO,NOMBREDUENIO,NUMTELEFONODUENIO FROM DUENIO";
+            consulta = "SELECT CEDULADUENIO CEDULA,NOMBREDUENIO NOMBRE,NUMTELEFONODUENIO TELEFONO FROM DUENIO";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
 
-        public string consultarCantidadClientes()
+		public DataSet consultarClienteMenu()
+		{
+			DataSet rDT = new DataSet();
+			string consulta;
+			consulta = "SELECT CEDULADUENIO Cedula,NOMBREDUENIO Nombre,NUMTELEFONODUENIO Numero FROM DUENIO";
+			rDT = dt.ejecutarSELECT(consulta);
+			return rDT;
+		}
+
+		public string consultarCantidadClientes()
         {
             DataSet rDT = new DataSet();
             string consulta;
@@ -47,5 +56,15 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT.Tables[0].Rows[0][0].ToString();
         }
-    }
+
+		public DataTable consultarClienteIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT CEDULADUENIO, NOMBREDUENIO FROM DUENIO";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
+		}
+	}
 }

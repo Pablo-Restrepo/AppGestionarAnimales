@@ -35,9 +35,19 @@ namespace AppTiendaMascotas.logica
         {
             DataSet rDT = new DataSet();
             string consulta;
-            consulta = "SELECT IDATENCION,CODEMPLEADO,IDMASCOTA,TIPOATENCION,descriptcion,FECHAATENCION,COSTOATENCION FROM ATIENDE";
+            consulta = "SELECT IDATENCION ID,CODEMPLEADO ID_EMPLEADO,IDMASCOTA ID_MASCOTA,TIPOATENCION TIPO,descriptcion DESCRIPCION,FECHAATENCION FECHA,COSTOATENCION COSTO FROM ATIENDE";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
-    }
+
+		public DataTable consultarAtencionesIDs()
+		{
+			DataSet mids = new DataSet();
+			string consulta;
+			consulta = "SELECT IDATENCION FROM ATIENDE";
+			mids = dt.ejecutarSELECT(consulta);
+			DataTable dta = mids.Tables[0];
+			return dta;
+		}
+	}
 }
