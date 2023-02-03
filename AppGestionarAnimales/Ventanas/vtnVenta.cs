@@ -196,7 +196,7 @@ namespace AppTiendaMascotas.Ventanas
 
         private void txtCantProd_TextChanged(object sender, EventArgs e)
         {
-			string idProducto = Convert.ToString(cbxProducto.SelectedValue);
+			string idProducto = Convert.ToString(cbxProducto.Text);
 			if (txtCantProd.Text.Equals(""))
 			{
 				lblCostoVenta.Text = "";
@@ -206,8 +206,8 @@ namespace AppTiendaMascotas.Ventanas
 				int cantProducto = Convert.ToInt32(txtCantProd.Text);
 				DataSet res = new DataSet();
 				res = vent.valorVenta(idProducto);
-				//int valor = Convert.ToInt32(vent.Tables["ResultadoDatos"].Rows[0]["PRECIOPRODUCTO"].ToString());
-				lblCostoVenta.Text = Convert.ToString(cantProducto);	
+				int valor = Convert.ToInt32(res.Tables["ResultadoDatos"].Rows[0]["PRECIOPRODUCTO"].ToString());
+				lblCostoVenta.Text = "$ " + Convert.ToString(valor * cantProducto);	
             }
 			
 		}
