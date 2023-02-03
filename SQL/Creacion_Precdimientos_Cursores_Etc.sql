@@ -67,7 +67,7 @@ Create or replace package body paq_gerente as
         WHERE fechaIngreso BETWEEN p_fechaInicio AND p_fechaFin;
     END listar_empleados;
 end paq_gerente;
-Z
+
 
 /*==============================================================*/
 /* TRIGGERS                                                */
