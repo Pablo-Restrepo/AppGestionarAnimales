@@ -407,5 +407,22 @@ namespace AppTiendaMascotas
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
-	}
+
+        private void btnModoGerente_Click(object sender, EventArgs e)
+        {
+			abrirFormHija(new vtnGerente());
+			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
+			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
+			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
+			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
+			btnCompra.BackColor = Color.FromArgb(25, 25, 25);
+			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
+			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
+			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
+			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
+			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
+			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			metodoBuscar();
+		}
+    }
 }

@@ -102,6 +102,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\vtnGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\vtnGerente.Designer.cs">
+      <DependentUpon>vtnGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Tienda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     <Compile Include="Ventanas\vtnResidencia.Designer.cs">
       <DependentUpon>vtnResidencia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ventanas\vtnGerente.resx">
+      <DependentUpon>vtnGerente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Tienda.resx">
       <DependentUpon>Tienda.cs</DependentUpon>
     </EmbeddedResource>
