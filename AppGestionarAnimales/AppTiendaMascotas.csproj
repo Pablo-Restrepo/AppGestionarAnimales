@@ -342,6 +342,12 @@
   <ItemGroup>
     <None Include="Resources\icon-park-solid_appointment.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthicons_city-worker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthicons_city-worker %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

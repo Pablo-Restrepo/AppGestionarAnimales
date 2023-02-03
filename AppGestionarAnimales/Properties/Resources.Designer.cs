@@ -93,6 +93,26 @@ namespace AppTiendaMascotas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap healthicons_city_worker {
+            get {
+                object obj = ResourceManager.GetObject("healthicons_city-worker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap healthicons_city_worker__1_ {
+            get {
+                object obj = ResourceManager.GetObject("healthicons_city-worker (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_baseline_pets__1_ {
             get {
                 object obj = ResourceManager.GetObject("ic_baseline-pets (1)", resourceCulture);
