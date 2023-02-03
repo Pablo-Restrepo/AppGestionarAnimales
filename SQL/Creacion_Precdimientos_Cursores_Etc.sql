@@ -30,7 +30,6 @@ Create or replace package body paq_gerente as
     BEGIN
         FOR a IN (SELECT IDRESIDENCIA, TIPORESIDENCIA FROM RESIDENCIA) LOOP
             v_id_residencia := a.IDRESIDENCIA;
-            v_tipo_residencia := a.TIPORESIDENCIA;
             OPEN p_cursor for               
             SELECT tiporesidencia as Tipo_De_Residencia, NOMBREMASCOTA as Nombre_de_Mascota, TIPOMASCOTA as Tipo_De_Mascota, ESPECIEMASCOTA as Especie_De_Mascota, GENEROMASCOTA as Genero_De_Mascota
             FROM MASCOTA inner join (select idaloja,idmascota, aloja.idresidencia, tiporesidencia  from aloja inner join residencia on aloja.idresidencia = residencia.idresidencia ) T
@@ -50,6 +49,27 @@ Create or replace package body paq_gerente as
         WHERE fechaIngreso BETWEEN p_fechaInicio AND p_fechaFin;
     END listar_empleados;
 end paq_gerente;
+
+---Probando el procedimiento
+set serveroutput on;
+DECLARE
+  p_cursor SYS_REFCURSOR;
+  v_tipo_residencia VARCHAR2(30);
+  v_nombre_mascota VARCHAR2(30);
+  v_tipo_mascota VARCHAR2(30);
+  v_especie_mascota VARCHAR2(30);
+  v_genero_mascota VARCHAR2(30);
+BEGIN
+  paq_gerente.pr_verificacion_residencias(p_cursor);
+  LOOP
+    FETCH p_cursor INTO v_tipo_residencia, v_nombre_mascota, v_tipo_mascota, v_especie_mascota, v_genero_mascota;
+    EXIT WHEN p_cursor%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE('Tipo de residencia: ' || v_tipo_residencia || ' Nombre de Mascota: ' || v_nombre_mascota || ' Tipo de Mascota: ' || v_tipo_mascota || ' Especie de Mascota: ' || v_especie_mascota || ' Género de Mascota: ' || v_genero_mascota);
+  END LOOP;
+  CLOSE p_cursor;
+END;
+
+
 
 /*==============================================================*/
 /* TRIGGERS                                                */
