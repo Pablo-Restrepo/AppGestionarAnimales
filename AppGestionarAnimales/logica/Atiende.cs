@@ -11,12 +11,12 @@ namespace AppTiendaMascotas.logica
     class Atiende
     {
         Datos dt = new Datos();
-        public int ingresarAtencion(int codEmpledo, int idMascota, string tipoAtencion, string descripcionAtencion, string fechaAtencion, int costoAtencion)
+        public int ingresarAtencion(int codEmpledo, int idMascota, string tipoAtencion, string descripcionAtencion, int costoAtencion)
         {
             int resultado;
             //paso 1: construyo la sentencia sql para insertar
             string consulta = "INSERT INTO ATIENDE (CODEMPLEADO,IDMASCOTA,TIPOATENCION,FECHAATENCION,COSTOATENCION,descriptcion) VALUES (" +
-                codEmpledo + "," + idMascota + ",'" + tipoAtencion + "',TO_DATE('" + fechaAtencion + "','DD/MM/YY')," + costoAtencion + ",'" + descripcionAtencion+ "')";
+                codEmpledo + "," + idMascota + ",'" + tipoAtencion + "'," + costoAtencion + ",'" + descripcionAtencion+ "')";
             //paso 2: enviar la consulta a la capa de accesoDatos para ejecutarla
             resultado = dt.ejecutarDML(consulta);
             return resultado;

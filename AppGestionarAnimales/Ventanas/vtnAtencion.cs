@@ -131,25 +131,23 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			if (timeFechaAtencion.Text.Equals("") || cbxEmpleado.Text.Equals("") || cbxMascota.Text.Equals("") || cbxTipoAtencion.Text.Equals("") || txtDescAtencion.Text.Equals(""))
+			if (cbxEmpleado.Text.Equals("") || cbxMascota.Text.Equals("") || cbxTipoAtencion.Text.Equals("") || txtDescAtencion.Text.Equals(""))
 			{
 				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
 			int codEmpleado, idMascota, costoAtencion, resultado;
-			string tipoAtencion, fechaAtencion, descripcion;
+			string tipoAtencion, descripcion;
 
 			try
 			{
-				DateTime fechaA = timeFechaAtencion.Value;
-				fechaAtencion = fechaA.ToString("dd'/'MM'/'yyyy");
 				codEmpleado = Convert.ToInt32(cbxEmpleado.SelectedValue);
 				idMascota = Convert.ToInt32(cbxMascota.SelectedValue);
 				costoAtencion = int.Parse(txtCostoAtencion.Text);
 				tipoAtencion = cbxTipoAtencion.Text;
 				descripcion = txtDescAtencion.Text;
-				resultado = atie.ingresarAtencion(codEmpleado, idMascota, tipoAtencion, descripcion, fechaAtencion, costoAtencion);
+				resultado = atie.ingresarAtencion(codEmpleado, idMascota, tipoAtencion, descripcion, costoAtencion);
 			}
 			catch (Exception ex)
 			{

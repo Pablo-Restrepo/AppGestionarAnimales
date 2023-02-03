@@ -273,7 +273,7 @@ namespace AppTiendaMascotas
 		}
 
 		private void btnEmplado_Click(object sender, EventArgs e)
-		{
+		{	
 			abrirFormHija(new vtnEmpleado());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);

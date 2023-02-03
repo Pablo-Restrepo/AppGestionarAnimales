@@ -52,23 +52,23 @@ end paq_gerente;
 ---Probando el procedimiento pr_verificacion_residencias
 set serveroutput on;
 DECLARE
-  p_cursor SYS_REFCURSOR;
-  v_tipo_residencia VARCHAR2(30);
-  v_nombre_mascota VARCHAR2(30);
-  v_tipo_mascota VARCHAR2(30);
-  v_especie_mascota VARCHAR2(30);
-  v_genero_mascota VARCHAR2(30);
-  p_tipo_residencia VARCHAR2(30);
+    p_cursor SYS_REFCURSOR;
+    v_tipo_residencia VARCHAR2(30);
+    v_nombre_mascota VARCHAR2(30);
+    v_tipo_mascota VARCHAR2(30);
+    v_especie_mascota VARCHAR2(30);
+    v_genero_mascota VARCHAR2(30);
+    p_tipo_residencia VARCHAR2(30);
 
 BEGIN
-  p_tipo_residencia := 'Acuario';
-  paq_gerente.pr_verificacion_residencias(p_tipo_residencia,p_cursor);
-  LOOP
-    FETCH p_cursor INTO v_tipo_residencia, v_nombre_mascota, v_tipo_mascota, v_especie_mascota, v_genero_mascota;
-    EXIT WHEN p_cursor%NOTFOUND;
-    DBMS_OUTPUT.PUT_LINE('Tipo de residencia: ' || v_tipo_residencia || ', Nombre de Mascota: ' || v_nombre_mascota || ', Tipo de Mascota: ' || v_tipo_mascota || ', Especie de Mascota: ' || v_especie_mascota || ', Género de Mascota: ' || v_genero_mascota);
-  END LOOP;
-  CLOSE p_cursor;
+    p_tipo_residencia := 'Acuario';
+    paq_gerente.pr_verificacion_residencias(p_tipo_residencia,p_cursor);
+    LOOP
+        FETCH p_cursor INTO v_tipo_residencia, v_nombre_mascota, v_tipo_mascota, v_especie_mascota, v_genero_mascota;
+        EXIT WHEN p_cursor%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('Tipo de residencia: ' || v_tipo_residencia || ', Nombre de Mascota: ' || v_nombre_mascota || ', Tipo de Mascota: ' || v_tipo_mascota || ', Especie de Mascota: ' || v_especie_mascota || ', Gï¿½nero de Mascota: ' || v_genero_mascota);
+    END LOOP;
+    CLOSE p_cursor;
 END;
 
 

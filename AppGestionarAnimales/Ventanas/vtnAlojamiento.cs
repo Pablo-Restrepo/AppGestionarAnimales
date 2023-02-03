@@ -121,24 +121,22 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			if (cbxResidencia.Text.Equals("") || cbxMascota.Text.Equals("") || timeFechaInicioAloj.Text.Equals("") || timeFechaFinAloj.Text.Equals(""))
+			if (cbxResidencia.Text.Equals("") || cbxMascota.Text.Equals("") || timeFechaFinAloj.Text.Equals(""))
 			{
 				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
 			int idResidencia, idMascota, resultado;
-			DateTime fechaInicio = timeFechaInicioAloj.Value;
 			DateTime fechaFin = timeFechaFinAloj.Value;
 
 			try
 			{
-				string fechaInicioAlojamiento, fechaFinAlojamiento;
-				fechaInicioAlojamiento = fechaInicio.ToString("dd'/'MM'/'yyyy HH:mm:ss");
+				string fechaFinAlojamiento;
 				fechaFinAlojamiento = fechaFin.ToString("dd'/'MM'/'yyyy HH:mm:ss");
 				idResidencia = Convert.ToInt32(cbxResidencia.SelectedValue);
 				idMascota = Convert.ToInt32(cbxMascota.SelectedValue);
-				resultado = aloja.ingresarAlojamiento(idResidencia, idMascota, fechaInicioAlojamiento, fechaFinAlojamiento);
+				resultado = aloja.ingresarAlojamiento(idResidencia, idMascota, fechaFinAlojamiento);
 			}
 			catch (Exception ex)
 			{

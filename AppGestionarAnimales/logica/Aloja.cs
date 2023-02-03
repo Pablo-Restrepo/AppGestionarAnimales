@@ -11,12 +11,12 @@ namespace AppTiendaMascotas.logica
     class Aloja
     {
         Datos dt = new Datos();
-        public int ingresarAlojamiento(int idResidencia, int idMascota, string fechaInicioAlojamiento, string fechaFinAlojamiento)
+        public int ingresarAlojamiento(int idResidencia, int idMascota, string fechaFinAlojamiento)
         {
             int resultado;
             //paso 1: construyo la sentencia sql para insertar
             string consulta = "INSERT INTO ALOJA (IDRESIDENCIA,IDMASCOTA,FECHAINICIOALOJAMIENTO,FECHAFINALOJAMIENTO) VALUES (" +
-                idResidencia + "," + idMascota + ",TO_TIMESTAMP('" + fechaInicioAlojamiento + "','DD/MM/YYYY HH24:MI:SS'),TO_TIMESTAMP('" + fechaFinAlojamiento + "','DD/MM/YYYY HH24:MI:SS'))";
+                idResidencia + "," + idMascota + ",TO_TIMESTAMP('" + fechaFinAlojamiento + "','DD/MM/YYYY HH24:MI:SS'))";
             //paso 2: enviar la consulta a la capa de accesoDatos para ejecutarla
             resultado = dt.ejecutarDML(consulta);
             return resultado;
