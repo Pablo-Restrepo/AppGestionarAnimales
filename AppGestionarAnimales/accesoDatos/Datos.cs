@@ -36,7 +36,7 @@ namespace AppTiendaMascotas.accesoDatos
 
 		public void setCadenaConexion(string userId, string hostName = "localhost", string portNumber = "1521", string password = "******")
 		{
-			cadenaConexion = $"User Id={userId};Password={password}; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS= (PROTOCOL=TCP)(HOST={hostName}) (PORT={portNumber}))))";
+			cadenaConexion = $"User Id={userId};Password={password}; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS= (PROTOCOL=TCP)(HOST={hostName})(PORT={portNumber}))))";
 		}
 
 		public string getCadenaConexion()

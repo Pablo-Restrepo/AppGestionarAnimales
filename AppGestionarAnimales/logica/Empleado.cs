@@ -57,5 +57,10 @@ namespace AppTiendaMascotas.logica
 			DataTable dta = mids.Tables[0];
 			return dta;
 		}
+        /*
+        public DataSet consultarIngresosXEmpleado()
+        {
+            return
+        }*/
 	}
 }

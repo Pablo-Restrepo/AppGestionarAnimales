@@ -40,7 +40,6 @@ namespace AppTiendaMascotas.Ventanas
             this.label1 = new System.Windows.Forms.Label();
             this.dgvConsultaProcedimiento2 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbxCodEmpleado = new System.Windows.Forms.ComboBox();
             this.timeFechaFinPrimerFuncion = new System.Windows.Forms.DateTimePicker();
             this.timeFechaInicioPrimerFuncion = new System.Windows.Forms.DateTimePicker();
             this.btnConsultarIngXempleado = new System.Windows.Forms.Button();
@@ -57,15 +56,20 @@ namespace AppTiendaMascotas.Ventanas
             this.label11 = new System.Windows.Forms.Label();
             this.timeFechaInicioTercerProcedimiento = new System.Windows.Forms.DateTimePicker();
             this.timeFechaFinTercerProcedimiento = new System.Windows.Forms.DateTimePicker();
-            this.cbxCodEmpleadoProcedimiento3 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvEmpleadosIngresados = new System.Windows.Forms.DataGridView();
             this.btnConsultarEmpleadosIngresados = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtCedulaCliente = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaProcedimiento2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleadosIngresados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,18 +147,6 @@ namespace AppTiendaMascotas.Ventanas
             this.label2.Size = new System.Drawing.Size(285, 29);
             this.label2.TabIndex = 56;
             this.label2.Text = "Ingresos Por Empleado";
-            // 
-            // cbxCodEmpleado
-            // 
-            this.cbxCodEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-            this.cbxCodEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCodEmpleado.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCodEmpleado.ForeColor = System.Drawing.Color.White;
-            this.cbxCodEmpleado.FormattingEnabled = true;
-            this.cbxCodEmpleado.Location = new System.Drawing.Point(309, 132);
-            this.cbxCodEmpleado.Name = "cbxCodEmpleado";
-            this.cbxCodEmpleado.Size = new System.Drawing.Size(300, 27);
-            this.cbxCodEmpleado.TabIndex = 57;
             // 
             // timeFechaFinPrimerFuncion
             // 
@@ -367,18 +359,6 @@ namespace AppTiendaMascotas.Ventanas
             this.timeFechaFinTercerProcedimiento.Size = new System.Drawing.Size(299, 26);
             this.timeFechaFinTercerProcedimiento.TabIndex = 75;
             // 
-            // cbxCodEmpleadoProcedimiento3
-            // 
-            this.cbxCodEmpleadoProcedimiento3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-            this.cbxCodEmpleadoProcedimiento3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCodEmpleadoProcedimiento3.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCodEmpleadoProcedimiento3.ForeColor = System.Drawing.Color.White;
-            this.cbxCodEmpleadoProcedimiento3.FormattingEnabled = true;
-            this.cbxCodEmpleadoProcedimiento3.Location = new System.Drawing.Point(310, 798);
-            this.cbxCodEmpleadoProcedimiento3.Name = "cbxCodEmpleadoProcedimiento3";
-            this.cbxCodEmpleadoProcedimiento3.Size = new System.Drawing.Size(300, 27);
-            this.cbxCodEmpleadoProcedimiento3.TabIndex = 77;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -501,6 +481,52 @@ namespace AppTiendaMascotas.Ventanas
             this.label15.Text = "(este procedimiento muestra los empleados\r\nque han ingresado en una determinada f" +
     "echa\r\ncon inicio y fin)";
             // 
+            // txtCedulaCliente
+            // 
+            this.txtCedulaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+            this.txtCedulaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCedulaCliente.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedulaCliente.ForeColor = System.Drawing.Color.White;
+            this.txtCedulaCliente.Location = new System.Drawing.Point(324, 135);
+            this.txtCedulaCliente.MaxLength = 50;
+            this.txtCedulaCliente.Name = "txtCedulaCliente";
+            this.txtCedulaCliente.Size = new System.Drawing.Size(272, 18);
+            this.txtCedulaCliente.TabIndex = 85;
+            this.txtCedulaCliente.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(311, 129);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(300, 32);
+            this.pictureBox2.TabIndex = 84;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(325, 803);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(272, 18);
+            this.textBox1.TabIndex = 87;
+            this.textBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(312, 797);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 32);
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
             // vtnGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,13 +534,16 @@ namespace AppTiendaMascotas.Ventanas
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(731, 559);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtCedulaCliente);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.btnConsultarEmpleadosIngresados);
             this.Controls.Add(this.dgvEmpleadosIngresados);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.cbxCodEmpleadoProcedimiento3);
             this.Controls.Add(this.timeFechaInicioTercerProcedimiento);
             this.Controls.Add(this.timeFechaFinTercerProcedimiento);
             this.Controls.Add(this.label11);
@@ -531,7 +560,6 @@ namespace AppTiendaMascotas.Ventanas
             this.Controls.Add(this.btnConsultarIngXempleado);
             this.Controls.Add(this.timeFechaInicioPrimerFuncion);
             this.Controls.Add(this.timeFechaFinPrimerFuncion);
-            this.Controls.Add(this.cbxCodEmpleado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvConsultaProcedimiento2);
             this.Controls.Add(this.label1);
@@ -540,6 +568,8 @@ namespace AppTiendaMascotas.Ventanas
             this.Text = "vtnGerente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaProcedimiento2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleadosIngresados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,7 +580,6 @@ namespace AppTiendaMascotas.Ventanas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvConsultaProcedimiento2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbxCodEmpleado;
         private System.Windows.Forms.DateTimePicker timeFechaFinPrimerFuncion;
         private System.Windows.Forms.DateTimePicker timeFechaInicioPrimerFuncion;
         private System.Windows.Forms.Button btnConsultarIngXempleado;
@@ -567,12 +596,15 @@ namespace AppTiendaMascotas.Ventanas
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker timeFechaInicioTercerProcedimiento;
         private System.Windows.Forms.DateTimePicker timeFechaFinTercerProcedimiento;
-        private System.Windows.Forms.ComboBox cbxCodEmpleadoProcedimiento3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dgvEmpleadosIngresados;
         private System.Windows.Forms.Button btnConsultarEmpleadosIngresados;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtCedulaCliente;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
