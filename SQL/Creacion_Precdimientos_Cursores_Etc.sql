@@ -5,7 +5,7 @@ CREATE OR REPLACE PACKAGE paq_gerente as
     FUNCTION total_ingresos_empleado(p_codEmpleado IN NUMBER, p_fechaInicio IN DATE, p_fechaFin IN DATE)
         RETURN INTEGER;
     
-    PROCEDURE pr_verificacion_residencias(p_cursor OUT SYS_REFCURSOR) ;
+    PROCEDURE pr_verificacion_residencias(p_tipo_residencia varchar2,p_cursor OUT SYS_REFCURSOR) ;
     
     PROCEDURE listar_empleados(p_fechaInicio IN DATE, p_fechaFin IN DATE, p_cursor OUT SYS_REFCURSOR);
 END paq_gerente;    
@@ -25,20 +25,18 @@ Create or replace package body paq_gerente as
         RETURN v_total;
     END;
 
-    PROCEDURE pr_verificacion_residencias(p_cursor OUT SYS_REFCURSOR) as
+    PROCEDURE pr_verificacion_residencias(p_tipo_residencia varchar2, p_cursor OUT SYS_REFCURSOR) as
         v_id_residencia NUMBER;
     BEGIN
-        FOR a IN (SELECT IDRESIDENCIA, TIPORESIDENCIA FROM RESIDENCIA) LOOP
-            v_id_residencia := a.IDRESIDENCIA;
-            v_tipo_residencia := a.TIPORESIDENCIA;
-            OPEN p_cursor for               
+        open p_cursor for
             SELECT tiporesidencia as Tipo_De_Residencia, NOMBREMASCOTA as Nombre_de_Mascota, TIPOMASCOTA as Tipo_De_Mascota, ESPECIEMASCOTA as Especie_De_Mascota, GENEROMASCOTA as Genero_De_Mascota
-            FROM MASCOTA inner join (select idaloja,idmascota, aloja.idresidencia, tiporesidencia  from aloja inner join residencia on aloja.idresidencia = residencia.idresidencia ) T
-            on mascota.idmascota = t.idmascota
-            WHERE mascota.IDMASCOTA IN (SELECT aloja.IDMASCOTA
-                                FROM ALOJA
-                                WHERE aloja.IDRESIDENCIA = v_id_residencia);
-        END loop;
+            from aloja 
+            inner join (select *
+                        from residencia
+                        where tiporesidencia like p_tipo_residencia) RESIDENCIA_FILTRADA
+            on aloja.idresidencia = RESIDENCIA_FILTRADA.idresidencia
+            inner join mascota
+            on aloja.idmascota = mascota.idmascota;
     END pr_verificacion_residencias;
     
     PROCEDURE listar_empleados(p_fechaInicio IN DATE, p_fechaFin IN DATE, p_cursor OUT SYS_REFCURSOR)
@@ -50,6 +48,30 @@ Create or replace package body paq_gerente as
         WHERE fechaIngreso BETWEEN p_fechaInicio AND p_fechaFin;
     END listar_empleados;
 end paq_gerente;
+
+---Probando el procedimiento pr_verificacion_residencias
+set serveroutput on;
+DECLARE
+  p_cursor SYS_REFCURSOR;
+  v_tipo_residencia VARCHAR2(30);
+  v_nombre_mascota VARCHAR2(30);
+  v_tipo_mascota VARCHAR2(30);
+  v_especie_mascota VARCHAR2(30);
+  v_genero_mascota VARCHAR2(30);
+  p_tipo_residencia VARCHAR2(30);
+
+BEGIN
+  p_tipo_residencia := 'Acuario';
+  paq_gerente.pr_verificacion_residencias(p_tipo_residencia,p_cursor);
+  LOOP
+    FETCH p_cursor INTO v_tipo_residencia, v_nombre_mascota, v_tipo_mascota, v_especie_mascota, v_genero_mascota;
+    EXIT WHEN p_cursor%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE('Tipo de residencia: ' || v_tipo_residencia || ', Nombre de Mascota: ' || v_nombre_mascota || ', Tipo de Mascota: ' || v_tipo_mascota || ', Especie de Mascota: ' || v_especie_mascota || ', Género de Mascota: ' || v_genero_mascota);
+  END LOOP;
+  CLOSE p_cursor;
+END;
+
+
 
 /*==============================================================*/
 /* TRIGGERS                                                */
