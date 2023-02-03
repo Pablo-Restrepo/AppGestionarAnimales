@@ -16,5 +16,20 @@ namespace AppTiendaMascotas.Ventanas
         {
             InitializeComponent();
         }
+
+        private void btnConsultarIngXEmpleado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultarAlojXResidencia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultarEmpleadosIngresados_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
