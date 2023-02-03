@@ -16,7 +16,7 @@ Create or replace package body paq_gerente as
     AS
         v_total INTEGER;
     BEGIN
-        SELECT SUM(valorVenta)
+        SELECT SUM(valorVenta) as IngresoXEmpleado
         INTO v_total
         FROM venta
         WHERE idEmpleado = p_codEmpleado
@@ -27,15 +27,14 @@ Create or replace package body paq_gerente as
 
     PROCEDURE pr_verificacion_residencias(p_cursor OUT SYS_REFCURSOR) as
         v_id_residencia NUMBER;
-        v_tipo_residencia VARCHAR2(30);
     BEGIN
         FOR a IN (SELECT IDRESIDENCIA, TIPORESIDENCIA FROM RESIDENCIA) LOOP
             v_id_residencia := a.IDRESIDENCIA;
             v_tipo_residencia := a.TIPORESIDENCIA;
             OPEN p_cursor for               
-            SELECT aloja.IDRESIDENCIA, NOMBREMASCOTA, TIPOMASCOTA, ESPECIEMASCOTA, GENEROMASCOTA
-            FROM MASCOTA inner join aloja
-            on mascota.idmascota = aloja.idmascota
+            SELECT tiporesidencia as Tipo_De_Residencia, NOMBREMASCOTA as Nombre_de_Mascota, TIPOMASCOTA as Tipo_De_Mascota, ESPECIEMASCOTA as Especie_De_Mascota, GENEROMASCOTA as Genero_De_Mascota
+            FROM MASCOTA inner join (select idaloja,idmascota, aloja.idresidencia, tiporesidencia  from aloja inner join residencia on aloja.idresidencia = residencia.idresidencia ) T
+            on mascota.idmascota = t.idmascota
             WHERE mascota.IDMASCOTA IN (SELECT aloja.IDMASCOTA
                                 FROM ALOJA
                                 WHERE aloja.IDRESIDENCIA = v_id_residencia);
@@ -46,7 +45,7 @@ Create or replace package body paq_gerente as
     AS
     BEGIN
         OPEN p_cursor FOR
-        SELECT codEmpleado, nombreEmpleado, apellidoEmpleado, cargoEmpleado, fechaIngreso, salarioEmpleado
+        SELECT codEmpleado as Codigo_Empleado, nombreEmpleado as Nombre_De_Empleado, apellidoEmpleado as Apellido_De_Empleado, cargoEmpleado as Cargo_De_Empleado, fechaIngreso as Fecha_De_Ingreso, salarioEmpleado as Salario_De_Empleado
         FROM empleado
         WHERE fechaIngreso BETWEEN p_fechaInicio AND p_fechaFin;
     END listar_empleados;
