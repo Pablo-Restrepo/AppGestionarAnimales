@@ -51,26 +51,6 @@ Create or replace package body paq_gerente as
     END listar_empleados;
 end paq_gerente;
 
-
----Probando el procedimiento
-set serveroutput on;
-DECLARE
-  p_cursor SYS_REFCURSOR;
-  v_id_residencia NUMBER;
-  v_nombre_mascota VARCHAR2(30);
-  v_tipo_mascota VARCHAR2(30);
-  v_especie_mascota VARCHAR2(30);
-  v_genero_mascota VARCHAR2(30);
-BEGIN
-  paq_gerente.pr_verificacion_residencias(p_cursor);
-  LOOP
-    FETCH p_cursor INTO v_id_residencia, v_nombre_mascota, v_tipo_mascota, v_especie_mascota, v_genero_mascota;
-    EXIT WHEN p_cursor%NOTFOUND;
-    DBMS_OUTPUT.PUT_LINE('ID Residencia: ' || v_id_residencia || ' Nombre Mascota: ' || v_nombre_mascota || ' Tipo Mascota: ' || v_tipo_mascota || ' Especie Mascota: ' || v_especie_mascota || ' Género Mascota: ' || v_genero_mascota);
-  END LOOP;
-  CLOSE p_cursor;
-END;
-
 /*==============================================================*/
 /* TRIGGERS                                                */
 /*==============================================================*/
