@@ -235,6 +235,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -252,6 +253,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(25, 25, 25);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -269,6 +271,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -286,6 +289,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -303,6 +307,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(25, 25, 25);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -320,6 +325,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -337,6 +343,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -354,6 +361,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -371,6 +379,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(25, 25, 25);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -388,6 +397,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -405,6 +415,7 @@ namespace AppTiendaMascotas
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -415,13 +426,14 @@ namespace AppTiendaMascotas
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
 			btnAtencion.BackColor = Color.FromArgb(46, 48, 51);
 			btnCliente.BackColor = Color.FromArgb(46, 48, 51);
-			btnCompra.BackColor = Color.FromArgb(25, 25, 25);
+			btnCompra.BackColor = Color.FromArgb(46, 48, 51);
 			btnAcercaDe.BackColor = Color.FromArgb(46, 48, 51);
 			btnEmplado.BackColor = Color.FromArgb(46, 48, 51);
 			btnMascota.BackColor = Color.FromArgb(46, 48, 51);
 			btnProducto.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(25, 25, 25);
 			metodoBuscar();
 		}
     }
