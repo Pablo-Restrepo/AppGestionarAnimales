@@ -237,6 +237,7 @@ namespace AppTiendaMascotas
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
 			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -255,6 +256,7 @@ namespace AppTiendaMascotas
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(25, 25, 25);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 
@@ -277,7 +279,7 @@ namespace AppTiendaMascotas
 		}
 
 		private void btnEmplado_Click(object sender, EventArgs e)
-		{
+		{	
 			abrirFormHija(new vtnEmpleado());
 			btnInicio.BackColor = Color.FromArgb(46, 48, 51);
 			btnAlojamiento.BackColor = Color.FromArgb(46, 48, 51);
@@ -327,6 +329,7 @@ namespace AppTiendaMascotas
 			btnVenta.BackColor = Color.FromArgb(46, 48, 51);
 			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			btnResidencia.BackColor = Color.FromArgb(46, 48, 51);
+			btnModoGerente.BackColor = Color.FromArgb(46, 48, 51);
 			metodoBuscar();
 		}
 

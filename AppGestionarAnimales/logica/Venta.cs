@@ -11,12 +11,12 @@ namespace AppTiendaMascotas.logica
     class Venta
     {
         Datos dt = new Datos();
-        public int ingresarVenta(int idProducto, int idEmpleado, int numProducto, string fechaVenta, int valorVenta)
+        public int ingresarVenta(int idProducto, int idEmpleado, int numProducto, int valorVenta)
         {
             int resultado;
             //paso 1: construyo la sentencia sql para insertar
             string consulta = "INSERT INTO VENTA (IDPRODUCTO,IDEMPLEADO,NUMPRODUCTO,FECHAVENTA,VALORVENTA) VALUES (" +
-                idProducto + "," + idEmpleado + "," + numProducto + ",TO_TIMESTAMP('" + fechaVenta + "','DD/MM/YYYY HH24:MI:SS')," + valorVenta + ")";
+                idProducto + "," + idEmpleado + "," + numProducto + "," + valorVenta + ")";
             //paso 2: enviar la consulta a la capa de accesoDatos para ejecutarla
             resultado = dt.ejecutarDML(consulta);
             return resultado;
@@ -67,5 +67,13 @@ namespace AppTiendaMascotas.logica
 			DataTable dta = mids.Tables[0];
 			return dta;
 		}
+
+        public DataSet valorVenta(string idProducto)
+        {
+            DataSet rDT = new DataSet();
+            string consulta = "SELECT PRECIOPRODUCTO FROM PRODUCTO WHERE NOMBREPRODUCTO = '" + idProducto + "'";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT;
+        }
 	}
 }

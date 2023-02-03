@@ -54,14 +54,14 @@ namespace AppTiendaMascotas.Ventanas
 
 			txtCantProd.Anchor = AnchorStyles.Top;
 			cbxIdVentaDelete.Anchor = AnchorStyles.Top;
-			txtCostoVenta.Anchor = AnchorStyles.Top;
+			lblCostoVenta.Anchor = AnchorStyles.Top;
 			cbxEmpleado.Anchor = AnchorStyles.Top;
 			cbxProducto.Anchor = AnchorStyles.Top;
 			btnEliminar.Anchor = AnchorStyles.Top;
 			btnGuardar.Anchor = AnchorStyles.Top;
 			dgvConsultaEmp.Anchor = AnchorStyles.Top;
 			pictureBox3.Anchor = AnchorStyles.Top;
-			pictureBox1.Anchor = AnchorStyles.Top;
+			lblCostoVenta.Anchor = AnchorStyles.Top;
 			timeFechaVenta.Anchor = AnchorStyles.Top;
 			label1.Anchor = AnchorStyles.Top;
 			label2.Anchor = AnchorStyles.Top;
@@ -127,7 +127,7 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			if (cbxProducto.Text.Equals("") || cbxEmpleado.Text.Equals("") || timeFechaVenta.Text.Equals("") || txtCantProd.Text.Equals("") || txtCostoVenta.Text.Equals(""))
+			if (cbxProducto.Text.Equals("") || cbxEmpleado.Text.Equals("") || txtCantProd.Text.Equals("") || lblCostoVenta.Text.Equals(""))
 			{
 				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
@@ -137,12 +137,11 @@ namespace AppTiendaMascotas.Ventanas
 
 			try
 			{
-				DateTime fechaV = timeFechaVenta.Value;
 				idProducto = Convert.ToInt32(cbxProducto.SelectedValue);
 				codEmpleado = Convert.ToInt32(cbxEmpleado.SelectedValue);
 				numProducto = int.Parse(txtCantProd.Text);
-				valorVenta = int.Parse(txtCostoVenta.Text);
-				resultado = vent.ingresarVenta(idProducto, codEmpleado, numProducto, fechaV.ToString("dd'/'MM'/'yyyy HH:mm:ss"), valorVenta);
+				valorVenta = int.Parse(lblCostoVenta.Text);
+				resultado = vent.ingresarVenta(idProducto, codEmpleado, numProducto, valorVenta);
 			}
 			catch (Exception ex)
 			{
@@ -155,7 +154,7 @@ namespace AppTiendaMascotas.Ventanas
 				informacion();
 				MessageBox.Show("Venta registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				txtCantProd.Text = "";
-				txtCostoVenta.Text = "";
+				lblCostoVenta.Text = "";
 			}
 			else
 			{
@@ -194,5 +193,23 @@ namespace AppTiendaMascotas.Ventanas
 				MessageBox.Show("Venta no eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
-	}
+
+        private void txtCantProd_TextChanged(object sender, EventArgs e)
+        {
+			string idProducto = Convert.ToString(cbxProducto.SelectedValue);
+			if (txtCantProd.Text.Equals(""))
+			{
+				lblCostoVenta.Text = "";
+            }
+            else
+            {
+				int cantProducto = Convert.ToInt32(txtCantProd.Text);
+				DataSet res = new DataSet();
+				res = vent.valorVenta(idProducto);
+				//int valor = Convert.ToInt32(vent.Tables["ResultadoDatos"].Rows[0]["PRECIOPRODUCTO"].ToString());
+				lblCostoVenta.Text = Convert.ToString(cantProducto);	
+            }
+			
+		}
+    }
 }

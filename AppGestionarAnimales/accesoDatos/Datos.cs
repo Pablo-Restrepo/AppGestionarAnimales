@@ -11,7 +11,7 @@ namespace AppTiendaMascotas.accesoDatos
 {
     class Datos
     {
-        string cadenaConexion = "DATA SOURCE=localhost;USER ID=proyecto;Password=2802";
+        string cadenaConexion = "DATA SOURCE=localhost:1522/xe;USER ID=proyecto;Password=2802";
 
         //metodo que crea una intruccion dml;
         public int ejecutarDML(string consulta) 

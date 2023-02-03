@@ -123,7 +123,7 @@ namespace AppTiendaMascotas.Ventanas
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			if (timeFechaIngreso.Text.Equals("") || txtCodEmpleado.Text.Equals("") || txtSalarioEmp.Text.Equals("") || txtNombreEmpleado.Text.Equals("") || txtApellidoEmpleado.Text.Equals("") || cbxCargoEmp.Text.Equals(""))
+			if (txtCodEmpleado.Text.Equals("") || txtSalarioEmp.Text.Equals("") || txtNombreEmpleado.Text.Equals("") || txtApellidoEmpleado.Text.Equals("") || cbxCargoEmp.Text.Equals(""))
 			{
 				MessageBox.Show("Hay espacios vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
@@ -131,18 +131,16 @@ namespace AppTiendaMascotas.Ventanas
 
 			int codEmpleado, resultado;
 			long salarioEmpleado;
-			string nombreEmpleado, apellidoEmpleado, cargoEmpleado, fechaIngreso;
+			string nombreEmpleado, apellidoEmpleado, cargoEmpleado;
 
 			try
 			{
-				DateTime fechaIEmp = timeFechaIngreso.Value;
-				fechaIngreso = fechaIEmp.ToString("dd'/'MM'/'yyyy");
 				codEmpleado = int.Parse(txtCodEmpleado.Text);
 				salarioEmpleado = int.Parse(txtSalarioEmp.Text);
 				nombreEmpleado = txtNombreEmpleado.Text;
 				apellidoEmpleado = txtApellidoEmpleado.Text;
 				cargoEmpleado = cbxCargoEmp.Text;
-				resultado = emp.ingresarEmpleado(codEmpleado, nombreEmpleado, apellidoEmpleado, cargoEmpleado, fechaIngreso, salarioEmpleado);
+				resultado = emp.ingresarEmpleado(codEmpleado, nombreEmpleado, apellidoEmpleado, cargoEmpleado, salarioEmpleado);
 			}
 			catch (Exception ex)
 			{
