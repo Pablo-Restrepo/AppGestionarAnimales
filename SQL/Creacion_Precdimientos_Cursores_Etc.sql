@@ -66,7 +66,7 @@ BEGIN
   LOOP
     FETCH p_cursor INTO v_tipo_residencia, v_nombre_mascota, v_tipo_mascota, v_especie_mascota, v_genero_mascota;
     EXIT WHEN p_cursor%NOTFOUND;
-    DBMS_OUTPUT.PUT_LINE('Tipo de residencia: ' || v_tipo_residencia || ' Nombre de Mascota: ' || v_nombre_mascota || ' Tipo de Mascota: ' || v_tipo_mascota || ' Especie de Mascota: ' || v_especie_mascota || ' Género de Mascota: ' || v_genero_mascota);
+    DBMS_OUTPUT.PUT_LINE('Tipo de residencia: ' || v_tipo_residencia || ', Nombre de Mascota: ' || v_nombre_mascota || ', Tipo de Mascota: ' || v_tipo_mascota || ', Especie de Mascota: ' || v_especie_mascota || ', Género de Mascota: ' || v_genero_mascota);
   END LOOP;
   CLOSE p_cursor;
 END;
