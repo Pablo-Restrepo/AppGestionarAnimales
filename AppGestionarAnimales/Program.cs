@@ -17,7 +17,7 @@ namespace AppTiendaMascotas
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tienda());
+            Application.Run(new vtnConexion());
         }
     }
 }

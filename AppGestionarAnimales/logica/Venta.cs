@@ -71,7 +71,7 @@ namespace AppTiendaMascotas.logica
         public DataSet valorVenta(string idProducto)
         {
             DataSet rDT = new DataSet();
-            string consulta = "SELECT PRECIOPRODUCTO FROM PRODUCTO WHERE NOMBREPRODUCTO = '" + idProducto + "'";
+            string consulta = "SELECT PRECIOPRODUCTO FROM PRODUCTO WHERE NOMBREPRODUCTO = 'Cama Perro'";
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }

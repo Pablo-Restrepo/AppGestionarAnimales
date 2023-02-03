@@ -11,10 +11,12 @@ namespace AppTiendaMascotas.accesoDatos
 {
     class Datos
     {
-        string cadenaConexion = "DATA SOURCE=localhost;USER ID=proyecto;Password=2802";
+		public static string cadenaConexion = "";
 
         //metodo que crea una intruccion dml;
         public int ejecutarDML(string consulta)
+		//metodo que crea una intruccion dml;
+		public int ejecutarDML(string consulta) 
         {
             int filasAfectadas = 0;
             OracleConnection miConexion = new OracleConnection(cadenaConexion);
@@ -34,7 +36,17 @@ namespace AppTiendaMascotas.accesoDatos
             return filasAfectadas;
         }
 
-        public DataSet ejecutarSELECT(string consulta)
+		public void setCadenaConexion(string userId, string hostName = "localhost", string portNumber = "1521", string password = "******")
+		{
+			cadenaConexion = $"User Id={userId};Password={password}; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS= (PROTOCOL=TCP)(HOST={hostName}) (PORT={portNumber}))))";
+		}
+
+		public string getCadenaConexion()
+		{
+			return cadenaConexion;
+		}
+
+		public DataSet ejecutarSELECT(string consulta) 
         {
             //paso1: crear un dataset vacio
             DataSet ds = new DataSet();
