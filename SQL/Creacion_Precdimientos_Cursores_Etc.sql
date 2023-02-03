@@ -5,7 +5,7 @@ CREATE OR REPLACE PACKAGE paq_gerente as
     FUNCTION total_ingresos_empleado(p_codEmpleado IN NUMBER, p_fechaInicio IN DATE, p_fechaFin IN DATE)
         RETURN INTEGER;
     
-    PROCEDURE pr_verificacion_residencias;
+    PROCEDURE pr_verificacion_residencias(p_cursor OUT SYS_REFCURSOR) ;
     
     PROCEDURE listar_empleados(p_fechaInicio IN DATE, p_fechaFin IN DATE, p_cursor OUT SYS_REFCURSOR);
 END paq_gerente;    
@@ -25,37 +25,21 @@ Create or replace package body paq_gerente as
         RETURN v_total;
     END;
 
-    PROCEDURE pr_verificacion_residencias as
+    PROCEDURE pr_verificacion_residencias(p_cursor OUT SYS_REFCURSOR) as
         v_id_residencia NUMBER;
         v_tipo_residencia VARCHAR2(30);
-        v_id_mascota NUMBER;
-        v_nombre_mascota VARCHAR2(30);
-        v_tipo_mascota VARCHAR2(20);
-        v_especie_mascota VARCHAR2(30);
-        v_genero_mascota VARCHAR2(30);
     BEGIN
         FOR a IN (SELECT IDRESIDENCIA, TIPORESIDENCIA FROM RESIDENCIA) LOOP
             v_id_residencia := a.IDRESIDENCIA;
             v_tipo_residencia := a.TIPORESIDENCIA;
-    
-            DBMS_OUTPUT.PUT_LINE('Residencia: ' || v_tipo_residencia);
-            DBMS_OUTPUT.PUT_LINE('-------------------------------------------');
-            
-            FOR m IN (SELECT IDMASCOTA, NOMBREMASCOTA, TIPOMASCOTA, ESPECIEMASCOTA, GENEROMASCOTA
-                    FROM MASCOTA
-                    WHERE IDMASCOTA IN (SELECT IDMASCOTA
-                                        FROM ALOJA
-                                        WHERE IDRESIDENCIA = v_id_residencia)) LOOP
-                v_id_mascota := m.IDMASCOTA;
-                v_nombre_mascota := m.NOMBREMASCOTA;
-                v_tipo_mascota := m.TIPOMASCOTA;
-                v_especie_mascota := m.ESPECIEMASCOTA;
-                v_genero_mascota := m.GENEROMASCOTA;
-                
-                DBMS_OUTPUT.PUT_LINE('ID: ' || v_id_mascota || ', Nombre: ' || v_nombre_mascota || ', Tipo: ' || v_tipo_mascota || ', Especie: ' || v_especie_mascota || ', Genero: ' || v_genero_mascota);
-                END LOOP;    
-            DBMS_OUTPUT.PUT_LINE(' ');
-        END LOOP;
+            OPEN p_cursor for               
+            SELECT aloja.IDRESIDENCIA, NOMBREMASCOTA, TIPOMASCOTA, ESPECIEMASCOTA, GENEROMASCOTA
+            FROM MASCOTA inner join aloja
+            on mascota.idmascota = aloja.idmascota
+            WHERE mascota.IDMASCOTA IN (SELECT aloja.IDMASCOTA
+                                FROM ALOJA
+                                WHERE aloja.IDRESIDENCIA = v_id_residencia);
+        END loop;
     END pr_verificacion_residencias;
     
     PROCEDURE listar_empleados(p_fechaInicio IN DATE, p_fechaFin IN DATE, p_cursor OUT SYS_REFCURSOR)
@@ -67,7 +51,6 @@ Create or replace package body paq_gerente as
         WHERE fechaIngreso BETWEEN p_fechaInicio AND p_fechaFin;
     END listar_empleados;
 end paq_gerente;
-Z
 
 /*==============================================================*/
 /* TRIGGERS                                                */
