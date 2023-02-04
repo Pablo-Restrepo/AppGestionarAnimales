@@ -57,31 +57,40 @@ namespace AppTiendaMascotas.accesoDatos
 
         public int ConsultarIngXEmpleado(int codEmpleado, DateTime fechaInicio, DateTime fechaFin)
         {
-
+            int total = 0;
             OracleConnection connection = new OracleConnection(cadenaConexion);
+            try
+            {
+                connection.Open();
 
-            connection.Open();
+                // Crear un objeto OracleCommand y establecer sus propiedades
+                OracleCommand command = new OracleCommand();
+                command.Connection = connection;
+                command.CommandText = "total_ingresos_empleado";
+                command.CommandType = CommandType.StoredProcedure;
 
-            // Crear un objeto OracleCommand y establecer sus propiedades
-            OracleCommand command = new OracleCommand();
-            command.Connection = connection;
-            command.CommandText = "total_ingresos_empleado";
-            command.CommandType = CommandType.StoredProcedure;
+                // Agregar los parámetros de entrada al objeto OracleCommand
+                command.Parameters.Add("p_codEmpleado", OracleDbType.Int32).Value = codEmpleado;
+                command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
+                command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
 
-            // Agregar los parámetros de entrada al objeto OracleCommand
-            command.Parameters.Add("p_codEmpleado", OracleDbType.Int32).Value = codEmpleado;
-            command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
-            command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
+                command.Parameters.Add("p_total", OracleDbType.Int32).Direction = ParameterDirection.Output;
 
-            command.Parameters.Add("p_total", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                command.ExecuteScalar();
 
-            command.ExecuteScalar();
-
-            int total = Convert.ToInt32(command.Parameters["p_total"].Value);
-
-            connection.Close();
-
+                total = Convert.ToInt32(command.Parameters["p_total"].Value);
+                return total;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
             return total;
+
         }
 
     }
