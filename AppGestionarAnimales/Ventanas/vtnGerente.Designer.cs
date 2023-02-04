@@ -558,7 +558,7 @@ namespace AppTiendaMascotas.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(731, 559);
+            this.ClientSize = new System.Drawing.Size(748, 559);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCedulaCliente);
