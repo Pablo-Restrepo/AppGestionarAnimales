@@ -56,7 +56,7 @@ namespace AppTiendaMascotas.accesoDatos
             return ds;
         }
 
-        public int ConsultarIngXEmpleado(int codEmpleado, DateTime fechaInicio, DateTime fechaFin)
+        public int ConsultarIngXEmpleado(long codEmpleado, DateTime fechaInicio, DateTime fechaFin)
         {
             int total = 0;
             OracleConnection connection = new OracleConnection(cadenaConexion);
@@ -64,14 +64,12 @@ namespace AppTiendaMascotas.accesoDatos
             {
                 connection.Open();
 
-                // Crear un objeto OracleCommand y establecer sus propiedades
                 OracleCommand command = new OracleCommand();
                 command.Connection = connection;
                 command.CommandText = "paq_gerente.total_ingresos_empleado";
                 command.CommandType = CommandType.StoredProcedure;
 
-                // Agregar los parámetros de entrada al objeto OracleCommand
-                command.Parameters.Add("p_codEmpleado", OracleDbType.Int32).Value = codEmpleado;
+                command.Parameters.Add("p_codEmpleado", OracleDbType.Decimal).Value = codEmpleado;
                 command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
                 command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
 
