@@ -88,8 +88,36 @@ namespace AppTiendaMascotas.accesoDatos
                 connection.Close();
             }
             return total;
-
         }
-
+        public DataSet ConsultarListarEmpleados(DateTime fechaInicio, DateTime fechaFin)
+        {
+            DataSet ds = new DataSet();
+            OracleConnection connection = new OracleConnection(getCadenaConexion());
+            try
+            {
+                connection.Open();
+                OracleCommand command = new OracleCommand();
+                command.Connection = connection;
+                command.CommandText = "paq_gerente.listar_empleados";
+                command.CommandType = CommandType.StoredProcedure;
+                // Agregar los parámetros de entrada al objeto OracleCommand
+                command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
+                command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
+                command.Parameters.Add("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
+                command.CommandType = CommandType.StoredProcedure;
+                OracleDataAdapter myAdapter = new OracleDataAdapter(command);
+                myAdapter.Fill(ds, "ResultadoDatos");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();                
+            }
+            return ds;
+        }
     }
 }
