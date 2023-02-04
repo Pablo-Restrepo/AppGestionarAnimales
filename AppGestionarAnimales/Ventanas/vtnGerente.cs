@@ -22,7 +22,7 @@ namespace AppTiendaMascotas.Ventanas
 
         private void btnConsultarIngXEmpleado_Click(object sender, EventArgs e)
         {
-            long codEmpleado = long.Parse(txtCedulaCliente.Text);
+            int codEmpleado = int.Parse(txtCedulaCliente.Text);
             this.lblResultadoPrimerFuncion.Text = gerente.ConsultarIngXEmpleado(codEmpleado,timeFechaInicioPrimerFuncion.Value, timeFechaFinPrimerFuncion.Value).ToString();
         }
 

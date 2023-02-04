@@ -56,7 +56,7 @@ namespace AppTiendaMascotas.accesoDatos
             return ds;
         }
 
-        public int ConsultarIngXEmpleado(long codEmpleado, DateTime fechaInicio, DateTime fechaFin)
+        public int ConsultarIngXEmpleado(int codEmpleado, DateTime fechaInicio, DateTime fechaFin)
         {
             int total = 0;
             OracleConnection connection = new OracleConnection(cadenaConexion);
@@ -64,20 +64,17 @@ namespace AppTiendaMascotas.accesoDatos
             {
                 connection.Open();
 
-                OracleCommand command = new OracleCommand();
-                command.Connection = connection;
-                command.CommandText = "paq_gerente.total_ingresos_empleado";
+                OracleCommand command = new OracleCommand("paq_gerente.total_ingresos_empleado",connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add("p_codEmpleado", OracleDbType.Decimal).Value = codEmpleado;
                 command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
                 command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
 
-                command.Parameters.Add("v_total", OracleDbType.Int32).Direction = ParameterDirection.ReturnValue;
+                command.Parameters.Add("v_total", OracleDbType.Decimal).Direction = ParameterDirection.ReturnValue;
                 Console.WriteLine(command.CommandText);
                 command.ExecuteNonQuery();
                 total = Convert.ToInt32(command.Parameters["v_total"].Value);
-                return total;
             }
             catch (Exception ex)
             {

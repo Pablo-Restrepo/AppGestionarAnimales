@@ -12,7 +12,7 @@ namespace AppTiendaMascotas.logica
     {
         Datos dt = new Datos();
 
-        public int ConsultarIngXEmpleado(long codEmpleado, DateTime fechaInicio, DateTime fechaFin)
+        public int ConsultarIngXEmpleado(int codEmpleado, DateTime fechaInicio, DateTime fechaFin)
         {
             return dt.ConsultarIngXEmpleado(codEmpleado, fechaInicio, fechaFin);
         }
