@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppTiendaMascotas.logica;
 
 namespace AppTiendaMascotas.Ventanas
 {
     public partial class vtnGerente : Form
+
     {
+        Gerente gerente = new Gerente();
         public vtnGerente()
         {
             InitializeComponent();
@@ -19,7 +22,8 @@ namespace AppTiendaMascotas.Ventanas
 
         private void btnConsultarIngXEmpleado_Click(object sender, EventArgs e)
         {
-
+            long codEmpleado = long.Parse(txtCedulaCliente.Text);
+            this.lblResultadoPrimerFuncion.Text = gerente.ConsultarIngXEmpleado(codEmpleado,timeFechaInicioPrimerFuncion.Value, timeFechaFinPrimerFuncion.Value).ToString();
         }
 
         private void btnConsultarAlojXResidencia_Click(object sender, EventArgs e)
