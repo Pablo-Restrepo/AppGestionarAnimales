@@ -1,5 +1,5 @@
 /*==============================================================*/
-/* PAQUETE CON FUNCION Y PROCEDIMIENTO QUE USA CURSOR                                      */
+/* PAQUETE CON FUNCION Y PROCEDIMIENTO QUE USA CURSOR           */
 /*==============================================================*/
 CREATE OR REPLACE PACKAGE paq_gerente as
     FUNCTION total_ingresos_empleado(p_codEmpleado IN NUMBER, p_fechaInicio IN DATE, p_fechaFin IN DATE)
@@ -48,7 +48,9 @@ Create or replace package body paq_gerente as
         WHERE fechaIngreso BETWEEN p_fechaInicio AND p_fechaFin;
     END listar_empleados;
 end paq_gerente;
---Probando la funcionalidad total_ingresos_empleado
+/*==============================================================*/
+/* Pruebas de los procedimientos                                */
+/*==============================================================*/
 set serveroutput on;
 DECLARE
     v_total number;
