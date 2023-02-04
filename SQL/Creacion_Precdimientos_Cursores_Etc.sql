@@ -3,7 +3,7 @@
 /*==============================================================*/
 CREATE OR REPLACE PACKAGE paq_gerente as
     FUNCTION total_ingresos_empleado(p_codEmpleado IN NUMBER, p_fechaInicio IN DATE, p_fechaFin IN DATE)
-        RETURN INTEGER;
+        RETURN number;
     
     PROCEDURE pr_verificacion_residencias(p_tipo_residencia varchar2,p_cursor OUT SYS_REFCURSOR) ;
     
@@ -12,9 +12,9 @@ END paq_gerente;
 
 Create or replace package body paq_gerente as
     FUNCTION total_ingresos_empleado(p_codEmpleado IN NUMBER, p_fechaInicio IN DATE, p_fechaFin IN DATE)
-    RETURN INTEGER
+    RETURN number
     AS
-        v_total INTEGER;
+        v_total number;
     BEGIN
         SELECT SUM(valorVenta) as IngresoXEmpleado
         INTO v_total
