@@ -67,7 +67,7 @@ namespace AppTiendaMascotas.accesoDatos
                 // Crear un objeto OracleCommand y establecer sus propiedades
                 OracleCommand command = new OracleCommand();
                 command.Connection = connection;
-                command.CommandText = "total_ingresos_empleado";
+                command.CommandText = "paq_gerente.total_ingresos_empleado";
                 command.CommandType = CommandType.StoredProcedure;
 
                 // Agregar los parámetros de entrada al objeto OracleCommand
