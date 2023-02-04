@@ -48,7 +48,14 @@ Create or replace package body paq_gerente as
         WHERE fechaIngreso BETWEEN p_fechaInicio AND p_fechaFin;
     END listar_empleados;
 end paq_gerente;
-
+--Probando la funcionalidad total_ingresos_empleado
+set serveroutput on;
+DECLARE
+    v_total number;
+BEGIN
+    v_total := paq_gerente.total_ingresos_empleado(123, to_date('01/01/2020'), SYSDATE);
+    DBMS_OUTPUT.PUT_LINE('Resultado: ' || v_total);
+END;
 ---Probando el procedimiento pr_verificacion_residencias
 set serveroutput on;
 DECLARE

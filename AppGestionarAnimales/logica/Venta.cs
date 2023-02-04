@@ -15,7 +15,7 @@ namespace AppTiendaMascotas.logica
         {
             int resultado;
             //paso 1: construyo la sentencia sql para insertar
-            string consulta = "INSERT INTO VENTA (IDPRODUCTO,IDEMPLEADO,NUMPRODUCTO,FECHAVENTA,VALORVENTA) VALUES (" +
+            string consulta = "INSERT INTO VENTA (IDPRODUCTO,IDEMPLEADO,NUMPRODUCTO,VALORVENTA) VALUES (" +
                 idProducto + "," + idEmpleado + "," + numProducto + "," + valorVenta + ")";
             //paso 2: enviar la consulta a la capa de accesoDatos para ejecutarla
             resultado = dt.ejecutarDML(consulta);

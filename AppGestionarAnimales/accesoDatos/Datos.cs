@@ -69,10 +69,10 @@ namespace AppTiendaMascotas.accesoDatos
                 command.Parameters.Add("p_codEmpleado", OracleDbType.Decimal, ParameterDirection.Input).Value = codEmpleado;
                 command.Parameters.Add("p_fechaInicio", OracleDbType.Date, ParameterDirection.Input).Value = fechaInicio;
                 command.Parameters.Add("p_fechaFin", OracleDbType.Date, ParameterDirection.Input).Value = fechaFin;
-                command.Parameters.Add("v_total", OracleDbType.Int32, ParameterDirection.Output);
+                command.Parameters.Add("v_total", OracleDbType.Decimal, ParameterDirection.Output);
                 Console.WriteLine(command.CommandText);
-                object result = command.ExecuteScalar();
-                total = Convert.ToInt32(result);
+                var result = command.ExecuteNonQuery();
+                total = Convert.ToInt32(command.Parameters["v_total"].Value);
                 return total;
             }
             catch (Exception ex)

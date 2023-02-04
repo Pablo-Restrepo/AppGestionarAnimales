@@ -207,7 +207,7 @@ namespace AppTiendaMascotas.Ventanas
 				DataSet res = new DataSet();
 				res = vent.valorVenta(idProducto);
 				int valor = Convert.ToInt32(res.Tables["ResultadoDatos"].Rows[0]["PRECIOPRODUCTO"].ToString());
-				lblCostoVenta.Text = "$ " + Convert.ToString(valor * cantProducto);	
+				lblCostoVenta.Text = Convert.ToString(valor * cantProducto);	
             }
 			
 		}
