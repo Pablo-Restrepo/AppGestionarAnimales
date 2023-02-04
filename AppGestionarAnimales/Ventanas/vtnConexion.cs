@@ -65,6 +65,7 @@ namespace AppTiendaMascotas
 				{
 					conn.Open();
 					Form aux = new Tienda();
+					MessageBox.Show("Conexion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 					this.Hide();
 					aux.ShowDialog();
 					this.Dispose();
@@ -79,7 +80,6 @@ namespace AppTiendaMascotas
 					conn.Close();
 				}
 			}
-			MessageBox.Show("Conexion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 	}
 }
