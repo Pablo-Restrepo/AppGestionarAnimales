@@ -151,22 +151,6 @@ namespace AppTiendaMascotas.Ventanas
             this.label2.TabIndex = 56;
             this.label2.Text = "Ingresos Por Empleado";
             // 
-<<<<<<< HEAD
-=======
-            // cbxCodEmpleado
-            // 
-            this.cbxCodEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxCodEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-            this.cbxCodEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCodEmpleado.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCodEmpleado.ForeColor = System.Drawing.Color.White;
-            this.cbxCodEmpleado.FormattingEnabled = true;
-            this.cbxCodEmpleado.Location = new System.Drawing.Point(309, 132);
-            this.cbxCodEmpleado.Name = "cbxCodEmpleado";
-            this.cbxCodEmpleado.Size = new System.Drawing.Size(300, 27);
-            this.cbxCodEmpleado.TabIndex = 57;
-            // 
->>>>>>> 6ccfe6ae549d30451994d90f6ee54d7d7a2a2354
             // timeFechaFinPrimerFuncion
             // 
             this.timeFechaFinPrimerFuncion.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -394,22 +378,6 @@ namespace AppTiendaMascotas.Ventanas
             this.timeFechaFinTercerProcedimiento.Size = new System.Drawing.Size(299, 26);
             this.timeFechaFinTercerProcedimiento.TabIndex = 75;
             // 
-<<<<<<< HEAD
-=======
-            // cbxCodEmpleadoProcedimiento3
-            // 
-            this.cbxCodEmpleadoProcedimiento3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxCodEmpleadoProcedimiento3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-            this.cbxCodEmpleadoProcedimiento3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCodEmpleadoProcedimiento3.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCodEmpleadoProcedimiento3.ForeColor = System.Drawing.Color.White;
-            this.cbxCodEmpleadoProcedimiento3.FormattingEnabled = true;
-            this.cbxCodEmpleadoProcedimiento3.Location = new System.Drawing.Point(310, 798);
-            this.cbxCodEmpleadoProcedimiento3.Name = "cbxCodEmpleadoProcedimiento3";
-            this.cbxCodEmpleadoProcedimiento3.Size = new System.Drawing.Size(300, 27);
-            this.cbxCodEmpleadoProcedimiento3.TabIndex = 77;
-            // 
->>>>>>> 6ccfe6ae549d30451994d90f6ee54d7d7a2a2354
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;

@@ -14,8 +14,6 @@ namespace AppTiendaMascotas.accesoDatos
     {
 		public static string cadenaConexion = "";
 
-        //metodo que crea una intruccion dml;
-        public int ejecutarDML(string consulta)
 		//metodo que crea una intruccion dml;
 		public int ejecutarDML(string consulta) 
         {
