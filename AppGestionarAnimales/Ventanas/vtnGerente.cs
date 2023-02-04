@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppTiendaMascotas.logica;
 
 namespace AppTiendaMascotas.Ventanas
 {
     public partial class vtnGerente : Form
+
     {
+        Gerente gerente = new Gerente();
         public vtnGerente()
         {
             InitializeComponent();
@@ -19,17 +22,24 @@ namespace AppTiendaMascotas.Ventanas
 
         private void btnConsultarIngXEmpleado_Click(object sender, EventArgs e)
         {
-
+            int codEmpleado = int.Parse(txtCedulaCliente.Text);
+            this.lblResultadoPrimerFuncion.Text = gerente.ConsultarIngXEmpleado(codEmpleado,timeFechaInicioPrimerFuncion.Value, timeFechaFinPrimerFuncion.Value).ToString();
         }
 
         private void btnConsultarAlojXResidencia_Click(object sender, EventArgs e)
         {
-
+            DataSet dsResultado = new DataSet();
+            dsResultado = gerente.ConsultarResidenciasXAlojamiento(cbxTipoResidencia.Text);
+            dgvConsultaProcedimiento2.DataSource = dsResultado;
+            dgvConsultaProcedimiento2.DataMember = "ResultadoDatos";
         }
 
         private void btnConsultarEmpleadosIngresados_Click(object sender, EventArgs e)
         {
-
+            DataSet dsResultado = new DataSet();
+            dsResultado = gerente.ConsultarListarEmpleados(timeFechaInicioTercerProcedimiento.Value, timeFechaFinTercerProcedimiento.Value);
+            dgvEmpleadosIngresados.DataSource = dsResultado;
+            dgvEmpleadosIngresados.DataMember = "ResultadoDatos";
         }
     }
 }
