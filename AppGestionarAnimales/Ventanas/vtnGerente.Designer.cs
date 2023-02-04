@@ -79,7 +79,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Inter", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(422, 42);
             this.label1.TabIndex = 19;
@@ -113,7 +113,7 @@ namespace AppTiendaMascotas.Ventanas
             this.dgvConsultaProcedimiento2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConsultaProcedimiento2.EnableHeadersVisualStyles = false;
             this.dgvConsultaProcedimiento2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvConsultaProcedimiento2.Location = new System.Drawing.Point(12, 467);
+            this.dgvConsultaProcedimiento2.Location = new System.Drawing.Point(4, 467);
             this.dgvConsultaProcedimiento2.Name = "dgvConsultaProcedimiento2";
             this.dgvConsultaProcedimiento2.ReadOnly = true;
             this.dgvConsultaProcedimiento2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -145,7 +145,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(14, 63);
+            this.label2.Location = new System.Drawing.Point(6, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(284, 29);
             this.label2.TabIndex = 56;
@@ -157,7 +157,7 @@ namespace AppTiendaMascotas.Ventanas
             this.timeFechaFinPrimerFuncion.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinPrimerFuncion.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinPrimerFuncion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.timeFechaFinPrimerFuncion.Location = new System.Drawing.Point(310, 226);
+            this.timeFechaFinPrimerFuncion.Location = new System.Drawing.Point(302, 226);
             this.timeFechaFinPrimerFuncion.Name = "timeFechaFinPrimerFuncion";
             this.timeFechaFinPrimerFuncion.Size = new System.Drawing.Size(299, 26);
             this.timeFechaFinPrimerFuncion.TabIndex = 58;
@@ -168,7 +168,7 @@ namespace AppTiendaMascotas.Ventanas
             this.timeFechaInicioPrimerFuncion.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioPrimerFuncion.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioPrimerFuncion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.timeFechaInicioPrimerFuncion.Location = new System.Drawing.Point(310, 175);
+            this.timeFechaInicioPrimerFuncion.Location = new System.Drawing.Point(302, 175);
             this.timeFechaInicioPrimerFuncion.Name = "timeFechaInicioPrimerFuncion";
             this.timeFechaInicioPrimerFuncion.Size = new System.Drawing.Size(299, 26);
             this.timeFechaInicioPrimerFuncion.TabIndex = 59;
@@ -187,7 +187,7 @@ namespace AppTiendaMascotas.Ventanas
             this.btnConsultarIngXempleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarIngXempleado.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarIngXempleado.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarIngXempleado.Location = new System.Drawing.Point(54, 278);
+            this.btnConsultarIngXempleado.Location = new System.Drawing.Point(46, 278);
             this.btnConsultarIngXempleado.Name = "btnConsultarIngXempleado";
             this.btnConsultarIngXempleado.Size = new System.Drawing.Size(124, 37);
             this.btnConsultarIngXempleado.TabIndex = 60;
@@ -202,7 +202,7 @@ namespace AppTiendaMascotas.Ventanas
             this.lblResultadoPrimerFuncion.BackColor = System.Drawing.Color.Transparent;
             this.lblResultadoPrimerFuncion.Font = new System.Drawing.Font("Inter SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoPrimerFuncion.ForeColor = System.Drawing.Color.White;
-            this.lblResultadoPrimerFuncion.Location = new System.Drawing.Point(362, 285);
+            this.lblResultadoPrimerFuncion.Location = new System.Drawing.Point(354, 285);
             this.lblResultadoPrimerFuncion.Name = "lblResultadoPrimerFuncion";
             this.lblResultadoPrimerFuncion.Size = new System.Drawing.Size(145, 23);
             this.lblResultadoPrimerFuncion.TabIndex = 61;
@@ -215,7 +215,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 336);
+            this.label4.Location = new System.Drawing.Point(7, 336);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(351, 29);
             this.label4.TabIndex = 62;
@@ -228,7 +228,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(62, 132);
+            this.label5.Location = new System.Drawing.Point(54, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(200, 23);
             this.label5.TabIndex = 64;
@@ -241,7 +241,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(62, 178);
+            this.label8.Location = new System.Drawing.Point(54, 178);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 23);
             this.label8.TabIndex = 67;
@@ -254,7 +254,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(62, 229);
+            this.label6.Location = new System.Drawing.Point(54, 229);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 23);
             this.label6.TabIndex = 68;
@@ -267,7 +267,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(305, 60);
+            this.label7.Location = new System.Drawing.Point(297, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(348, 57);
             this.label7.TabIndex = 69;
@@ -290,7 +290,7 @@ namespace AppTiendaMascotas.Ventanas
             "Jaula",
             "Casa Perro",
             "CasaGato"});
-            this.cbxTipoResidencia.Location = new System.Drawing.Point(309, 380);
+            this.cbxTipoResidencia.Location = new System.Drawing.Point(301, 380);
             this.cbxTipoResidencia.Name = "cbxTipoResidencia";
             this.cbxTipoResidencia.Size = new System.Drawing.Size(300, 27);
             this.cbxTipoResidencia.TabIndex = 70;
@@ -302,7 +302,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(62, 380);
+            this.label9.Location = new System.Drawing.Point(54, 380);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(184, 23);
             this.label9.TabIndex = 71;
@@ -322,7 +322,7 @@ namespace AppTiendaMascotas.Ventanas
             this.btnConsultarAlojXResidencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarAlojXResidencia.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarAlojXResidencia.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarAlojXResidencia.Location = new System.Drawing.Point(57, 424);
+            this.btnConsultarAlojXResidencia.Location = new System.Drawing.Point(49, 424);
             this.btnConsultarAlojXResidencia.Name = "btnConsultarAlojXResidencia";
             this.btnConsultarAlojXResidencia.Size = new System.Drawing.Size(124, 37);
             this.btnConsultarAlojXResidencia.TabIndex = 72;
@@ -337,7 +337,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(362, 327);
+            this.label10.Location = new System.Drawing.Point(354, 327);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(291, 38);
             this.label10.TabIndex = 73;
@@ -350,7 +350,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(15, 755);
+            this.label11.Location = new System.Drawing.Point(7, 755);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(279, 29);
             this.label11.TabIndex = 74;
@@ -362,7 +362,7 @@ namespace AppTiendaMascotas.Ventanas
             this.timeFechaInicioTercerProcedimiento.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioTercerProcedimiento.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioTercerProcedimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.timeFechaInicioTercerProcedimiento.Location = new System.Drawing.Point(311, 848);
+            this.timeFechaInicioTercerProcedimiento.Location = new System.Drawing.Point(303, 848);
             this.timeFechaInicioTercerProcedimiento.Name = "timeFechaInicioTercerProcedimiento";
             this.timeFechaInicioTercerProcedimiento.Size = new System.Drawing.Size(299, 26);
             this.timeFechaInicioTercerProcedimiento.TabIndex = 76;
@@ -373,7 +373,7 @@ namespace AppTiendaMascotas.Ventanas
             this.timeFechaFinTercerProcedimiento.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinTercerProcedimiento.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinTercerProcedimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.timeFechaFinTercerProcedimiento.Location = new System.Drawing.Point(311, 899);
+            this.timeFechaFinTercerProcedimiento.Location = new System.Drawing.Point(303, 899);
             this.timeFechaFinTercerProcedimiento.Name = "timeFechaFinTercerProcedimiento";
             this.timeFechaFinTercerProcedimiento.Size = new System.Drawing.Size(299, 26);
             this.timeFechaFinTercerProcedimiento.TabIndex = 75;
@@ -385,7 +385,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(53, 902);
+            this.label12.Location = new System.Drawing.Point(45, 902);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 23);
             this.label12.TabIndex = 80;
@@ -398,7 +398,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(53, 851);
+            this.label13.Location = new System.Drawing.Point(45, 851);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(119, 23);
             this.label13.TabIndex = 79;
@@ -411,7 +411,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(53, 798);
+            this.label14.Location = new System.Drawing.Point(45, 798);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(200, 23);
             this.label14.TabIndex = 78;
@@ -445,7 +445,7 @@ namespace AppTiendaMascotas.Ventanas
             this.dgvEmpleadosIngresados.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmpleadosIngresados.EnableHeadersVisualStyles = false;
             this.dgvEmpleadosIngresados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvEmpleadosIngresados.Location = new System.Drawing.Point(12, 996);
+            this.dgvEmpleadosIngresados.Location = new System.Drawing.Point(4, 996);
             this.dgvEmpleadosIngresados.Name = "dgvEmpleadosIngresados";
             this.dgvEmpleadosIngresados.ReadOnly = true;
             this.dgvEmpleadosIngresados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -484,7 +484,7 @@ namespace AppTiendaMascotas.Ventanas
             this.btnConsultarEmpleadosIngresados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarEmpleadosIngresados.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarEmpleadosIngresados.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarEmpleadosIngresados.Location = new System.Drawing.Point(57, 943);
+            this.btnConsultarEmpleadosIngresados.Location = new System.Drawing.Point(49, 943);
             this.btnConsultarEmpleadosIngresados.Name = "btnConsultarEmpleadosIngresados";
             this.btnConsultarEmpleadosIngresados.Size = new System.Drawing.Size(124, 37);
             this.btnConsultarEmpleadosIngresados.TabIndex = 82;
@@ -499,7 +499,7 @@ namespace AppTiendaMascotas.Ventanas
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(301, 740);
+            this.label15.Location = new System.Drawing.Point(293, 740);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(364, 57);
             this.label15.TabIndex = 83;
@@ -508,6 +508,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // txtCedulaCliente
             // 
+            this.txtCedulaCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCedulaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
             this.txtCedulaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCedulaCliente.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -521,6 +522,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__2_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(311, 129);
@@ -558,7 +560,7 @@ namespace AppTiendaMascotas.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(748, 559);
+            this.ClientSize = new System.Drawing.Size(731, 559);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCedulaCliente);
