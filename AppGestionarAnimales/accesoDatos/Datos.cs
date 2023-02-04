@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace AppTiendaMascotas.accesoDatos
 {
@@ -34,9 +35,9 @@ namespace AppTiendaMascotas.accesoDatos
 			return filasAfectadas;
 		}
 
-		public void setCadenaConexion(string userId, string hostName = "localhost", string portNumber = "1521", string password = "******")
+		public void setCadenaConexion(string userId, string hostName, string portNumber, string password)
 		{
-			cadenaConexion = $"User Id={userId};Password={password}; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS= (PROTOCOL=TCP)(HOST={hostName}) (PORT={portNumber}))))";
+			cadenaConexion = "Data Source = " + hostName + ":" + portNumber + "/ xe; User Id = " + userId + "; Password = " + password;
 		}
 
 		public string getCadenaConexion()
