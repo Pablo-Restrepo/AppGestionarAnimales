@@ -269,16 +269,16 @@ namespace AppTiendaMascotas.Ventanas
 			this.label7.TabIndex = 69;
 			this.label7.Text = "(esta funcion muestra los ingresos \r\nde un empleado en una determinada fecha \r\nco" +
     "n inicio y fin)";
-			// 
-			// cbxTipoResidencia
-			// 
-			this.cbxTipoResidencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.cbxTipoResidencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
-			this.cbxTipoResidencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cbxTipoResidencia.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbxTipoResidencia.ForeColor = System.Drawing.Color.White;
-			this.cbxTipoResidencia.FormattingEnabled = true;
-			this.cbxTipoResidencia.Items.AddRange(new object[] {
+            // 
+            // cbxTipoResidencia
+            // 
+            this.cbxTipoResidencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxTipoResidencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+            this.cbxTipoResidencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTipoResidencia.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTipoResidencia.ForeColor = System.Drawing.Color.White;
+            this.cbxTipoResidencia.FormattingEnabled = true;
+            this.cbxTipoResidencia.Items.AddRange(new object[] {
             "Reptiliario Grande",
             "Reptiliario Pequenio",
             "Terrario",
