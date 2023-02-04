@@ -58,9 +58,9 @@ namespace AppTiendaMascotas.logica
 			return dta;
 		}
         /*
-        public DataSet consultarIngresosXEmpleado()
+        public int ConsultarIngXEmpleado(long codEmpleado, DateTime fechaInicio, DateTime fechaFin)
         {
-            return
+            return dt.ConsultarIngXEmpleado(codEmpleado, fechaInicio, fechaFin);
         }*/
 	}
 }
