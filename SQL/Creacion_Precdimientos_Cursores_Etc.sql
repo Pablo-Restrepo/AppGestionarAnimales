@@ -53,7 +53,7 @@ set serveroutput on;
 DECLARE
     v_total number;
 BEGIN
-    v_total := paq_gerente.total_ingresos_empleado(123, to_date('01/01/2020'), SYSDATE);
+    v_total := paq_gerente.total_ingresos_empleado(100, to_date('01/01/2020'), SYSDATE);
     DBMS_OUTPUT.PUT_LINE('Resultado: ' || v_total);
 END;
 ---Probando el procedimiento pr_verificacion_residencias
