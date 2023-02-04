@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppTiendaMascotas.logica;
 
 namespace AppTiendaMascotas.Ventanas
 {
@@ -19,7 +20,7 @@ namespace AppTiendaMascotas.Ventanas
 
         private void btnConsultarIngXEmpleado_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnConsultarAlojXResidencia_Click(object sender, EventArgs e)
@@ -29,7 +30,10 @@ namespace AppTiendaMascotas.Ventanas
 
         private void btnConsultarEmpleadosIngresados_Click(object sender, EventArgs e)
         {
-
+            DataSet dsResultado = new DataSet();
+            dsResultado = aloja.consultarAlojamiento();
+            dgvConsultaAlojamiento.DataSource = dsResultado;
+            dgvConsultaAlojamiento.DataMember = "ResultadoDatos";
         }
     }
 }

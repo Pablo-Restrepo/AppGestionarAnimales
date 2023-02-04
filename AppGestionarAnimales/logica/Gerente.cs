@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,10 @@ namespace AppTiendaMascotas.logica
         public int ConsultarIngXEmpleado(int codEmpleado, DateTime fechaInicio, DateTime fechaFin)
         {
             return dt.ConsultarIngXEmpleado(codEmpleado, fechaInicio, fechaFin);
+        }
+        public DataSet ConsultarListarEmpleados(DateTime fechaInicio, DateTime fechaFin)
+        {
+            return dt.ConsultarListarEmpleados(fechaInicio, fechaFin);
         }
     }
 }
