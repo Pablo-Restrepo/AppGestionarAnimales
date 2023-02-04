@@ -22,12 +22,8 @@ namespace AppTiendaMascotas.Ventanas
 
         private void btnConsultarIngXEmpleado_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            
-=======
             long codEmpleado = long.Parse(txtCedulaCliente.Text);
             this.lblResultadoPrimerFuncion.Text = gerente.ConsultarIngXEmpleado(codEmpleado,timeFechaInicioPrimerFuncion.Value, timeFechaFinPrimerFuncion.Value).ToString();
->>>>>>> 8af687f3e471d689b523e15a7818d658f1180124
         }
 
         private void btnConsultarAlojXResidencia_Click(object sender, EventArgs e)
@@ -38,9 +34,9 @@ namespace AppTiendaMascotas.Ventanas
         private void btnConsultarEmpleadosIngresados_Click(object sender, EventArgs e)
         {
             DataSet dsResultado = new DataSet();
-            dsResultado = aloja.consultarAlojamiento();
-            dgvConsultaAlojamiento.DataSource = dsResultado;
-            dgvConsultaAlojamiento.DataMember = "ResultadoDatos";
+            dsResultado = gerente.ConsultarListarEmpleados(timeFechaInicioTercerProcedimiento.Value, timeFechaFinTercerProcedimiento.Value);
+            dgvEmpleadosIngresados.DataSource = dsResultado;
+            dgvEmpleadosIngresados.DataMember = "ResultadoDatos";
         }
     }
 }

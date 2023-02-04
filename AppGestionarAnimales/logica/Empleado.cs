@@ -57,13 +57,5 @@ namespace AppTiendaMascotas.logica
 			DataTable dta = mids.Tables[0];
 			return dta;
 		}
-<<<<<<< HEAD
-=======
-        /*
-        public int ConsultarIngXEmpleado(long codEmpleado, DateTime fechaInicio, DateTime fechaFin)
-        {
-            return dt.ConsultarIngXEmpleado(codEmpleado, fechaInicio, fechaFin);
-        }*/
->>>>>>> 8af687f3e471d689b523e15a7818d658f1180124
 	}
 }
