@@ -74,6 +74,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Inter", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +87,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // dgvConsultaProcedimiento2
             // 
+            this.dgvConsultaProcedimiento2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvConsultaProcedimiento2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsultaProcedimiento2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
             this.dgvConsultaProcedimiento2.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -138,18 +140,36 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(14, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 29);
+            this.label2.Size = new System.Drawing.Size(284, 29);
             this.label2.TabIndex = 56;
             this.label2.Text = "Ingresos Por Empleado";
             // 
+<<<<<<< HEAD
+=======
+            // cbxCodEmpleado
+            // 
+            this.cbxCodEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxCodEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+            this.cbxCodEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCodEmpleado.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCodEmpleado.ForeColor = System.Drawing.Color.White;
+            this.cbxCodEmpleado.FormattingEnabled = true;
+            this.cbxCodEmpleado.Location = new System.Drawing.Point(309, 132);
+            this.cbxCodEmpleado.Name = "cbxCodEmpleado";
+            this.cbxCodEmpleado.Size = new System.Drawing.Size(300, 27);
+            this.cbxCodEmpleado.TabIndex = 57;
+            // 
+>>>>>>> 6ccfe6ae549d30451994d90f6ee54d7d7a2a2354
             // timeFechaFinPrimerFuncion
             // 
+            this.timeFechaFinPrimerFuncion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeFechaFinPrimerFuncion.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinPrimerFuncion.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinPrimerFuncion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -160,6 +180,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // timeFechaInicioPrimerFuncion
             // 
+            this.timeFechaInicioPrimerFuncion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeFechaInicioPrimerFuncion.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioPrimerFuncion.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioPrimerFuncion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -170,6 +191,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // btnConsultarIngXempleado
             // 
+            this.btnConsultarIngXempleado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnConsultarIngXempleado.BackColor = System.Drawing.Color.Transparent;
             this.btnConsultarIngXempleado.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__3_;
             this.btnConsultarIngXempleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -191,6 +213,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // lblResultadoPrimerFuncion
             // 
+            this.lblResultadoPrimerFuncion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblResultadoPrimerFuncion.AutoSize = true;
             this.lblResultadoPrimerFuncion.BackColor = System.Drawing.Color.Transparent;
             this.lblResultadoPrimerFuncion.Font = new System.Drawing.Font("Inter SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,6 +226,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,6 +239,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,6 +252,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,6 +265,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -251,6 +278,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,6 +292,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // cbxTipoResidencia
             // 
+            this.cbxTipoResidencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxTipoResidencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
             this.cbxTipoResidencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoResidencia.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -284,6 +313,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -296,6 +326,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // btnConsultarAlojXResidencia
             // 
+            this.btnConsultarAlojXResidencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnConsultarAlojXResidencia.BackColor = System.Drawing.Color.Transparent;
             this.btnConsultarAlojXResidencia.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__3_;
             this.btnConsultarAlojXResidencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -317,6 +348,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,18 +361,20 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(15, 755);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(280, 29);
+            this.label11.Size = new System.Drawing.Size(279, 29);
             this.label11.TabIndex = 74;
             this.label11.Text = "Empleados Ingresados";
             // 
             // timeFechaInicioTercerProcedimiento
             // 
+            this.timeFechaInicioTercerProcedimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeFechaInicioTercerProcedimiento.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioTercerProcedimiento.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaInicioTercerProcedimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -351,6 +385,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // timeFechaFinTercerProcedimiento
             // 
+            this.timeFechaFinTercerProcedimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeFechaFinTercerProcedimiento.CalendarFont = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinTercerProcedimiento.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeFechaFinTercerProcedimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -359,8 +394,25 @@ namespace AppTiendaMascotas.Ventanas
             this.timeFechaFinTercerProcedimiento.Size = new System.Drawing.Size(299, 26);
             this.timeFechaFinTercerProcedimiento.TabIndex = 75;
             // 
+<<<<<<< HEAD
+=======
+            // cbxCodEmpleadoProcedimiento3
+            // 
+            this.cbxCodEmpleadoProcedimiento3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxCodEmpleadoProcedimiento3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
+            this.cbxCodEmpleadoProcedimiento3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCodEmpleadoProcedimiento3.Font = new System.Drawing.Font("Inter Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCodEmpleadoProcedimiento3.ForeColor = System.Drawing.Color.White;
+            this.cbxCodEmpleadoProcedimiento3.FormattingEnabled = true;
+            this.cbxCodEmpleadoProcedimiento3.Location = new System.Drawing.Point(310, 798);
+            this.cbxCodEmpleadoProcedimiento3.Name = "cbxCodEmpleadoProcedimiento3";
+            this.cbxCodEmpleadoProcedimiento3.Size = new System.Drawing.Size(300, 27);
+            this.cbxCodEmpleadoProcedimiento3.TabIndex = 77;
+            // 
+>>>>>>> 6ccfe6ae549d30451994d90f6ee54d7d7a2a2354
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -373,6 +425,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,6 +438,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Inter", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,6 +451,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // dgvEmpleadosIngresados
             // 
+            this.dgvEmpleadosIngresados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvEmpleadosIngresados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmpleadosIngresados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(51)))));
             this.dgvEmpleadosIngresados.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -449,6 +504,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // btnConsultarEmpleadosIngresados
             // 
+            this.btnConsultarEmpleadosIngresados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnConsultarEmpleadosIngresados.BackColor = System.Drawing.Color.Transparent;
             this.btnConsultarEmpleadosIngresados.BackgroundImage = global::AppTiendaMascotas.Properties.Resources.Rectangle_7__3_;
             this.btnConsultarEmpleadosIngresados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -470,6 +526,7 @@ namespace AppTiendaMascotas.Ventanas
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
