@@ -63,16 +63,11 @@ namespace AppTiendaMascotas.accesoDatos
             try
             {
                 connection.Open();
-                OracleCommand command = new OracleCommand();
-                command.Connection = connection;
-                command.CommandText = "paq_gerente.total_ingresos_empleado";
-                command.Parameters.Add("p_codEmpleado", OracleDbType.Decimal, ParameterDirection.Input).Value = codEmpleado;
-                command.Parameters.Add("p_fechaInicio", OracleDbType.Date, ParameterDirection.Input).Value = fechaInicio;
-                command.Parameters.Add("p_fechaFin", OracleDbType.Date, ParameterDirection.Input).Value = fechaFin;
-                command.Parameters.Add("v_total", OracleDbType.Decimal, ParameterDirection.ReturnValue);
-                Console.WriteLine(command.CommandText);
-                var result = command.ExecuteNonQuery();
-                total = Convert.ToInt32(command.Parameters["v_total"].Value);
+                using (OracleCommand command = new OracleCommand("SELECT paq_gerente.total_ingresos_empleado("+codEmpleado+",\'"+fechaInicio.ToString("MM/dd/yyyy") +"\',\'"+fechaFin.ToString("MM/dd/yyyy") +"\') FROM DUAL", connection))
+                {
+                    total = Convert.ToInt32(command.ExecuteScalar());
+                    Console.WriteLine("Result: " + total);
+                }
                 return total;
             }
             catch (Exception ex)
