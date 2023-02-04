@@ -28,7 +28,10 @@ namespace AppTiendaMascotas.Ventanas
 
         private void btnConsultarAlojXResidencia_Click(object sender, EventArgs e)
         {
-
+            DataSet dsResultado = new DataSet();
+            dsResultado = gerente.ConsultarResidenciasXAlojamiento(cbxTipoResidencia.Text);
+            dgvConsultaProcedimiento2.DataSource = dsResultado;
+            dgvConsultaProcedimiento2.DataMember = "ResultadoDatos";
         }
 
         private void btnConsultarEmpleadosIngresados_Click(object sender, EventArgs e)

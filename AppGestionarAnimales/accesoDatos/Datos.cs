@@ -59,22 +59,36 @@ namespace AppTiendaMascotas.accesoDatos
         public int ConsultarIngXEmpleado(int codEmpleado, DateTime fechaInicio, DateTime fechaFin)
         {
             int total = 0;
-            OracleConnection connection = new OracleConnection(cadenaConexion);
+            OracleConnection connection = new OracleConnection(getCadenaConexion());
             try
             {
                 connection.Open();
+<<<<<<< HEAD
+                OracleCommand command = new OracleCommand();
+                command.Connection = connection;
+                command.CommandText = "paq_gerente.total_ingresos_empleado";
+=======
 
                 OracleCommand command = new OracleCommand("paq_gerente.total_ingresos_empleado",connection);
+>>>>>>> 73c16b7c5df4dc65f154f6f3c94191f2cd8cb2e3
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.Add("p_codEmpleado", OracleDbType.Decimal).Value = codEmpleado;
-                command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
-                command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
+                command.Parameters.Add("p_codEmpleado", OracleDbType.Decimal, ParameterDirection.Input).Value = codEmpleado;
+                command.Parameters.Add("p_fechaInicio", OracleDbType.Date, ParameterDirection.Input).Value = fechaInicio;
+                command.Parameters.Add("p_fechaFin", OracleDbType.Date, ParameterDirection.Input).Value = fechaFin;
 
+<<<<<<< HEAD
+                command.Parameters.Add("v_total", OracleDbType.Int32, ParameterDirection.Output);
+                Console.WriteLine(command.CommandText);
+                object result = command.ExecuteScalar();
+                total = Convert.ToInt32(result);
+                return total;
+=======
                 command.Parameters.Add("v_total", OracleDbType.Decimal).Direction = ParameterDirection.ReturnValue;
                 Console.WriteLine(command.CommandText);
                 command.ExecuteNonQuery();
                 total = Convert.ToInt32(command.Parameters["v_total"].Value);
+>>>>>>> 73c16b7c5df4dc65f154f6f3c94191f2cd8cb2e3
             }
             catch (Exception ex)
             {
@@ -86,6 +100,33 @@ namespace AppTiendaMascotas.accesoDatos
             }
             return total;
         }
+        public DataSet ConsultarResidenciasXAlojamiento(string tipoResidencia)
+        {
+            DataSet ds = new DataSet();
+            OracleConnection connection = new OracleConnection(getCadenaConexion());
+            try
+            {
+                connection.Open();
+                OracleCommand command = new OracleCommand();
+                command.Connection = connection;
+                command.CommandText = "paq_gerente.pr_verificacion_residencias";
+                command.Parameters.Add("p_tipo_residencia", OracleDbType.Varchar2, ParameterDirection.Input).Value = tipoResidencia;
+                command.Parameters.Add("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
+                command.CommandType = CommandType.StoredProcedure;
+                OracleDataAdapter myAdapter = new OracleDataAdapter(command);
+                myAdapter.Fill(ds, "ResultadoDatos");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return ds;
+        }
         public DataSet ConsultarListarEmpleados(DateTime fechaInicio, DateTime fechaFin)
         {
             DataSet ds = new DataSet();
@@ -96,10 +137,9 @@ namespace AppTiendaMascotas.accesoDatos
                 OracleCommand command = new OracleCommand();
                 command.Connection = connection;
                 command.CommandText = "paq_gerente.listar_empleados";
-                command.CommandType = CommandType.StoredProcedure;
                 // Agregar los parámetros de entrada al objeto OracleCommand
-                command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
-                command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
+                command.Parameters.Add("p_fechaInicio", OracleDbType.Date, ParameterDirection.Input).Value = fechaInicio;
+                command.Parameters.Add("p_fechaFin", OracleDbType.Date, ParameterDirection.Input).Value = fechaFin;
                 command.Parameters.Add("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output);
                 command.CommandType = CommandType.StoredProcedure;
                 OracleDataAdapter myAdapter = new OracleDataAdapter(command);
