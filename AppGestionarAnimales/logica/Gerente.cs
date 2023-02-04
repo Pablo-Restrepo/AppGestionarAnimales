@@ -16,6 +16,10 @@ namespace AppTiendaMascotas.logica
         {
             return dt.ConsultarIngXEmpleado(codEmpleado, fechaInicio, fechaFin);
         }
+        public DataSet ConsultarResidenciasXAlojamiento(string tipoResidencia)
+        {
+            return dt.ConsultarResidenciasXAlojamiento(tipoResidencia);
+        }
         public DataSet ConsultarListarEmpleados(DateTime fechaInicio, DateTime fechaFin)
         {
             return dt.ConsultarListarEmpleados(fechaInicio, fechaFin);
