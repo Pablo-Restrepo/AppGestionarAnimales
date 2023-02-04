@@ -73,11 +73,10 @@ namespace AppTiendaMascotas.accesoDatos
                 command.Parameters.Add("p_fechaInicio", OracleDbType.Date).Value = fechaInicio;
                 command.Parameters.Add("p_fechaFin", OracleDbType.Date).Value = fechaFin;
 
-                command.Parameters.Add("p_total", OracleDbType.Int32).Direction = ParameterDirection.Output;
-
-                command.ExecuteScalar();
-
-                total = Convert.ToInt32(command.Parameters["p_total"].Value);
+                command.Parameters.Add("v_total", OracleDbType.Int32).Direction = ParameterDirection.ReturnValue;
+                Console.WriteLine(command.CommandText);
+                command.ExecuteNonQuery();
+                total = Convert.ToInt32(command.Parameters["v_total"].Value);
                 return total;
             }
             catch (Exception ex)
