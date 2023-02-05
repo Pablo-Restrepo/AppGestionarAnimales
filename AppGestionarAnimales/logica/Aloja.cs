@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class Aloja
+    internal class Aloja
     {
-        Datos dt = new Datos();
+        private Datos dt = new Datos();
+
         public int ingresarAlojamiento(int idResidencia, int idMascota, string fechaFinAlojamiento)
         {
             int resultado;
@@ -40,23 +36,23 @@ namespace AppTiendaMascotas.logica
             return rDT;
         }
 
-		public DataSet consultarNumAlojamiento()
-		{
-			DataSet rDT = new DataSet();
-			string consulta;
-			consulta = "SELECT COUNT(IDALOJA) FROM ALOJA WHERE fechafinalojamiento >= SYSDATE";
-			rDT = dt.ejecutarSELECT(consulta);
-			return rDT;
-		}
+        public DataSet consultarNumAlojamiento()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT COUNT(IDALOJA) FROM ALOJA WHERE fechafinalojamiento >= SYSDATE";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT;
+        }
 
-		public DataTable consultarAlojamientoIDs()
-		{
-			DataSet mids = new DataSet();
-			string consulta;
-			consulta = "SELECT IDALOJA, IDALOJA FROM ALOJA";
-			mids = dt.ejecutarSELECT(consulta);
-			DataTable dta = mids.Tables[0];
-			return dta;
-		}
-	}
+        public DataTable consultarAlojamientoIDs()
+        {
+            DataSet mids = new DataSet();
+            string consulta;
+            consulta = "SELECT IDALOJA, IDALOJA FROM ALOJA";
+            mids = dt.ejecutarSELECT(consulta);
+            DataTable dta = mids.Tables[0];
+            return dta;
+        }
+    }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xs:include schemaLocation="Oracle.DataAccess.Common.Configuration.Section.xsd"/>
-  <xs:element name="oracle.manageddataaccess.client" >
+  <xs:include schemaLocation="Oracle.DataAccess.Common.Configuration.Section.xsd" />
+  <xs:element name="oracle.manageddataaccess.client">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="version" type="odpmversiontype" minOccurs="0" />
@@ -93,7 +93,6 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-
 
       <xs:element minOccurs="0" name="edmMappings">
         <xs:complexType>

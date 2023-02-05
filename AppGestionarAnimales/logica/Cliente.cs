@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class Cliente
+    internal class Cliente
     {
-        Datos dt = new Datos();
+        private Datos dt = new Datos();
+
         public int ingresarCliente(long cedulaDuenio, string nombreDuenio, long numTelefonoDuenio)
         {
             int resultado;
@@ -21,6 +17,7 @@ namespace AppTiendaMascotas.logica
             resultado = dt.ejecutarDML(consulta);
             return resultado;
         }
+
         public int eliminarCliente(int cedulaCliente)
         {
             int resultado;
@@ -39,16 +36,16 @@ namespace AppTiendaMascotas.logica
             return rDT;
         }
 
-		public DataSet consultarClienteMenu()
-		{
-			DataSet rDT = new DataSet();
-			string consulta;
-			consulta = "SELECT CEDULADUENIO Cedula,NOMBREDUENIO Nombre,NUMTELEFONODUENIO Numero FROM DUENIO";
-			rDT = dt.ejecutarSELECT(consulta);
-			return rDT;
-		}
+        public DataSet consultarClienteMenu()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT CEDULADUENIO Cedula,NOMBREDUENIO Nombre,NUMTELEFONODUENIO Numero FROM DUENIO";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT;
+        }
 
-		public string consultarCantidadClientes()
+        public string consultarCantidadClientes()
         {
             DataSet rDT = new DataSet();
             string consulta;
@@ -57,14 +54,14 @@ namespace AppTiendaMascotas.logica
             return rDT.Tables[0].Rows[0][0].ToString();
         }
 
-		public DataTable consultarClienteIDs()
-		{
-			DataSet mids = new DataSet();
-			string consulta;
-			consulta = "SELECT CEDULADUENIO, NOMBREDUENIO FROM DUENIO";
-			mids = dt.ejecutarSELECT(consulta);
-			DataTable dta = mids.Tables[0];
-			return dta;
-		}
-	}
+        public DataTable consultarClienteIDs()
+        {
+            DataSet mids = new DataSet();
+            string consulta;
+            consulta = "SELECT CEDULADUENIO, NOMBREDUENIO FROM DUENIO";
+            mids = dt.ejecutarSELECT(consulta);
+            DataTable dta = mids.Tables[0];
+            return dta;
+        }
+    }
 }

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class Residencia
+    internal class Residencia
     {
-        Datos dt = new Datos();
+        private Datos dt = new Datos();
+
         public int ingresarResidencia(int idResidencia, int numResidentes, string tipoResidencia)
         {
             int resultado;
             //paso 1: construyo la sentencia sql para insertar
             string consulta = "INSERT INTO RESIDENCIA (IDRESIDENCIA,NUMRESIDENTESMAX,TIPORESIDENCIA) VALUES (" +
-                idResidencia + "," + numResidentes + ",'" + tipoResidencia +  "')";
+                idResidencia + "," + numResidentes + ",'" + tipoResidencia + "')";
             //paso 2: enviar la consulta a la capa de accesoDatos para ejecutarla
             resultado = dt.ejecutarDML(consulta);
             return resultado;
@@ -49,14 +45,14 @@ namespace AppTiendaMascotas.logica
             return rDT.Tables[0].Rows[0][0].ToString();
         }
 
-		public DataTable consultarResidenciaIDs()
-		{
-			DataSet mids = new DataSet();
-			string consulta;
-			consulta = "SELECT IDRESIDENCIA FROM RESIDENCIA";
-			mids = dt.ejecutarSELECT(consulta);
-			DataTable dta = mids.Tables[0];
-			return dta;
-		}
-	}
+        public DataTable consultarResidenciaIDs()
+        {
+            DataSet mids = new DataSet();
+            string consulta;
+            consulta = "SELECT IDRESIDENCIA FROM RESIDENCIA";
+            mids = dt.ejecutarSELECT(consulta);
+            DataTable dta = mids.Tables[0];
+            return dta;
+        }
+    }
 }

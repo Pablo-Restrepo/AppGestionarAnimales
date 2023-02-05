@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class Atiende
+    internal class Atiende
     {
-        Datos dt = new Datos();
+        private Datos dt = new Datos();
+
         public int ingresarAtencion(int codEmpledo, int idMascota, string tipoAtencion, string descripcionAtencion, int costoAtencion)
         {
             int resultado;
             //paso 1: construyo la sentencia sql para insertar
             string consulta = "INSERT INTO ATIENDE (CODEMPLEADO,IDMASCOTA,TIPOATENCION,COSTOATENCION,descriptcion) VALUES (" +
-                codEmpledo + "," + idMascota + ",'" + tipoAtencion + "'," + costoAtencion + ",'" + descripcionAtencion+ "')";
+                codEmpledo + "," + idMascota + ",'" + tipoAtencion + "'," + costoAtencion + ",'" + descripcionAtencion + "')";
             //paso 2: enviar la consulta a la capa de accesoDatos para ejecutarla
             resultado = dt.ejecutarDML(consulta);
             return resultado;
@@ -40,14 +36,14 @@ namespace AppTiendaMascotas.logica
             return rDT;
         }
 
-		public DataTable consultarAtencionesIDs()
-		{
-			DataSet mids = new DataSet();
-			string consulta;
-			consulta = "SELECT IDATENCION FROM ATIENDE";
-			mids = dt.ejecutarSELECT(consulta);
-			DataTable dta = mids.Tables[0];
-			return dta;
-		}
-	}
+        public DataTable consultarAtencionesIDs()
+        {
+            DataSet mids = new DataSet();
+            string consulta;
+            consulta = "SELECT IDATENCION FROM ATIENDE";
+            mids = dt.ejecutarSELECT(consulta);
+            DataTable dta = mids.Tables[0];
+            return dta;
+        }
+    }
 }

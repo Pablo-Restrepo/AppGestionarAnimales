@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class HaceCompra
+    internal class HaceCompra
     {
-        Datos dt = new Datos();
+        private Datos dt = new Datos();
+
         public int ingresarCompra(int idCliente, int idVenta)
         {
             int resultado;
@@ -21,6 +17,7 @@ namespace AppTiendaMascotas.logica
             resultado = dt.ejecutarDML(consulta);
             return resultado;
         }
+
         public DataSet consultarCompras()
         {
             DataSet rDT = new DataSet();

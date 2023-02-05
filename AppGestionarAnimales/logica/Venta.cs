@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class Venta
+    internal class Venta
     {
-        Datos dt = new Datos();
+        private Datos dt = new Datos();
+
         public int ingresarVenta(int idProducto, int idEmpleado, int numProducto, int valorVenta)
         {
             int resultado;
@@ -40,33 +36,33 @@ namespace AppTiendaMascotas.logica
             return rDT;
         }
 
-		public DataSet consultarVentasMenu()
-		{
-			DataSet rDT = new DataSet();
-			string consulta;
-			consulta = "SELECT NOMBREPRODUCTO Nombre, NUMPRODUCTO Cantidad, VALORVENTA Total FROM VENTA INNER JOIN PRODUCTO ON producto.serialproducto = venta.idproducto ORDER BY FECHAVENTA DESC";
-			rDT = dt.ejecutarSELECT(consulta);
-			return rDT;
-		}
+        public DataSet consultarVentasMenu()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT NOMBREPRODUCTO Nombre, NUMPRODUCTO Cantidad, VALORVENTA Total FROM VENTA INNER JOIN PRODUCTO ON producto.serialproducto = venta.idproducto ORDER BY FECHAVENTA DESC";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT;
+        }
 
-		public DataSet consultarVentaTotal()
-		{
-			DataSet rDT = new DataSet();
-			string consulta;
-			consulta = "SELECT SUM(VALORVENTA*NUMPRODUCTO) FROM VENTA";
-			rDT = dt.ejecutarSELECT(consulta);
-			return rDT;
-		}
+        public DataSet consultarVentaTotal()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT SUM(VALORVENTA*NUMPRODUCTO) FROM VENTA";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT;
+        }
 
-		public DataTable consultarVentaIDs()
-		{
-			DataSet mids = new DataSet();
-			string consulta;
-			consulta = "SELECT IDVENTA FROM VENTA";
-			mids = dt.ejecutarSELECT(consulta);
-			DataTable dta = mids.Tables[0];
-			return dta;
-		}
+        public DataTable consultarVentaIDs()
+        {
+            DataSet mids = new DataSet();
+            string consulta;
+            consulta = "SELECT IDVENTA FROM VENTA";
+            mids = dt.ejecutarSELECT(consulta);
+            DataTable dta = mids.Tables[0];
+            return dta;
+        }
 
         public DataSet valorVenta(string idProducto)
         {
@@ -75,5 +71,5 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
-	}
+    }
 }

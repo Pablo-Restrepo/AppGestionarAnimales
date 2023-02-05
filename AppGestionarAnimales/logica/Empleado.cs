@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class Empleado
-    {        
-        Datos dt = new Datos();
+    internal class Empleado
+    {
+        private Datos dt = new Datos();
+
         public int ingresarEmpleado(int codEmpleado, string nombreEmpleado, string apellidoEmpleado, string cargoEmpleado, long salarioEmpleado)
         {
             int resultado;
@@ -30,6 +26,7 @@ namespace AppTiendaMascotas.logica
             resultado = dt.ejecutarDML(consulta);
             return resultado;
         }
+
         public DataSet consultarEmpleado()
         {
             DataSet rDT = new DataSet();
@@ -48,14 +45,14 @@ namespace AppTiendaMascotas.logica
             return rDT.Tables[0].Rows[0][0].ToString();
         }
 
-		public DataTable consultarEmpleadoIDs()
-		{
-			DataSet mids = new DataSet();
-			string consulta;
-			consulta = "SELECT CODEMPLEADO, NOMBREEMPLEADO FROM EMPLEADO";
-			mids = dt.ejecutarSELECT(consulta);
-			DataTable dta = mids.Tables[0];
-			return dta;
-		}
-	}
+        public DataTable consultarEmpleadoIDs()
+        {
+            DataSet mids = new DataSet();
+            string consulta;
+            consulta = "SELECT CODEMPLEADO, NOMBREEMPLEADO FROM EMPLEADO";
+            mids = dt.ejecutarSELECT(consulta);
+            DataTable dta = mids.Tables[0];
+            return dta;
+        }
+    }
 }

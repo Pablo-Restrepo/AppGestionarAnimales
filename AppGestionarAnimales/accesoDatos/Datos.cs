@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Oracle.ManagedDataAccess.Client;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace AppTiendaMascotas.accesoDatos
 {
-    class Datos
+    internal class Datos
     {
-		public static string cadenaConexion = "";
+        public static string cadenaConexion = "";
 
-		//metodo que crea una intruccion dml;
-		public int ejecutarDML(string consulta) 
+        //metodo que crea una intruccion dml;
+        public int ejecutarDML(string consulta)
         {
             int filasAfectadas = 0;
             OracleConnection miConexion = new OracleConnection(cadenaConexion);
@@ -35,17 +30,17 @@ namespace AppTiendaMascotas.accesoDatos
             return filasAfectadas;
         }
 
-		public void setCadenaConexion(string userId, string hostName, string portNumber, string password)
-		{
-			cadenaConexion = "Data Source = " + hostName + ":" + portNumber + "/ xe; User Id = " + userId + "; Password = " + password;
-		}
+        public void setCadenaConexion(string userId, string hostName, string portNumber, string password)
+        {
+            cadenaConexion = "Data Source = " + hostName + ":" + portNumber + "/ xe; User Id = " + userId + "; Password = " + password;
+        }
 
-		public string getCadenaConexion()
-		{
-			return cadenaConexion;
-		}
+        public string getCadenaConexion()
+        {
+            return cadenaConexion;
+        }
 
-		public DataSet ejecutarSELECT(string consulta) 
+        public DataSet ejecutarSELECT(string consulta)
         {
             //paso1: crear un dataset vacio
             DataSet ds = new DataSet();
@@ -63,7 +58,7 @@ namespace AppTiendaMascotas.accesoDatos
             try
             {
                 connection.Open();
-                using (OracleCommand command = new OracleCommand("SELECT paq_gerente.total_ingresos_empleado("+codEmpleado+",\'"+fechaInicio.ToString("MM/dd/yyyy") +"\',\'"+fechaFin.ToString("MM/dd/yyyy") +"\') FROM DUAL", connection))
+                using (OracleCommand command = new OracleCommand("SELECT paq_gerente.total_ingresos_empleado(" + codEmpleado + ",\'" + fechaInicio.ToString("MM/dd/yyyy") + "\',\'" + fechaFin.ToString("MM/dd/yyyy") + "\') FROM DUAL", connection))
                 {
                     total = Convert.ToInt32(command.ExecuteScalar());
                     Console.WriteLine("Result: " + total);
@@ -80,6 +75,7 @@ namespace AppTiendaMascotas.accesoDatos
             }
             return total;
         }
+
         public DataSet ConsultarResidenciasXAlojamiento(string tipoResidencia)
         {
             DataSet ds = new DataSet();
@@ -107,6 +103,7 @@ namespace AppTiendaMascotas.accesoDatos
             }
             return ds;
         }
+
         public DataSet ConsultarListarEmpleados(DateTime fechaInicio, DateTime fechaFin)
         {
             DataSet ds = new DataSet();
@@ -132,7 +129,7 @@ namespace AppTiendaMascotas.accesoDatos
             }
             finally
             {
-                connection.Close();                
+                connection.Close();
             }
             return ds;
         }

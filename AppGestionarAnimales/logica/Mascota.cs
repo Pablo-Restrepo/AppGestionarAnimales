@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTiendaMascotas.accesoDatos;
+﻿using AppTiendaMascotas.accesoDatos;
 using System.Data;
 
 namespace AppTiendaMascotas.logica
 {
-    class Mascota
+    internal class Mascota
     {
         //creo un objeto de la clase datos;
-        Datos dt = new Datos();
-        public int ingresarMascota(int idMascota, string nombreMascota, string tipoMascota, string especieMascota, string generoMascota, int cedulaDuenio) {
+        private Datos dt = new Datos();
+
+        public int ingresarMascota(int idMascota, string nombreMascota, string tipoMascota, string especieMascota, string generoMascota, int cedulaDuenio)
+        {
             int resultado;
             //paso 1: construyo la sentencia sql para insertar
             string consulta = "INSERT INTO MASCOTA (IDMASCOTA,NOMBREMASCOTA,TIPOMASCOTA,ESPECIEMASCOTA,GENEROMASCOTA,CEDULADUENIO) VALUES (" +
@@ -40,23 +37,23 @@ namespace AppTiendaMascotas.logica
             return rDT;
         }
 
-		public DataSet consultarMascotasMenu()
-		{
-			DataSet rDT = new DataSet();
-			string consulta;
-			consulta = "SELECT NOMBREMASCOTA Nombre,TIPOMASCOTA Tipo,ESPECIEMASCOTA Especie,GENEROMASCOTA Genero FROM MASCOTA";
-			rDT = dt.ejecutarSELECT(consulta);
-			return rDT;
-		}
+        public DataSet consultarMascotasMenu()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT NOMBREMASCOTA Nombre,TIPOMASCOTA Tipo,ESPECIEMASCOTA Especie,GENEROMASCOTA Genero FROM MASCOTA";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT;
+        }
 
-		public DataTable consultarMascotaIDs()
-		{
-			DataSet mids = new DataSet();
-			string consulta;
-			consulta = "SELECT IDMASCOTA, NOMBREMASCOTA FROM MASCOTA";
-			mids = dt.ejecutarSELECT(consulta);
-			DataTable dta = mids.Tables[0];
-			return dta;
-		}
-	}
+        public DataTable consultarMascotaIDs()
+        {
+            DataSet mids = new DataSet();
+            string consulta;
+            consulta = "SELECT IDMASCOTA, NOMBREMASCOTA FROM MASCOTA";
+            mids = dt.ejecutarSELECT(consulta);
+            DataTable dta = mids.Tables[0];
+            return dta;
+        }
+    }
 }
