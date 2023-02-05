@@ -33,6 +33,8 @@ git clone https://github.com/pablo736/AppGestionarAnimales.git
 
 3. Install the necessary dependencies in the project (NuGet):
 
+![image](https://user-images.githubusercontent.com/67757313/216800212-122a98bc-b220-4609-8882-76ad9c616bf1.png)
+
 # Application Screenshots
 ![image](https://user-images.githubusercontent.com/67757313/216801303-146dca4a-ebdc-4c36-8168-ed7d81d2df02.png)
 ![image](https://user-images.githubusercontent.com/67757313/216801315-0068de7c-7f9f-4043-8417-545ff167576b.png)
