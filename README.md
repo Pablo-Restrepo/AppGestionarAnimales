@@ -48,11 +48,10 @@ git clone https://github.com/pablo736/AppGestionarAnimales.git
 ![image](https://user-images.githubusercontent.com/67757313/216801392-42db4604-bd3c-4ca9-be6f-33166d6a23c8.png)
 ![image](https://user-images.githubusercontent.com/67757313/216801402-ac8ab08f-db90-470f-af96-9d9c2bb3e6e2.png)
 ![image](https://user-images.githubusercontent.com/67757313/216801413-4fab8a2f-087d-48a5-a661-a940f73c95f6.png)
-![image](https://user-images.githubusercontent.com/67757313/216801423-672c418c-bbf4-4393-a79d-d1b93972a8cb.png)
 ![image](https://user-images.githubusercontent.com/67757313/216801283-d099c418-1e96-4671-8499-06e2f7afdc08.png)
 
 # Contributors
-* [Pablo José Restrepo Ruiz](https://github.com/Pablo736)
+* [Pablo Restrepo ](https://github.com/Pablo-Restrepo)
 * [Jojan Esteban Serna Serna](https://github.com/Jojan-Esteban-Serna)
 * [Joan Sebastian Tuquerrez Gomez](https://github.com/SebastianTuquerrezG)
 
