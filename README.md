@@ -27,7 +27,7 @@ This is a project to create a veterinary clinic management application. With thi
 # Installation
 1. Clone the repository:
 ```
-git clone https://github.com/pablo736/AppGestionarAnimales.git
+git clone https://github.com/Pablo-Restrepo/AppGestionarAnimales.git
 ```
 2. Create the database in Oracle SQL with the scripts from `AppGestionarAnimales/SQL/`
 
