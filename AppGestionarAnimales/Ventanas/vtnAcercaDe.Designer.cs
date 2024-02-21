@@ -60,8 +60,8 @@
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(350, 161);
 			this.label3.TabIndex = 20;
-			this.label3.Text = "App para gestión de una Veterinaria.\r\n\r\nColaboradores:\r\n\r\n- Pablo José Restrepo R" +
-    "uiz\r\n- Jojan Esteban Serna Serna\r\n- Joan Sebastian Tuquerrez Gomez";
+			this.label3.Text = "App para gestión de una Veterinaria.\r\n\r\nColaboradores:\r\n\r\n- Pablo Restrepo" +
+    "\r\n- Jojan Esteban Serna Serna\r\n- Joan Sebastian Tuquerrez Gomez";
 			// 
 			// linkLabel1
 			// 
@@ -75,7 +75,7 @@
 			this.linkLabel1.Size = new System.Drawing.Size(497, 23);
 			this.linkLabel1.TabIndex = 21;
 			this.linkLabel1.TabStop = true;
-			this.linkLabel1.Text = "https://github.com/Pablo736/AppGestionarAnimales";
+			this.linkLabel1.Text = "https://github.com/Pablo-Restrepo/AppGestionarAnimales";
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
 			// 
 			// linkLabel2
@@ -120,7 +120,7 @@
 			this.linkLabel4.Size = new System.Drawing.Size(264, 21);
 			this.linkLabel4.TabIndex = 24;
 			this.linkLabel4.TabStop = true;
-			this.linkLabel4.Text = "https://github.com/Pablo736";
+			this.linkLabel4.Text = "https://github.com/Pablo-Restrepo";
 			this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
 			// 
 			// vtnAcercaDe
